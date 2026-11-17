@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hashiyeh · The Persian life of a world book</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F0E4;--ink:#1F1B16;--mute:#6B5F4E;--lapis:#2E4A9E;--orange:#A2471F;--gold:#B8963E;--card:#F3EAD9;--rule:#E3D7B8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "EB Garamond",Georgia,serif}
+html[dir=rtl] body{font-family:"Noto Naskh Arabic",serif;line-height:1.9}
+a{color:var(--lapis)}.w{max-width:1100px;margin:0 auto;padding:0 28px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding:18px 28px;max-width:1100px;margin:0 auto}
+.brand{display:flex;gap:10px;align-items:baseline}.brand b{font-family:"Noto Naskh Arabic",serif;font-size:24px;color:var(--orange)}
+.brand i{font-style:normal;font-size:12px;letter-spacing:.18em}nav{display:flex;gap:18px;align-items:center}nav a{color:var(--ink);text-decoration:none}
+button{font:inherit;background:none;border:0;cursor:pointer;color:var(--mute);padding:6px}button[aria-pressed=true]{color:var(--lapis);text-decoration:underline}
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:48px 0 72px}.hero>*{flex:1 1 380px;min-width:0}
+.k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:0}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.05;font-weight:400;margin:14px 0}h1 em{color:var(--lapis)}
+.cta{display:inline-flex;gap:30px;background:var(--lapis);color:var(--bg);padding:12px 22px;text-decoration:none;min-height:44px;align-items:center}
+.hero img{width:100%;max-width:420px;display:block;margin:auto;background:var(--card)}
+.band{border-block:1px solid var(--gold);padding:14px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--mute);font-size:14px}
+.band b{font-family:"Noto Naskh Arabic",serif;font-size:22px;color:var(--orange)}
+.atlas{display:flex;flex-wrap:wrap;gap:40px;padding:56px 0}.atlas>*{flex:1 1 320px;min-width:0}
+.frame{border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-6px;padding:20px}
+.f2,.f3{border:1px solid var(--gold);padding:12px;margin-top:10px}.f3{color:var(--lapis)}
+.tag{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+ol{list-style:none;margin:14px 0 0;padding:0}li button{display:flex;gap:12px;width:100%;text-align:start;padding:10px 8px;min-height:44px;color:var(--ink);border-top:1px solid var(--rule);border-inline-start:3px solid transparent}
+li button[aria-pressed=true]{background:#ECE6D8;color:var(--lapis);border-inline-start-color:var(--lapis);text-decoration:none}
+aside{border-inline-start:1px solid #D9CBA8;padding-inline-start:20px}aside h2{font-weight:400;font-size:30px;line-height:1.15;margin:6px 0}
+.fa{font-family:"Noto Naskh Arabic",serif;color:var(--orange);font-size:20px;direction:rtl}
+.sec{border-top:1px solid var(--rule);padding-top:8px;margin-top:12px}
+.lion{display:flex;flex-wrap:wrap;gap:40px;padding:64px 0;align-items:center}.lion>*{flex:1 1 340px;min-width:0}.lion img{width:100%;height:auto}
+.lion figcaption{font-size:13px;color:var(--mute);margin-top:8px}h2.big{font-size:clamp(30px,5vw,48px);font-weight:400;line-height:1.1;margin:8px 0 16px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--gold);margin:24px 0 56px}
+.steps div{padding:18px;border-inline-end:1px solid var(--rule)}.steps b{color:var(--orange);font-weight:400}
+footer{border-top:1px solid var(--gold);padding:28px 0 60px;color:var(--mute);font-size:15px}
+.badge{font-size:12px;border:1px solid var(--gold);padding:2px 8px;display:inline-block}
+@media(prefers-color-scheme:dark){:root{--bg:#1C1A17;--ink:#ECE4D6;--mute:#A89E8C;--lapis:#8FA8EE;--orange:#E08A63;--card:#262320;--rule:#3A352E}li button[aria-pressed=true]{background:#2A2621}}
+</style></head><body>
+<header><div class="brand"><b>حاشیه</b><i>HASHIYEH</i><span data-k="tagline" style="color:var(--mute);font-size:14px"></span></div>
+<nav><a href="#atlas" data-k="navExplore"></a><a href="reader/" data-k="navRead"></a><a href="#method" data-k="navMethod"></a>
+<span><button id="en" aria-pressed="true">EN</button>/<button id="fa" aria-pressed="false">فارسی</button></span></nav></header>
+<main class="w">
+<section class="hero"><div><p class="k" data-k="kicker"></p><h1><span data-k="h1a"></span><br><em data-k="h1b"></em></h1>
+<p style="font-size:22px;line-height:1.5" data-k="lead"></p><p style="color:var(--mute)" data-k="sub"></p>
+<a class="cta" href="reader/"><span data-k="cta"></span><span aria-hidden="true">↗</span></a>
+<p class="k" style="margin-top:28px" data-k="projectBy"></p><p style="margin:0;font-size:20px" data-k="author"></p><p style="margin:0;color:var(--mute);font-size:15px" data-k="skills"></p></div>
+<div><img src="assets/cypress.jpg" alt="" data-alt="cypressAlt"></div></section>
+<div class="band"><b>حاشیه</b><span data-k="band"></span><span class="badge" data-k="badge"></span></div>
+<section id="atlas" class="atlas"><div class="frame"><span class="tag" data-k="atlasLabel"></span><br>
+<div><span class="tag" data-k="kChapter"></span><span style="font-size:22px" id="a0"></span>
+<div class="f2"><span class="tag" data-k="kTale"></span><span style="font-size:21px" id="a1"></span>
+<div class="f3"><span class="tag" data-k="kNested"></span><span style="font-size:21px" id="a2"></span></div></div></div>
+<ol id="list"></ol><p style="font-size:12px;color:var(--mute)" data-k="atlasNote"></p></div>
+<aside aria-live="polite"><span class="tag" data-k="inMargin"></span><span style="color:var(--orange);font-size:13px" id="num"></span>
+<h2 id="ttl"></h2><span class="fa" id="fat"></span><p id="sum"></p>
+<div class="sec"><span class="tag" data-k="position"></span><span id="pos"></span></div>
+<div class="sec"><span class="tag" data-k="across"></span><span id="ver"></span></div>
+<p style="font-size:14px;color:var(--mute);font-style:italic" data-k="notQuotes"></p>
+<a href="reader/" data-k="openPreview"></a></aside></section>
+<section class="lion"><figure style="margin:0"><img src="assets/lion-court.jpg" alt="" data-alt="lionAlt"><figcaption data-k="lionCaption"></figcaption></figure>
+<div><p class="k" data-k="chapterKicker"></p><h2 class="big"><span data-k="enterA"></span><br><em style="color:var(--lapis)" data-k="enterB"></em></h2><p data-k="closeReading"></p>
+<p style="color:var(--mute);font-size:15px" data-k="kfNote"></p></div></section>
+<section id="method"><p class="k" data-k="notebook"></p><h2 class="big"><span data-k="howA"></span> <em style="color:var(--lapis)" data-k="howB"></em></h2>
+<p data-k="howLead"></p><div class="steps" id="steps"></div>
+<a href="https://ganjoor.net/monshi/kelile-demni" data-k="visitGanjoor"></a></section>
+<footer><p class="k" data-k="aboutLabel"></p><p data-k="about"></p></footer></main>
+<script>
+var T={en:{tagline:"A reading in the margins",navExplore:"Explore",navRead:"Read",navMethod:"Method",cypressAlt:"A Persian miniature-style cypress with flowering branches and two birds",kicker:"Kalileh o Demneh · A digital reading",h1a:"The Persian life",h1b:"of a world book.",lead:"Stories carry other stories. Across languages, across centuries, and sometimes inside the words of a cunning jackal.",sub:"An exploration of Nasrollah Monshi’s Persian prose through translation, narrative structure, and computational annotation.",cta:"Enter the story",projectBy:"A project by",author:"Maryam Fooladi",skills:"Translation · NLP · Digital humanities",band:"The text at the centre. The questions in the margin.",badge:"Work in progress · Chapter one",atlasLabel:"01 / The narrative atlas",kChapter:"Chapter",kTale:"Tale",kNested:"Nested tale",atlasNote:"Opening artwork: AI-generated, inspired by Persian cypress and manuscript art. The nested frames show three stories from the first chapter.",inMargin:"In the margin",position:"Position",across:"Across versions",notQuotes:"Editorial summaries, not source quotations.",openPreview:"Open the side-by-side reader ↗",lionAlt:"Illustration in Persian manuscript style: Dimna presents the ox Shanzabeh to the Lion",lionCaption:"Contemporary AI-generated illustration, inspired by Persian manuscript painting. Not a historical manuscript.",chapterKicker:"A first chapter · The Lion and the Ox",enterA:"Enter a story.",enterB:"Find another inside.",closeReading:"The first step is a close reading: follow a tale, see where it sits, and ask what changes across versions.",kfNote:"Keith-Falconer’s 1885 English translation follows the later Syriac version. It is a sibling version for comparison, not a translation of Monshi’s Persian.",notebook:"An open notebook",howA:"How the margin",howB:"is made.",howLead:"The interface is an invitation to read. Its claims need a visible path back to the text.",visitGanjoor:"Persian text at Ganjoor ↗",aboutLabel:"About the project",about:"Hashiyeh / حاشیه means “the margin.” A personal project by Maryam Fooladi, bringing translation, applied NLP and digital humanities into the same reading space. Persian text from ganjoor.net; English from I. G. N. Keith-Falconer, Kalilah and Dimnah (Cambridge, 1885), public domain."},
+fa:{tagline:"خواندن در حاشیه",navExplore:"کاوش",navRead:"خواندن",navMethod:"روش",cypressAlt:"سروی به شیوهٔ نگارگری ایرانی با شاخه‌های شکوفه و دو پرنده",kicker:"کلیله و دمنه · یک خوانش دیجیتال",h1a:"زندگی فارسیِ",h1b:"یک کتاب جهانی.",lead:"داستان‌ها، داستان‌های دیگری را با خود می‌برند؛ از زبانی به زبان دیگر، از سده‌ای به سدهٔ دیگر، و گاه در سخنِ شغالی زیرک.",sub:"کاوشی در نثر فارسی نصرالله منشی، با ترجمه، ساختار روایت و حاشیه‌نویسی رایانشی.",cta:"ورود به داستان",projectBy:"پروژه‌ای از",author:"مریم فولادی",skills:"ترجمه · پردازش زبان طبیعی · علوم انسانی دیجیتال",band:"متن در مرکز؛ پرسش‌ها در حاشیه.",badge:"در دست ساخت · باب نخست",atlasLabel:"۰۱ / اطلس روایت",kChapter:"باب",kTale:"حکایت",kNested:"حکایت در حکایت",atlasNote:"تصویر آغازین ساخته‌شده با هوش مصنوعی و با الهام از سرو و نگارگری ایرانی است. قاب‌های تودرتو سه داستان از باب نخست را نشان می‌دهند.",inMargin:"در حاشیه",position:"جایگاه در روایت",across:"مقایسهٔ نسخه‌ها",notQuotes:"خلاصه‌های تحریری، نه نقل‌قول از متن.",openPreview:"بازکردن خوانش دوستونه ↗",lionAlt:"نگاره‌ای به شیوهٔ نسخه‌های فارسی: دمنه گاو شنزبه را نزد شیر می‌برد",lionCaption:"تصویر معاصرِ ساخته‌شده با هوش مصنوعی، با الهام از نگارگری ایرانی؛ نه تصویر یک نسخهٔ تاریخی.",chapterKicker:"آغاز با یک باب · شیر و گاو",enterA:"وارد داستان شوید.",enterB:"داستانی دیگر در آن بیابید.",closeReading:"نخست، خواندن دقیق: داستانی را دنبال کنید، جایگاهش را ببینید و بپرسید در نسخه‌های دیگر چه تغییر می‌کند.",kfNote:"ترجمهٔ انگلیسی کیث فالکونر (۱۸۸۵) بر پایهٔ نسخهٔ سریانیِ متأخر است؛ نسخه‌ای همتبار برای مقایسه، نه ترجمهٔ فارسی منشی.",notebook:"دفتر پژوهش باز",howA:"این حاشیه",howB:"چگونه ساخته می‌شود؟",howLead:"این رابط دعوتی است به خواندن. هر ادعا باید مسیری روشن به متن داشته باشد.",visitGanjoor:"متن فارسی در گنجور ↗",aboutLabel:"دربارهٔ پروژه",about:"حاشیه، فضایی پیرامون متن است. پروژه‌ای شخصی از مریم فولادی که ترجمه، پردازش زبان طبیعی و علوم انسانی دیجیتال را در یک فضای خواندن گرد هم می‌آورد. متن فارسی از گنجور؛ متن انگلیسی از کیث فالکونر، کلیله و دمنه (کمبریج، ۱۸۸۵)، در مالکیت عمومی."}};
+var bothEn="In the project’s Persian text and in its later-Syriac comparator.",bothFa="هم در متن فارسی پروژه و هم در متن مقایسه‌ای سریانیِ متأخر.";
+var D=[{n:"01",en:"The Lion and the Ox",fa:"شیر و گاو",kE:"Chapter",kF:"باب",sE:"The frame of the first chapter: the jackal Dimna turns the Lion against his trusted friend, the ox Shanzabeh.",sF:"قاب باب نخست: شغالی به نام دمنه، شیر را با دوست مورد اعتمادش، گاو شنزبه، دشمن می‌کند.",pE:"The book’s first story chapter, told by the Brahman to the king of India.",pF:"نخستین باب داستانی کتاب؛ برهمن آن را برای رای هند روایت می‌کند.",vE:bothEn,vF:bothFa},
+{n:"02",en:"The Two Partners",fa:"دو شریک",kE:"Tale",kF:"حکایت",sE:"A rogue cheats his simple partner and hides his father in a hollow tree as a false witness.",sF:"شریکی حیله‌گر، شریک ساده‌دلش را فریب می‌دهد و پدرش را در درختی پنهان می‌کند تا گواهی دروغ دهد.",pE:"Inside “The Lion and the Ox.” Told by Kalila to Dimna.",pF:"درون باب «شیر و گاو». کلیله برای دمنه می‌گوید.",vE:bothEn,vF:bothFa},
+{n:"03",en:"The Frog and the Snake",fa:"غوک و مار",kE:"Nested tale",kF:"حکایت در حکایت",sE:"A small tale nested in the Two Partners, found in Monshi but not in the later Syriac version.",sF:"حکایتی کوتاه درون «دو شریک»؛ در متن منشی هست، اما در نسخهٔ سریانیِ متأخر نیست.",pE:"Inside “The Two Partners,” within “The Lion and the Ox.”",pF:"درون «دو شریک»، در باب «شیر و گاو».",vE:"In Monshi’s Persian; not found in the later-Syriac comparator. Source verification still pending.",vF:"در متن فارسی منشی آمده، اما در متن مقایسه‌ای سریانیِ متأخر یافت نشده است. بررسی منابع هنوز انجام نشده است."}];
+var S={en:[["1","Sources","Persian text from Ganjoor; English from the 1885 Keith-Falconer OCR, which is still noisy."],["2","Alignment","Twelve tales from “The Lion and the Ox” aligned by hand, with parent and child nesting."],["3","Annotation","Model suggestions stay separate from human-reviewed interpretations."],["4","Verification","Every claim needs a visible path back to the text. Pending items are marked."]],fa:[["۱","منابع","متن فارسی از گنجور؛ متن انگلیسی از OCR چاپ ۱۸۸۵ کیث فالکونر که هنوز خطا دارد."],["۲","همترازی","دوازده حکایت از باب «شیر و گاو» با دست همتراز شده‌اند، با نسبت پدر و فرزندی."],["۳","حاشیه‌نویسی","پیشنهادهای مدل جدا از تفسیرهای بازبینی‌شده توسط انسان نگه داشته می‌شود."],["۴","راستی‌آزمایی","هر ادعا باید مسیری روشن به متن داشته باشد. موارد در انتظار، نشان‌دار هستند."]]};
+var lang="en",pick=2;
+function set(k,v){document.querySelectorAll('[data-k="'+k+'"]').forEach(function(e){e.textContent=v})}
+function render(){var fa=lang==="fa",t=T[lang];document.documentElement.lang=lang;document.documentElement.dir=fa?"rtl":"ltr";
+document.querySelectorAll("[data-k]").forEach(function(e){if(t[e.dataset.k]!=null)e.textContent=t[e.dataset.k]});
+document.querySelectorAll("[data-alt]").forEach(function(e){e.alt=t[e.dataset.alt]});
+["a0","a1","a2"].forEach(function(id,i){document.getElementById(id).textContent=fa?D[i].fa:D[i].en});
+var ol=document.getElementById("list");ol.innerHTML="";
+D.forEach(function(d,i){var li=document.createElement("li"),b=document.createElement("button");b.setAttribute("aria-pressed",i===pick);
+b.innerHTML='<span style="width:26px;color:var(--mute);font-size:13px">'+(fa?["۰۱","۰۲","۰۳"][i]:d.n)+'</span><span style="flex:1">'+(fa?d.fa:d.en)+'</span><span class="tag" style="align-self:center">'+(fa?d.kF:d.kE)+'</span>';
+b.onclick=function(){pick=i;render()};li.appendChild(b);ol.appendChild(li)});
+var d=D[pick];document.getElementById("num").textContent="[ "+(fa?["۰۱","۰۲","۰۳"][pick]:d.n)+" ]";
+document.getElementById("ttl").textContent=fa?d.fa:d.en;document.getElementById("fat").textContent=d.fa;
+document.getElementById("sum").textContent=fa?d.sF:d.sE;document.getElementById("pos").textContent=fa?d.pF:d.pE;document.getElementById("ver").textContent=fa?d.vF:d.vE;
+document.getElementById("steps").innerHTML=S[lang].map(function(s){return"<div><b>"+s[0]+"</b> <strong>"+s[1]+"</strong><br>"+s[2]+"</div>"}).join("");
+document.getElementById("en").setAttribute("aria-pressed",!fa);document.getElementById("fa").setAttribute("aria-pressed",fa)}
+document.getElementById("en").onclick=function(){lang="en";render()};document.getElementById("fa").onclick=function(){lang="fa";render()};render();
+</script></body></html>
