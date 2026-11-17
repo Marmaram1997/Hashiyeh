@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hashiyeh — cypress version</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F0E4}
+a{color:#2E4A9E}a:hover{color:#1F3474}
+</style>
+</helmet>
+<div lang="{{ lang }}" dir="{{ dir }}" style="{{ rootStyle }}">
+
+<header style="max-width: 1320px; margin: 0 auto; padding: 20px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: baseline; gap: 10px">
+<span style="font-family: 'Noto Naskh Arabic', serif; font-size: 24px; color: #A2471F">حاشیه</span>
+<span style="font-family: 'EB Garamond', serif; font-size: 12px; letter-spacing: 0.18em; color: #1F1B16">HASHIYEH</span>
+<span style="font-size: 14px; color: #6B5F4E">{{ t.tagline }}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px">
+<nav style="display: flex; gap: 18px; font-size: 15px" aria-label="Main">
+<a href="#atlas" style="color: #1F1B16; text-decoration: none">{{ t.navExplore }}</a>
+<a href="#read" style="color: #1F1B16; text-decoration: none">{{ t.navRead }}</a>
+<a href="#method" style="color: #1F1B16; text-decoration: none">{{ t.navMethod }}</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 4px; font-size: 14px" role="group" aria-label="Language">
+<button onClick="{{ setEn }}" aria-pressed="{{ isEn }}" style="{{ enStyle }}">EN</button>
+<span aria-hidden="true" style="color: #B8963E">/</span>
+<button onClick="{{ setFa }}" aria-pressed="{{ isFa }}" style="{{ faStyle }}">فارسی</button>
+</div>
+</div>
+</header>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 8px 32px 40px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<img src="/_blob/553cda1433f7686c273d2bf62dfd58c8" alt="{{ t.cypressAlt }}" style="width: 100%; max-width: 440px; height: auto; display: block">
+<a href="#hero" style="font-size: 14px; color: #6B5F4E; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px">{{ t.scroll }}<span aria-hidden="true">↓</span></a>
+</section>
+
+<section id="hero" style="max-width: 1320px; margin: 0 auto; padding: 72px 32px 96px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px; max-width: 560px">
+<p style="margin: 0; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #6B5F4E">{{ t.kicker }}</p>
+<h1 style="margin: 0; font-size: 72px; line-height: 1.05; font-weight: 400; letter-spacing: -0.01em">{{ t.h1a }}<br><em style="color: #2E4A9E; font-style: italic">{{ t.h1b }}</em></h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.5">{{ t.lead }}</p>
+<p style="margin: 0; font-size: 17px; color: #6B5F4E">{{ t.sub }}</p>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<a href="#read" style="background: #2E4A9E; color: #F8F0E4; text-decoration: none; padding: 12px 22px; font-size: 18px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 36px">{{ t.cta }}<span aria-hidden="true">↗</span></a>
+<a href="#method" style="font-size: 16px; text-decoration: none">{{ t.methodLink }}</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; margin-top: 8px">
+<span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6B5F4E">{{ t.projectBy }}</span>
+<span style="font-size: 18px">{{ t.author }}</span>
+<span style="font-size: 14px; color: #6B5F4E">{{ t.skills }}</span>
+</div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center">
+<img src="/_blob/553cda1433f7686c273d2bf62dfd58c8" alt="" aria-hidden="true" style="width: 100%; max-width: 420px; height: auto; display: block; background: #F3EAD9">
+</div>
+</section>
+
+<section id="atlas" style="max-width: 1320px; margin: 0 auto; padding: 0 32px 80px">
+<div style="max-width: 800px; margin: 0 auto 48px; border-top: 1px solid #B8963E"></div>
+<div style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+
+<div style="flex: 1 1 380px; min-width: 0; border: 1px solid #B8963E; outline: 1px solid #B8963E; outline-offset: -6px; padding: 18px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; gap: 10px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B5F4E">
+<span>{{ t.atlasLabel }}</span>
+<span style="color: #2E4A9E; text-decoration: underline; text-transform: none; letter-spacing: 0; font-size: 13px">{{ t.outline }}</span>
+</div>
+<div style="{{ f1 }}">
+<span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ a0.kind }}</span>
+<span style="font-size: 22px; margin-bottom: 8px">{{ a0.title }}</span>
+<div style="{{ f2 }}">
+<span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ a1.kind }}</span>
+<span style="font-size: 21px; margin-bottom: 8px">{{ a1.title }}</span>
+<div style="{{ f3 }}">
+<span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ a2.kind }}</span>
+<span style="font-size: 21px; color: #2E4A9E">{{ a2.title }}</span>
+</div>
+</div>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{ items }}" as="it" hint-placeholder-count="3">
+<li style="border-top: 1px solid #E3D7B8">
+<button onClick="{{ it.pick }}" aria-pressed="{{ it.selected }}" style="{{ it.rowStyle }}">
+<span style="font-size: 12px; color: #6B5F4E; width: 22px">{{ it.num }}</span>
+<span style="flex: 1 1 auto; font-size: 17px; text-align: start">{{ it.title }}</span>
+<span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B5F4E">{{ it.kind }}</span>
+<span aria-hidden="true" style="color: #2E4A9E">↗</span>
+</button>
+</li>
+</sc-for>
+</ol>
+<p style="margin: 0; font-size: 12px; color: #6B5F4E">{{ t.atlasNote }}</p>
+</div>
+
+<aside style="flex: 1 1 280px; min-width: 0; border-inline-start: 1px solid #D9CBA8; padding-inline-start: 18px; display: flex; flex-direction: column; gap: 12px" aria-live="polite">
+<span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.inMargin }}</span>
+<span style="font-size: 13px; color: #A2471F">[ {{ sel.num }} ]</span>
+<h2 style="margin: 0; font-size: 30px; font-weight: 400; line-height: 1.15">{{ sel.title }}</h2>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 18px; color: #A2471F; text-align: end">{{ sel.faTitle }}</span>
+<p style="margin: 0; font-size: 16px">{{ sel.summary }}</p>
+<div style="border-top: 1px solid #E3D7B8; padding-top: 8px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.position }}</span>
+<span style="font-size: 15px">{{ sel.position }}</span>
+</div>
+<div style="border-top: 1px solid #E3D7B8; padding-top: 8px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.across }}</span>
+<span style="font-size: 15px">{{ sel.versions }}</span>
+</div>
+<a href="#read" style="font-size: 16px; text-decoration: none; border-bottom: 1px solid #2E4A9E; padding: 8px 0; display: flex; justify-content: space-between; min-height: 44px; box-sizing: border-box; align-items: center">{{ t.openPreview }}<span aria-hidden="true">↗</span></a>
+<p style="margin: 0; font-size: 13px; font-style: italic; color: #6B5F4E">{{ t.selectHint }}</p>
+</aside>
+</div>
+</section>
+
+<section style="max-width: 1100px; margin: 0 auto; padding: 0 32px">
+<div style="border-top: 1px solid #B8963E; border-bottom: 1px solid #B8963E; padding: 14px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+<span style="font-family: 'Noto Naskh Arabic', serif; font-size: 22px; color: #A2471F">حاشیه</span>
+<span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.band }}</span>
+<span style="font-size: 13px; color: #6B5F4E">01</span>
+</div>
+</section>
+
+<section id="read" style="max-width: 1100px; margin: 0 auto; padding: 56px 32px 72px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<figure style="flex: 1 1 260px; max-width: 300px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
+<img src="/_blob/7f6b8e9073f5d5c5d0ccf184f4089126" alt="{{ t.lionAlt }}" style="width: 100%; height: auto; display: block; border: 1px solid #B8963E; padding: 6px; box-sizing: border-box; background: #F3EAD9">
+<figcaption style="font-size: 12px; color: #6B5F4E">{{ t.lionCaption }}</figcaption>
+</figure>
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.chapterKicker }}</p>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.08; font-weight: 400">{{ t.enterA }}<br><em style="color: #2E4A9E">{{ t.enterB }}</em></h2>
+<p style="margin: 0; font-size: 19px; max-width: 560px">{{ t.closeReading }}</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E; border-bottom: 1px solid #B8963E; padding-bottom: 8px; margin-top: 8px">
+<span>{{ t.previewLabel }}</span><span>{{ t.notQuotes }}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 0">
+<div lang="fa" dir="rtl" style="flex: 1 1 260px; min-width: 0; padding: 4px 20px 16px; border-inline-end: 1px solid #D9CBA8; display: flex; flex-direction: column; gap: 10px; font-family: 'Noto Naskh Arabic', serif">
+<span style="font-size: 10px; letter-spacing: 0.1em; color: #6B5F4E; font-family: 'EB Garamond', serif">{{ t.persianMonshi }}</span>
+<span style="font-size: 22px">{{ sel.faTitle }}</span>
+<p style="margin: 0; font-size: 16px; line-height: 1.9">{{ sel.faSummary }}</p>
+</div>
+<div lang="en" dir="ltr" style="flex: 1 1 260px; min-width: 0; padding: 4px 20px 16px; display: flex; flex-direction: column; gap: 10px; font-family: 'EB Garamond', serif">
+<span style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6B5F4E">{{ t.englishNote }}</span>
+<span style="font-size: 22px">{{ sel.enTitle }}</span>
+<p style="margin: 0; font-size: 17px">{{ sel.enVersions }}</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #6B5F4E; border-top: 1px solid #B8963E; padding-top: 10px">{{ t.kfNote }}</p>
+</div>
+</section>
+
+<section id="method" style="max-width: 1100px; margin: 0 auto; padding: 0 32px">
+<div style="border-top: 1px solid #B8963E; padding: 56px 0 64px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.notebook }}</p>
+<h2 style="margin: 0; font-size: 46px; line-height: 1.08; font-weight: 400">{{ t.howA }}<br><em style="color: #2E4A9E">{{ t.howB }}</em></h2>
+<p style="margin: 0; font-size: 17px; color: #4A4136">{{ t.howLead }}</p>
+</div>
+<ol style="flex: 1 1 460px; min-width: 0; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+<li style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3D7B8">
+<span style="font-size: 12px; color: #A2471F; padding-top: 6px">{{ s.n }}</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 22px; font-weight: 400">{{ s.title }}</strong>
+<span style="font-size: 16px; color: #4A4136">{{ s.body }}</span>
+<sc-if value="{{ s.link }}" hint-placeholder-val="{{ false }}">
+<a href="https://ganjoor.net/monshi/kelile-demni" style="font-size: 14px; text-decoration: none">{{ t.visitGanjoor }}</a>
+</sc-if>
+</div>
+</li>
+</sc-for>
+</ol>
+</div>
+</section>
+
+<section style="max-width: 1100px; margin: 0 auto; padding: 0 32px">
+<div style="border-top: 1px solid #B8963E; padding: 28px 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<span style="flex: 0 1 200px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E">{{ t.aboutLabel }}</span>
+<p style="flex: 1 1 380px; min-width: 0; margin: 0; font-size: 18px">{{ t.about }}</p>
+<span style="flex: 0 1 240px; border: 1px solid #B8963E; padding: 8px 12px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5F4E; text-align: center">{{ t.badge }}</span>
+</div>
+</section>
+
+<footer style="max-width: 1200px; margin: 0 auto; padding: 20px 32px 40px; border-top: 1px solid #B8963E; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+<span style="display: flex; align-items: baseline; gap: 10px; color: #2E4A9E"><span style="font-family: 'Noto Naskh Arabic', serif; font-size: 22px">حاشیه</span><span style="font-size: 16px">Hashiyeh</span></span>
+<span style="font-size: 14px; color: #4A4136">{{ t.author }}</span>
+<a href="#hero" style="font-size: 14px; text-decoration: none">{{ t.backToTree }}</a>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"defaultLang":{"editor":"enum","options":["en","fa"],"default":"en"},"$preview":{"width":1440,"height":4200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var st = this.state || {};
+    var lang = st.lang || this.props.defaultLang || 'en';
+    var picked = st.picked == null ? 2 : st.picked;
+    var fa = lang === 'fa';
+    var T = {
+      en: {
+        tagline: 'A reading in the margins', navExplore: 'Explore', navRead: 'Read', navMethod: 'Method',
+        cypressAlt: 'A Persian miniature-style cypress with flowering branches and two birds',
+        scroll: 'Scroll to explore', kicker: 'Kalileh o Demneh · A digital reading',
+        h1a: 'The Persian life', h1b: 'of a world book.',
+        lead: 'Stories carry other stories. Across languages, across centuries, and sometimes inside the words of a cunning jackal.',
+        sub: 'An exploration of Nasrollah Monshi’s Persian prose through translation, narrative structure, and computational annotation.',
+        cta: 'Enter the story', methodLink: 'A note on the method ↓', projectBy: 'A project by', author: 'Maryam Fooladi',
+        skills: 'Translation · NLP · Digital humanities',
+        atlasLabel: '01 / The narrative atlas', outline: 'Outline view',
+        atlasNote: 'Opening artwork: AI-generated, inspired by Persian cypress and manuscript art. The nested frames here show three stories from the project brief.',
+        inMargin: 'In the margin', position: 'Position', across: 'Across versions', openPreview: 'Open reading preview',
+        selectHint: 'Select a story to trace its place in the chapter.',
+        band: 'The text at the centre. The questions in the margin.',
+        lionAlt: 'Illustration in Persian manuscript style: Dimna presents the ox Shanzabeh to the Lion',
+        lionCaption: 'Contemporary AI-generated illustration, inspired by Persian manuscript painting. Not a historical manuscript.',
+        chapterKicker: 'A first chapter · The Lion and the Ox', enterA: 'Enter a story.', enterB: 'Find another inside.',
+        closeReading: 'The first step is a close reading: follow a tale, see where it sits, and ask what changes across versions.',
+        previewLabel: 'Reading preview', notQuotes: 'Editorial summaries · not source quotations',
+        persianMonshi: 'PERSIAN · MONSHI', englishNote: 'English · comparison note',
+        kfNote: 'Keith-Falconer’s 1885 English translation follows the later Syriac version. It is a comparative text, not a translation of Monshi’s Persian. Source passages and locators will be connected in the next phase.',
+        notebook: 'An open notebook', howA: 'How the margin', howB: 'is made.',
+        howLead: 'The interface is an invitation to read. Its claims need a visible path back to the text.',
+        visitGanjoor: 'Visit Ganjoor ↗', aboutLabel: 'About the project',
+        about: 'Hashiyeh / حاشیه means “the margin.” A personal project by Maryam Fooladi, bringing translation, applied NLP, and digital humanities into the same reading space.',
+        badge: 'Design prototype · Chapter one', backToTree: 'Back to the tree ↑'
+      },
+      fa: {
+        tagline: 'خواندن در حاشیه', navExplore: 'کاوش', navRead: 'خواندن', navMethod: 'روش',
+        cypressAlt: 'سروی به شیوهٔ نگارگری ایرانی با شاخه‌های شکوفه و دو پرنده',
+        scroll: 'برای کاوش پایین بروید', kicker: 'کلیله و دمنه · یک خوانش دیجیتال',
+        h1a: 'زندگی فارسیِ', h1b: 'یک کتاب جهانی.',
+        lead: 'داستان‌ها، داستان‌های دیگری را با خود می‌برند؛ از زبانی به زبان دیگر، از سده‌ای به سدهٔ دیگر، و گاه در سخنِ شغالی زیرک.',
+        sub: 'کاوشی در نثر فارسی نصرالله منشی، با ترجمه، ساختار روایت و حاشیه‌نویسی رایانشی.',
+        cta: 'ورود به داستان', methodLink: 'یادداشتی دربارهٔ روش ↓', projectBy: 'پروژه‌ای از', author: 'مریم فولادی',
+        skills: 'ترجمه · پردازش زبان طبیعی · علوم انسانی دیجیتال',
+        atlasLabel: '۰۱ / اطلس روایت', outline: 'نمای فهرست',
+        atlasNote: 'تصویر آغازین ساخته‌شده با هوش مصنوعی و با الهام از سرو و نگارگری ایرانی است. قاب‌های تودرتو، سه داستان از شرح پروژه را نشان می‌دهند.',
+        inMargin: 'در حاشیه', position: 'جایگاه در روایت', across: 'مقایسهٔ نسخه‌ها', openPreview: 'بازکردن پیش‌نمایش خواندن',
+        selectHint: 'داستانی را انتخاب کنید تا جایگاهش در باب روشن شود.',
+        band: 'متن در مرکز؛ پرسش‌ها در حاشیه.',
+        lionAlt: 'نگاره‌ای به شیوهٔ نسخه‌های فارسی: دمنه گاو شنزبه را نزد شیر می‌برد',
+        lionCaption: 'تصویر معاصرِ ساخته‌شده با هوش مصنوعی، با الهام از نگارگری ایرانی؛ نه تصویر یک نسخهٔ تاریخی.',
+        chapterKicker: 'آغاز با یک باب · شیر و گاو', enterA: 'وارد داستان شوید.', enterB: 'داستانی دیگر در آن بیابید.',
+        closeReading: 'نخست، خواندن دقیق: داستانی را دنبال کنید، جایگاهش را ببینید و بپرسید در نسخه‌های دیگر چه تغییر می‌کند.',
+        previewLabel: 'پیش‌نمایش خواندن', notQuotes: 'خلاصه‌های تحریری · نه نقل‌قول از متن',
+        persianMonshi: 'فارسی · نصرالله منشی', englishNote: 'انگلیسی · یادداشت مقایسه‌ای',
+        kfNote: 'ترجمهٔ انگلیسی کیث فالکونر (۱۸۸۵) بر پایهٔ نسخهٔ سریانیِ متأخر است؛ متنی برای مقایسه، نه ترجمهٔ فارسی منشی. متن اصلی و نشانی دقیق بخش‌ها در مرحلهٔ بعد افزوده می‌شوند.',
+        notebook: 'دفتر پژوهش باز', howA: 'این حاشیه', howB: 'چگونه ساخته می‌شود؟',
+        howLead: 'این رابط دعوتی است به خواندن. هر ادعا باید مسیری روشن به متن داشته باشد.',
+        visitGanjoor: 'بازدید از گنجور ↗', aboutLabel: 'دربارهٔ پروژه',
+        about: 'حاشیه، فضایی پیرامون متن است. پروژه‌ای شخصی از مریم فولادی که ترجمه، پردازش زبان طبیعی و علوم انسانی دیجیتال را در یک فضای خواندن گرد هم می‌آورد.',
+        badge: 'ماکت طراحی · باب نخست', backToTree: 'بازگشت به درخت ↑'
+      }
+    };
+    var t = T[lang];
+    var bothEn = 'In the project’s Persian text and in its later-Syriac comparator.';
+    var bothFa = 'هم در متن فارسی پروژه و هم در متن مقایسه‌ای سریانیِ متأخر.';
+    var D = [
+      { num: '01', en: 'The Lion and the Ox', faT: 'شیر و گاو', kEn: 'Chapter', kFa: 'باب',
+        sEn: 'The frame of the first chapter: the jackal Dimna turns the Lion against his trusted friend, the ox Shanzabeh.',
+        sFa: 'قاب باب نخست: شغالی به نام دمنه، شیر را با دوست مورد اعتمادش، گاو شنزبه، دشمن می‌کند.',
+        pEn: 'The book’s first story chapter, told by the Brahman to the king of India.', pFa: 'نخستین باب داستانی کتاب؛ برهمن آن را برای رای هند روایت می‌کند.',
+        vEn: bothEn, vFa: bothFa },
+      { num: '02', en: 'The Two Partners', faT: 'دو شریک', kEn: 'Tale', kFa: 'حکایت',
+        sEn: 'A rogue cheats his simple partner and hides his father in a hollow tree as a false witness.',
+        sFa: 'شریکی حیله‌گر، شریک ساده‌دلش را فریب می‌دهد و پدرش را در درختی پنهان می‌کند تا گواهی دروغ دهد.',
+        pEn: 'Inside “The Lion and the Ox.”', pFa: 'درون باب «شیر و گاو».',
+        vEn: bothEn, vFa: bothFa },
+      { num: '03', en: 'The Frog and the Snake', faT: 'غوک و مار', kEn: 'Nested tale', kFa: 'حکایت در حکایت',
+        sEn: 'A small tale opens a larger question: what survives when a book moves between versions?',
+        sFa: 'حکایتی کوتاه، پرسشی بزرگ‌تر می‌گشاید: وقتی کتابی میان نسخه‌ها جابه‌جا می‌شود، چه چیز باقی می‌ماند؟',
+        pEn: 'Inside “The Two Partners,” within “The Lion and the Ox.”', pFa: 'درون «دو شریک»، در باب «شیر و گاو».',
+        vEn: 'Reported in the project’s Persian text; not found in its later-Syriac comparator. Source verification pending in this prototype.',
+        vFa: 'طبق دادهٔ معرفی‌شدهٔ پروژه در متن فارسی آمده، اما در متن مقایسه‌ای سریانیِ متأخر یافت نشده است. بررسی منابع در این ماکت هنوز انجام نشده است.' }
+    ];
+    var self = this;
+    var items = D.map(function (d, i) {
+      var on = i === picked;
+      return {
+        num: fa ? ['۰۱','۰۲','۰۳'][i] : d.num,
+        title: fa ? d.faT : d.en, kind: fa ? d.kFa : d.kEn, selected: on,
+        rowStyle: 'font: inherit; color: ' + (on ? '#2E4A9E' : '#1F1B16') + '; width: 100%; display: flex; align-items: center; gap: 12px; padding: 10px 8px; min-height: 44px; border: 0; cursor: pointer; text-align: start; background: ' + (on ? '#ECE6D8' : 'transparent') + '; border-inline-start: 3px solid ' + (on ? '#2E4A9E' : 'transparent'),
+        pick: function () { self.setState({ picked: i }); }
+      };
+    });
+    var d = D[picked];
+    var sel = {
+      num: items[picked].num, title: fa ? d.faT : d.en, faTitle: d.faT, enTitle: d.en,
+      summary: fa ? d.sFa : d.sEn, faSummary: d.sFa,
+      position: fa ? d.pFa : d.pEn, versions: fa ? d.vFa : d.vEn, enVersions: d.vEn
+    };
+    function frame(level) {
+      var on = picked === level;
+      var bg = level === 0 ? '#F3EAD9' : '#F1E6D2';
+      return 'display: flex; flex-direction: column; gap: 2px; padding: 14px; border: 1px solid ' + (on ? '#2E4A9E' : '#B8963E') + '; background: ' + bg + (on ? '; box-shadow: inset 0 0 0 1px #2E4A9E' : '');
+    }
+    var steps = fa ? [
+      { n: '۰۱', title: 'آغاز از منابع', body: 'متن فارسی از گنجور؛ متن انگلیسیِ مقایسه‌ای از چاپ ۱۸۸۵ کیث فالکونر. مسیرهای متفاوت انتقال این دو متن همواره مشخص می‌ماند.', link: true },
+      { n: '۰۲', title: 'ساختارِ قابل بررسی', body: 'پروژه با مجموعه‌ای از دوازده حکایتِ تطبیق‌یافته به‌صورت دستی در باب «شیر و گاو» آغاز می‌شود. این ماکت انتخاب سه داستان را نشان می‌دهد؛ مجموعه‌دادهٔ کامل هنوز متصل نشده است.', link: false },
+      { n: '۰۳', title: 'تفسیرِ پاسخ‌گو', body: 'حاشیه‌های آینده، پیشنهاد مدل را از تفسیر بازبینی‌شده جدا می‌کنند و هر ادعا را به متن پیوند می‌دهند. تطبیق شعرها و آزمایش عامل‌ها به مراحل بعدی پژوهش تعلق دارند.', link: false }
+    ] : [
+      { n: '01', title: 'Start with the sources', body: 'Persian text from Ganjoor; an English comparator from Keith-Falconer’s 1885 edition. Their different transmission paths remain explicit.', link: true },
+      { n: '02', title: 'Make the structure inspectable', body: 'The project begins with a hand-aligned set of twelve tales in “The Lion and the Ox.” This mockup demonstrates three story selections; the complete dataset is not yet connected.', link: false },
+      { n: '03', title: 'Keep interpretation accountable', body: 'Future annotations will distinguish model suggestions from reviewed interpretations and link each claim to a source passage. Verse matching and agent experiments are later research stages.', link: false }
+    ];
+    var btnOn = 'font: inherit; font-size: 14px; background: transparent; border: 0; padding: 8px 6px; min-height: 40px; cursor: pointer; color: #2E4A9E; text-decoration: underline';
+    var btnOff = 'font: inherit; font-size: 14px; background: transparent; border: 0; padding: 8px 6px; min-height: 40px; cursor: pointer; color: #1F1B16';
+    return {
+      lang: lang, dir: fa ? 'rtl' : 'ltr', isEn: !fa, isFa: fa,
+      rootStyle: 'background: #F8F0E4; color: #1F1B16; min-height: 100vh; line-height: 1.55; font-family: ' + (fa ? "'Noto Naskh Arabic', serif; font-size: 17px" : "'EB Garamond', Georgia, serif; font-size: 18px"),
+      enStyle: fa ? btnOff : btnOn, faStyle: (fa ? btnOn : btnOff) + "; font-family: 'Noto Naskh Arabic', serif",
+      setEn: function () { self.setState({ lang: 'en' }); }, setFa: function () { self.setState({ lang: 'fa' }); },
+      t: t, items: items, sel: sel, steps: steps, a0: items[0], a1: items[1], a2: items[2],
+      f1: frame(0), f2: frame(1), f3: frame(2)
+    };
+  }
+}
+</script>
+</body>
+</html>

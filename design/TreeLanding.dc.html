@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Landing as a tale tree — demo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F1E3}
+a{color:#2E4A9E}a:hover{color:#1F3474}
+</style>
+</helmet>
+<div style="background: #F7F1E3; color: #1F1B16; font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.55; min-height: 100vh">
+
+<header style="max-width: 1320px; margin: 0 auto; padding: 22px 32px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid #D9CBA8">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-size: 24px; font-weight: 600">Hashiyeh</span>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 21px; color: #6B5F4E">حاشیه</span>
+</div>
+<nav style="display: flex; gap: 22px; font-size: 17px" aria-label="Main">
+<a href="#tree" style="color: #1F1B16">The tale tree</a>
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="color: #1F1B16">Reader</a>
+<a href="#" style="color: #1F1B16">Method</a>
+</nav>
+</header>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 48px 32px 24px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #A2471F">Kalila and Dimna · the chapter of the Lion and the Ox</p>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.08; font-weight: 500; max-width: 900px">A story inside a story inside a story</h1>
+<p style="margin: 0; font-size: 20px; max-width: 760px">Every frame below is a tale told inside another tale, the way the book is built. Choose any frame to see who tells it, to whom, and where it sits.</p>
+</section>
+
+<section id="tree" style="max-width: 1320px; margin: 0 auto; padding: 16px 32px 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+<div style="flex: 999 1 640px; min-width: 0; border: 3px double #B8963E; padding: 18px; display: flex; flex-direction: column; gap: 14px; background: #FBF7EC">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px">
+<span style="font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #6B5F4E">Outer frame · the King of India asks the Brahman</span>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 16px; color: #6B5F4E">رای هند و برهمن</span>
+</div>
+
+<div style="border: 1px solid #2E4A9E; padding: 16px; display: flex; flex-direction: column; gap: 14px; background: #F7F1E3">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px">
+<span style="font-size: 22px; font-weight: 600">The Lion and the Ox</span>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 19px">باب شیر و گاو</span>
+</div>
+<p style="margin: 0; font-size: 16px; color: #4A4136">Main story: the jackal Dimna turns the Lion against his trusted friend, the ox Shanzabeh. Kalila, his brother, tries to stop him. Inside it, the characters argue with tales.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{ tales }}" as="t" hint-placeholder-count="9">
+<div style="{{ t.boxStyle }}">
+<button onClick="{{ t.pick }}" aria-pressed="{{ t.selected }}" style="font: inherit; text-align: left; background: transparent; border: 0; padding: 0; cursor: pointer; color: #1F1B16; display: flex; flex-direction: column; gap: 2px; min-height: 44px; width: 100%">
+<span style="font-size: 17px; font-weight: 600; line-height: 1.3">{{ t.en }}</span>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 15px; color: #4A4136; align-self: flex-end">{{ t.fa }}</span>
+<span style="font-size: 13px; color: #6B5F4E">{{ t.tellerShort }}</span>
+</button>
+<sc-for list="{{ t.children }}" as="c" hint-placeholder-count="0">
+<div style="{{ c.boxStyle }}">
+<button onClick="{{ c.pick }}" aria-pressed="{{ c.selected }}" style="font: inherit; text-align: left; background: transparent; border: 0; padding: 0; cursor: pointer; color: #1F1B16; display: flex; flex-direction: column; gap: 2px; min-height: 44px; width: 100%">
+<span style="font-size: 15px; font-weight: 600; line-height: 1.3">{{ c.en }}</span>
+<span lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 14px; color: #4A4136; align-self: flex-end">{{ c.fa }}</span>
+<span style="font-size: 12px; color: #6B5F4E">{{ c.tellerShort }}</span>
+</button>
+</div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+
+<p style="margin: 0; font-size: 14px; color: #6B5F4E">Nine tales in the chapter, three with a tale nested inside. Frames with a dashed border are told inside the frame around them.</p>
+</div>
+
+<aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; border-top: 3px solid #2E4A9E; padding-top: 16px" aria-live="polite">
+<sc-if value="{{ noneSelected }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="/_blob/7f6b8e9073f5d5c5d0ccf184f4089126" alt="Illustration in Persian manuscript style: Dimna presents the ox Shanzabeh to the lion" style="width: 100%; height: auto; display: block">
+<p style="margin: 0; font-size: 17px">Choose a frame on the left. This side is the <em>hashiyeh</em>, the margin, where the commentary lives.</p>
+</div>
+</sc-if>
+<sc-if value="{{ hasSelected }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #A2471F">{{ sel.kind }}</span>
+<h2 style="margin: 0; font-size: 30px; line-height: 1.15; font-weight: 500">{{ sel.en }}</h2>
+<p lang="fa" dir="rtl" style="margin: 0; font-family: 'Noto Naskh Arabic', serif; font-size: 22px">{{ sel.fa }}</p>
+<p style="margin: 0">{{ sel.summary }}</p>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 16px">
+<div style="display: flex; gap: 10px; border-top: 1px solid #D9CBA8; padding-top: 8px"><dt style="width: 110px; flex: none; color: #6B5F4E">Told by</dt><dd style="margin: 0">{{ sel.teller }}</dd></div>
+<div style="display: flex; gap: 10px; border-top: 1px solid #D9CBA8; padding-top: 8px"><dt style="width: 110px; flex: none; color: #6B5F4E">Sits inside</dt><dd style="margin: 0">{{ sel.inside }}</dd></div>
+<div style="display: flex; gap: 10px; border-top: 1px solid #D9CBA8; padding-top: 8px"><dt style="width: 110px; flex: none; color: #6B5F4E">Versions</dt><dd style="margin: 0">{{ sel.versions }}</dd></div>
+</dl>
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="align-self: flex-start; background: #2E4A9E; color: #F7F1E3; text-decoration: none; padding: 10px 20px; border-radius: 3px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Read side by side</a>
+</div>
+</sc-if>
+</aside>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var picked = (this.state && this.state.picked) || null;
+    var both = 'Persian (Monshi) and later Syriac (Keith-Falconer)';
+    var data = [
+      { id: 'ape', en: 'The Ape and the Carpenter', fa: 'بوزنه و درودگر', teller: 'Kalila, to Dimna', summary: 'An ape copies a carpenter, pulls out the wedge, and is caught in the split log. Kalila’s warning: do not meddle in what is not your business.', versions: both },
+      { id: 'crow', en: 'The Crow and the Snake', fa: 'زاغ و مار', teller: '', summary: 'A crow whose chicks a snake keeps eating gets the snake killed by cunning, with a stolen necklace.', versions: both,
+        children: [ { id: 'heron', en: 'The Heron and the Crab', fa: 'ماهی‌خوار و پنج‌پایک', teller: '', summary: 'An old heron fools the fish of a pond into being “carried to safety” and eats them, until a crab grips his throat.', versions: both } ] },
+      { id: 'hare', en: 'The Lion and the Hare', fa: 'شیر و خرگوش', teller: '', summary: 'The hare chosen as the lion’s meal leads him to a well, where the lion leaps at his own reflection.', versions: both },
+      { id: 'fish', en: 'The Three Fishes', fa: 'سه ماهی', teller: 'Dimna, to the Lion', summary: 'Facing the fishermen, the prudent fish leaves early, the clever one plays dead, the idle one is caught. Dimna uses it to rush the Lion into acting.', versions: both },
+      { id: 'camel', en: 'The Wolf, the Crow, the Jackal and the Camel', fa: 'گرگ و زاغ و شغال و اشتر', teller: 'Shanzabeh, to Dimna', summary: 'Three courtiers talk their lion into eating the camel he had promised to protect. The ox sees his own fate in it.', versions: both },
+      { id: 'sand', en: 'The Sandpiper and the Sea', fa: 'طیطوی و دریا', teller: 'Dimna, to Shanzabeh', summary: 'A small shore bird whose eggs the sea washes away rallies all the birds until the sea gives them back.', versions: both,
+        children: [ { id: 'tort', en: 'The Tortoise and the Geese', fa: 'باخه و دو بط', teller: 'The hen-bird, to her mate', summary: 'Two geese carry a tortoise on a stick. She opens her mouth to answer the onlookers, and falls.', versions: both } ] },
+      { id: 'apes', en: 'The Apes and the Glow-worm', fa: 'بوزینگان و کرم شب‌تاب', teller: 'Kalila, to Dimna', summary: 'Apes try to warm themselves at a glow-worm. The bird who corrects them is killed for it.', versions: both },
+      { id: 'partners', en: 'The Two Partners', fa: 'دو شریک', teller: 'Kalila, to Dimna', summary: 'A rogue cheats his simple partner and hides his father in a hollow tree as a false witness. Smoke brings out the truth.', versions: both,
+        children: [ { id: 'frog', en: 'The Frog and the Snake', fa: 'غوک و مار', teller: '', summary: 'A frog asks a crab for help against a snake. The remedy brings a worse enemy, who eats the frog too.', versions: 'Persian (Monshi) only. Not in the later Syriac.' } ] },
+      { id: 'iron', en: 'The Iron-Merchant', fa: 'بازرگان آهن‌فروش', teller: '', summary: 'A man claims mice ate his friend’s iron. The friend answers that an eagle carried off the man’s son.', versions: both }
+    ];
+    var self = this;
+    var byId = {};
+    function box(selected, nested) {
+      var base = nested
+        ? 'margin-top: 10px; padding: 10px 12px; border: 1px dashed #6B5F4E; display: flex; flex-direction: column; gap: 6px; '
+        : 'flex: 1 1 200px; min-width: 0; padding: 12px 14px; border: 1px solid #D9CBA8; display: flex; flex-direction: column; gap: 6px; ';
+      return base + (selected ? 'background: #E4E9F6; border-color: #2E4A9E; border-style: solid; box-shadow: inset 0 0 0 1px #2E4A9E' : 'background: #FBF7EC');
+    }
+    function prep(t, parent) {
+      var o = Object.assign({}, t);
+      o.selected = picked === t.id;
+      o.tellerShort = t.teller ? 'Told by ' + t.teller : 'Teller: to be labelled';
+      o.inside = parent ? parent.en : 'The Lion and the Ox (main story)';
+      o.kind = parent ? 'Nested tale' : 'Tale';
+      o.teller = t.teller || 'To be labelled. This is the next research step.';
+      o.boxStyle = box(o.selected, !!parent);
+      o.pick = function () { self.setState({ picked: t.id }); };
+      o.children = (t.children || []).map(function (c) { return prep(c, t); });
+      byId[t.id] = o;
+      return o;
+    }
+    var tales = data.map(function (t) { return prep(t, null); });
+    var sel = picked ? byId[picked] : null;
+    return {
+      tales: tales,
+      sel: sel || { en: '', fa: '', summary: '', teller: '', inside: '', versions: '', kind: '' },
+      hasSelected: !!sel,
+      noneSelected: !sel
+    };
+  }
+}
+</script>
+</body>
+</html>

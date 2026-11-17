@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hashiyeh — Kalila and Dimna in the margins</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F1E3}
+a{color:#2E4A9E}a:hover{color:#1F3474}
+</style>
+</helmet>
+<div style="background: #F7F1E3; color: #1F1B16; font-family: 'EB Garamond', Georgia, serif; font-size: 19px; line-height: 1.6; min-height: 100vh">
+
+<header style="max-width: 1240px; margin: 0 auto; padding: 22px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #D9CBA8">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-size: 24px; font-weight: 600; letter-spacing: 0.02em">Hashiyeh</span>
+<span style="font-family: 'Noto Naskh Arabic', serif; font-size: 22px; color: #6B5F4E" lang="fa" dir="rtl">حاشیه</span>
+</div>
+<div style="display: flex; gap: 6px; border: 1px solid #B8963E; border-radius: 999px; padding: 4px" role="group" aria-label="Language">
+<button onClick="{{ setEn }}" aria-pressed="{{ isEn }}" style="{{ enBtnStyle }}">English</button>
+<button onClick="{{ setFa }}" aria-pressed="{{ isFa }}" style="{{ faBtnStyle }}">فارسی</button>
+</div>
+</header>
+
+<sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+<main lang="en" dir="ltr">
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 32px 72px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; max-width: 520px">
+<img src="/_blob/7f6b8e9073f5d5c5d0ccf184f4089126" alt="Illustration in Persian manuscript style: the jackal Dimna presents the ox Shanzabeh to the lion, while Kalila sits beside him" style="width: 100%; height: auto; display: block; box-shadow: 0 1px 0 #D9CBA8">
+<p style="margin: 10px 0 0; font-size: 14px; color: #6B5F4E; font-style: italic">Dimna brings the ox Shanzabeh before the Lion. AI-generated illustration after the Persian manuscript tradition.</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #A2471F">A digital reading of Kalila and Dimna</p>
+<h1 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 500">Kalila and Dimna, read in the margins</h1>
+<p style="margin: 0; font-size: 21px">A book of animal fables that travelled from India to Persia, into Arabic, back into Persian, and on to Europe. This project reads Nasrollah Monshi’s twelfth-century Persian version beside its other branches, and puts the computational work where Persian readers always put commentary: in the margin.</p>
+<figure style="margin: 8px 0 0; padding: 20px 24px; border-top: 1px solid #B8963E; border-bottom: 1px solid #B8963E; display: flex; flex-direction: column; gap: 10px">
+<blockquote lang="fa" dir="rtl" style="margin: 0; font-family: 'Noto Naskh Arabic', serif; font-size: 22px; line-height: 1.9">رای هند فرمود برهمن را که: بیان کن از جهت من مَثَل دو تن که با یک دیگر دوستی دارند و به تضریب نَمّام خائن بنای آن خلل پذیرد و به عداوت و مفارقت کشد.</blockquote>
+<figcaption style="font-size: 16px; color: #4A4136"><em>“Tell me the parable of two friends whose bond is broken by the slander of a treacherous talebearer, until it ends in enmity and parting.”</em> The king of India to his Brahman, opening the chapter of the Lion and the Ox.</figcaption>
+</figure>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px">
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="background: #2E4A9E; color: #F7F1E3; text-decoration: none; padding: 12px 22px; border-radius: 3px; font-size: 18px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Read the Lion and the Ox</a>
+<a href="#method" style="color: #1F1B16; text-decoration: none; padding: 12px 22px; border: 1px solid #1F1B16; border-radius: 3px; font-size: 18px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">How it was made</a>
+</div>
+</div>
+</section>
+
+<section style="background: #EFE5CF; border-top: 1px solid #D9CBA8; border-bottom: 1px solid #D9CBA8">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 32px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px">
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #A2471F">The journey</p>
+<h2 style="margin: 0; font-size: 42px; font-weight: 500; line-height: 1.15">A book that travelled</h2>
+<p style="margin: 0">Four of its six stops pass through Persian hands. The highlighted ones are Persian.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px">
+<li style="flex: 1 1 180px; min-width: 0; background: #F7F1E3; border: 1px solid #D9CBA8; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #6B5F4E">India · Sanskrit</span>
+<strong style="font-size: 21px; font-weight: 600">Panchatantra</strong>
+<span style="font-size: 16px">Animal fables written to teach princes how to rule.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #E3D7B8">Persia · Pahlavi · 6th c.</span>
+<strong style="font-size: 21px; font-weight: 600">Borzuya</strong>
+<span style="font-size: 16px">A physician at the court of Khosrow I brings the book from India. His translation is lost.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #E3D7B8">Arabic · c. 750</span>
+<strong style="font-size: 21px; font-weight: 600">Ibn al-Muqaffaʿ</strong>
+<span style="font-size: 16px">A Persian writing in Arabic. Every later version descends from his.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 6px; outline: 3px solid #B8963E; outline-offset: 3px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #E3D7B8">Persian · 12th c.</span>
+<strong style="font-size: 21px; font-weight: 600">Nasrollah Monshi</strong>
+<span style="font-size: 16px">Recasts the Arabic as ornate Persian prose, woven with verse. The text this project reads.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #F7F1E3; border: 1px solid #D9CBA8; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #6B5F4E">Castile · 1251</span>
+<strong style="font-size: 21px; font-weight: 600">Calila e Dimna</strong>
+<span style="font-size: 16px">One of the European branches, translated from the Arabic for the future Alfonso X.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #E3D7B8">Herat · Persian · 15th c.</span>
+<strong style="font-size: 21px; font-weight: 600">Anvar-i Soheili</strong>
+<span style="font-size: 16px">Kashefi’s new Persian retelling, copied and illustrated again and again.</span>
+</li>
+</ol>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 72px 32px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #A2471F">Inside the project</p>
+<h2 style="margin: 0; font-size: 42px; font-weight: 500; line-height: 1.15">Three ways in</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="flex: 1 1 300px; min-width: 0; color: #1F1B16; text-decoration: none; border-top: 3px solid #2E4A9E; padding-top: 18px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #2E4A9E">Prototype</span>
+<strong style="font-size: 26px; font-weight: 500">Read the Lion and the Ox</strong>
+<span>Twelve tales from the first chapter. Monshi’s Persian beside the 1885 English, nested the way the book nests them.</span>
+<span style="color: #2E4A9E">Open the reader →</span>
+</a>
+<div style="flex: 1 1 300px; min-width: 0; border-top: 3px solid #A2471F; padding-top: 18px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #A2471F">In progress</span>
+<strong style="font-size: 26px; font-weight: 500">Where the verses come from</strong>
+<span>Monshi quotes more than two hundred Persian couplets without naming their poets. Matching them against the Ganjoor corpus shows who he was reading.</span>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; border-top: 3px solid #6B5F4E; padding-top: 18px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #6B5F4E">Planned</span>
+<strong style="font-size: 26px; font-weight: 500">Tales as arguments</strong>
+<span>Every tale in the book is told by someone, to someone, for a reason. A map of who uses which story to win which argument.</span>
+</div>
+</div>
+</section>
+
+<section id="method" style="background: #1F1B16; color: #EFE5CF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px 32px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #D9A06B">Method and data</p>
+<h2 style="margin: 0; font-size: 42px; font-weight: 500; line-height: 1.15; color: #F7F1E3">How it was made</h2>
+<p style="margin: 0">Open sources, a reproducible pipeline, and the limits stated plainly.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px">
+<a href="#" style="color: #F7F1E3; border: 1px solid #EFE5CF; padding: 10px 18px; border-radius: 3px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Dataset (JSON) [LINK]</a>
+<a href="#" style="color: #F7F1E3; border: 1px solid #EFE5CF; padding: 10px 18px; border-radius: 3px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Code on GitHub [LINK]</a>
+</div>
+</div>
+<dl style="flex: 2 1 520px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 22px">
+<div style="border-top: 1px solid #4A4136; padding-top: 14px">
+<dt style="font-weight: 600; color: #F7F1E3">Persian text</dt>
+<dd style="margin: 4px 0 0">Nasrollah Monshi, <em>Kelileh o Demneh</em>, the full text from the Ganjoor API: 19 chapters, 250 sections, about 85,000 words.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 14px">
+<dt style="font-weight: 600; color: #F7F1E3">English text</dt>
+<dd style="margin: 4px 0 0">I. G. N. Keith-Falconer, <em>Kalilah and Dimnah</em> (Cambridge, 1885), translated from the later Syriac. Public-domain scan on archive.org.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 14px">
+<dt style="font-weight: 600; color: #F7F1E3">Alignment</dt>
+<dd style="margin: 4px 0 0">Tale boundaries in the Lion and the Ox chapter marked by hand and linked across both versions, with each tale’s place in the frame story.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 14px">
+<dt style="font-weight: 600; color: #F7F1E3">Limits</dt>
+<dd style="margin: 4px 0 0">The English comes from the Syriac branch, not from Monshi, so the two columns are cousins rather than original and translation. Some OCR noise remains in the English.</dd>
+</div>
+</dl>
+</div>
+</section>
+
+<footer style="max-width: 1240px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 16px; color: #4A4136">
+<span>Made by Maryam Fooladi · Language Technologies and Digital Humanities · <a href="#">CV [LINK]</a></span>
+<span>Illustrations generated with AI, after the Persian manuscript tradition.</span>
+</footer>
+</main>
+</sc-if>
+
+<sc-if value="{{ isFa }}" hint-placeholder-val="{{ false }}">
+<main lang="fa" dir="rtl" style="font-family: 'Noto Naskh Arabic', serif; font-size: 18px; line-height: 2">
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 32px 72px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; max-width: 520px">
+<img src="/_blob/7f6b8e9073f5d5c5d0ccf184f4089126" alt="نگاره‌ای به شیوهٔ نسخه‌های خطی فارسی: دمنه گاو شنزبه را نزد شیر می‌برد و کلیله کنار او نشسته است" style="width: 100%; height: auto; display: block; box-shadow: 0 1px 0 #D9CBA8">
+<p style="margin: 10px 0 0; font-size: 14px; color: #6B5F4E">دمنه شنزبه را نزد شیر می‌برد. نگاره با هوش مصنوعی و به پیروی از سنت نگارگری نسخه‌های فارسی ساخته شده است.</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 16px; color: #A2471F; font-weight: 600">خوانشی دیجیتال از کلیله و دمنه</p>
+<h1 style="margin: 0; font-size: 50px; line-height: 1.5; font-weight: 600">کلیله و دمنه، خوانده در حاشیه</h1>
+<p style="margin: 0; font-size: 19px">کتابی از حکایت‌های جانوران که از هند به ایران رسید، به عربی رفت، دوباره به فارسی برگشت و از آنجا راهی اروپا شد. این پروژه کلیله و دمنهٔ نصرالله منشی را در کنار شاخه‌های دیگرش می‌خواند و کار محاسباتی را همان‌جا می‌نشاند که خوانندگان فارسی همیشه شرح و تفسیر را می‌نوشتند: در حاشیه.</p>
+<figure style="margin: 8px 0 0; padding: 20px 24px; border-top: 1px solid #B8963E; border-bottom: 1px solid #B8963E; display: flex; flex-direction: column; gap: 10px">
+<blockquote style="margin: 0; font-size: 22px; line-height: 1.9">رای هند فرمود برهمن را که: بیان کن از جهت من مَثَل دو تن که با یک دیگر دوستی دارند و به تضریب نَمّام خائن بنای آن خلل پذیرد و به عداوت و مفارقت کشد.</blockquote>
+<figcaption style="font-size: 15px; color: #4A4136">آغاز باب شیر و گاو</figcaption>
+</figure>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px">
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="background: #2E4A9E; color: #F7F1E3; text-decoration: none; padding: 10px 22px; border-radius: 3px; font-size: 17px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">خواندن باب شیر و گاو</a>
+<a href="#method-fa" style="color: #1F1B16; text-decoration: none; padding: 10px 22px; border: 1px solid #1F1B16; border-radius: 3px; font-size: 17px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">روش کار</a>
+</div>
+</div>
+</section>
+
+<section style="background: #EFE5CF; border-top: 1px solid #D9CBA8; border-bottom: 1px solid #D9CBA8">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 32px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 720px">
+<p style="margin: 0; font-size: 16px; color: #A2471F; font-weight: 600">سفر کتاب</p>
+<h2 style="margin: 0; font-size: 36px; font-weight: 600; line-height: 1.5">کتابی که سفر کرد</h2>
+<p style="margin: 0">چهار منزل از شش منزل این سفر از دست ایرانیان گذشته است. منزل‌های ایرانی پررنگ شده‌اند.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px">
+<li style="flex: 1 1 180px; min-width: 0; background: #F7F1E3; border: 1px solid #D9CBA8; padding: 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #6B5F4E">هند · سنسکریت</span>
+<strong style="font-size: 20px">پنچه‌تنتره</strong>
+<span style="font-size: 15px">حکایت‌هایی برای آموختن آیین کشورداری به شاهزادگان.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #E3D7B8">ایران · پهلوی · قرن ششم میلادی</span>
+<strong style="font-size: 20px">برزویه</strong>
+<span style="font-size: 15px">طبیب دربار انوشیروان کتاب را از هند می‌آورد. ترجمهٔ او از میان رفته است.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #E3D7B8">عربی · حدود ۷۵۰ میلادی</span>
+<strong style="font-size: 20px">ابن مقفع</strong>
+<span style="font-size: 15px">ایرانی‌ای که به عربی می‌نوشت. همهٔ نسخه‌های بعدی از ترجمهٔ او می‌آیند.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 4px; outline: 3px solid #B8963E; outline-offset: 3px">
+<span style="font-size: 14px; color: #E3D7B8">فارسی · قرن ششم هجری</span>
+<strong style="font-size: 20px">نصرالله منشی</strong>
+<span style="font-size: 15px">متن عربی را به نثر فنی فارسی برمی‌گرداند و با شعر می‌آراید. متنی که این پروژه می‌خواند.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #F7F1E3; border: 1px solid #D9CBA8; padding: 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #6B5F4E">کاستیل · ۱۲۵۱ میلادی</span>
+<strong style="font-size: 20px">کلیله و دمنهٔ کاستیلی</strong>
+<span style="font-size: 15px">یکی از شاخه‌های اروپایی، ترجمه از عربی برای آلفونسوی دهم پیش از پادشاهی‌اش.</span>
+</li>
+<li style="flex: 1 1 180px; min-width: 0; background: #2E4A9E; color: #F7F1E3; padding: 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #E3D7B8">هرات · فارسی · قرن نهم هجری</span>
+<strong style="font-size: 20px">انوار سهیلی</strong>
+<span style="font-size: 15px">بازنویسی تازهٔ حسین واعظ کاشفی که بارها نسخه‌برداری و نگارگری شد.</span>
+</li>
+</ol>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 72px 32px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 16px; color: #A2471F; font-weight: 600">درون پروژه</p>
+<h2 style="margin: 0; font-size: 36px; font-weight: 600; line-height: 1.5">سه راه ورود</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="https://claude.ai/artifact/E8pCpmhAszH5zF8pzyNq4T" style="flex: 1 1 300px; min-width: 0; color: #1F1B16; text-decoration: none; border-top: 3px solid #2E4A9E; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; color: #2E4A9E; font-weight: 600">نمونهٔ اولیه</span>
+<strong style="font-size: 23px">خواندن باب شیر و گاو</strong>
+<span>دوازده حکایت از باب نخست. متن منشی در کنار ترجمهٔ انگلیسی ۱۸۸۵، تودرتو همان‌گونه که در کتاب آمده‌اند.</span>
+<span style="color: #2E4A9E">باز کردن متن ←</span>
+</a>
+<div style="flex: 1 1 300px; min-width: 0; border-top: 3px solid #A2471F; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; color: #A2471F; font-weight: 600">در حال انجام</span>
+<strong style="font-size: 23px">این شعرها از کجا آمده‌اند؟</strong>
+<span>منشی بیش از دویست بیت فارسی آورده و نام بیشتر سرایندگان را نگفته است. مقایسهٔ آن‌ها با پیکرهٔ گنجور نشان می‌دهد او چه کسانی را می‌خوانده.</span>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; border-top: 3px solid #6B5F4E; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; color: #6B5F4E; font-weight: 600">برنامه‌ریزی‌شده</span>
+<strong style="font-size: 23px">حکایت به‌مثابهٔ استدلال</strong>
+<span>هر حکایت را کسی برای کسی و به قصدی می‌گوید. نقشه‌ای از این‌که چه کسی با کدام حکایت می‌خواهد کدام بحث را ببرد.</span>
+</div>
+</div>
+</section>
+
+<section id="method-fa" style="background: #1F1B16; color: #EFE5CF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px 32px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 16px; color: #D9A06B; font-weight: 600">روش و داده</p>
+<h2 style="margin: 0; font-size: 36px; font-weight: 600; line-height: 1.5; color: #F7F1E3">چگونه ساخته شد</h2>
+<p style="margin: 0">منابع باز، فرایندی تکرارپذیر، و محدودیت‌هایی که صریح گفته شده‌اند.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px">
+<a href="#" style="color: #F7F1E3; border: 1px solid #EFE5CF; padding: 8px 18px; border-radius: 3px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">داده‌ها (JSON) [LINK]</a>
+<a href="#" style="color: #F7F1E3; border: 1px solid #EFE5CF; padding: 8px 18px; border-radius: 3px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">کد در گیت‌هاب [LINK]</a>
+</div>
+</div>
+<dl style="flex: 2 1 520px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="border-top: 1px solid #4A4136; padding-top: 12px">
+<dt style="font-weight: 700; color: #F7F1E3">متن فارسی</dt>
+<dd style="margin: 4px 0 0">کلیله و دمنهٔ نصرالله منشی، متن کامل از API گنجور: ۱۹ باب، ۲۵۰ بخش، حدود ۸۵ هزار کلمه.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 12px">
+<dt style="font-weight: 700; color: #F7F1E3">متن انگلیسی</dt>
+<dd style="margin: 4px 0 0">ترجمهٔ کیث-فالکنر (کمبریج، ۱۸۸۵) از روایت سریانی متأخر؛ نسخهٔ اسکن‌شدهٔ آزاد در archive.org.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 12px">
+<dt style="font-weight: 700; color: #F7F1E3">هم‌ترازی</dt>
+<dd style="margin: 4px 0 0">مرز حکایت‌های باب شیر و گاو با دست مشخص و میان دو روایت پیوند داده شده، همراه با جای هر حکایت در داستان قاب.</dd>
+</div>
+<div style="border-top: 1px solid #4A4136; padding-top: 12px">
+<dt style="font-weight: 700; color: #F7F1E3">محدودیت‌ها</dt>
+<dd style="margin: 4px 0 0">متن انگلیسی از شاخهٔ سریانی است، نه ترجمهٔ متن منشی؛ پس دو ستون خویشاوندند، نه اصل و ترجمه. بخشی از خطاهای OCR در متن انگلیسی مانده است.</dd>
+</div>
+</dl>
+</div>
+</section>
+
+<footer style="max-width: 1240px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 15px; color: #4A4136">
+<span>ساختهٔ مریم فولادی · فناوری زبان و علوم انسانی دیجیتال · <a href="#">رزومه [LINK]</a></span>
+<span>نگاره‌ها با هوش مصنوعی و به پیروی از سنت نگارگری نسخه‌های فارسی ساخته شده‌اند.</span>
+</footer>
+</main>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"defaultLang":{"editor":"enum","options":["en","fa"],"default":"en"},"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var lang = (this.state && this.state.lang) || this.props.defaultLang || 'en';
+    var on = 'font: inherit; font-size: 15px; padding: 8px 16px; min-height: 40px; border: 0; border-radius: 999px; cursor: pointer; background: #1F1B16; color: #F7F1E3';
+    var off = 'font: inherit; font-size: 15px; padding: 8px 16px; min-height: 40px; border: 0; border-radius: 999px; cursor: pointer; background: transparent; color: #1F1B16';
+    return {
+      isEn: lang === 'en',
+      isFa: lang === 'fa',
+      enBtnStyle: lang === 'en' ? on : off,
+      faBtnStyle: lang === 'fa' ? on : off + "; font-family: 'Noto Naskh Arabic', serif",
+      setEn: () => this.setState({ lang: 'en' }),
+      setFa: () => this.setState({ lang: 'fa' })
+    };
+  }
+}
+</script>
+</body>
+</html>
