@@ -1,0 +1,47 @@
+{
+ "note": "Only tellers checked against the text are listed. Every other tale has no entry: the reader shows nothing until it is confirmed.",
+ "tellers": {
+  "ape_carpenter": {
+   "fa": "کلیله ← دمنه",
+   "en": "Kalila → Dimna",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "three_fishes": {
+   "fa": "دمنه ← شیر",
+   "en": "Dimna → Lion",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "camel": {
+   "fa": "گاو ← دمنه",
+   "en": "Ox → Dimna",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "sandpiper": {
+   "fa": "دمنه ← گاو",
+   "en": "Dimna → Ox",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "apes_glowworm": {
+   "fa": "کلیله ← دمنه",
+   "en": "Kalila → Dimna",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "two_partners": {
+   "fa": "کلیله ← دمنه",
+   "en": "Kalila → Dimna",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  },
+  "tortoise_geese": {
+   "fa": "طیطوی ماده ← طیطوی نر",
+   "en": "Hen sandpiper → cock sandpiper",
+   "verified": true,
+   "basis": "checked against the text (see CLAUDE.md)"
+  }
+ }
+}

@@ -1,0 +1,154 @@
+[
+ {
+  "slug": "mghdme-nasr",
+  "n": 1,
+  "title_fa": "مقدمهٔ نصرالله منشی",
+  "title_en": "Nasrollah Monshi's preface",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 30
+ },
+ {
+  "slug": "moghaffa",
+  "n": 2,
+  "title_fa": "مفتتح کتاب بر ترتیب ابن المقفع",
+  "title_en": "Opening of the book, in Ibn al-Muqaffaʿ's order",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 21
+ },
+ {
+  "slug": "bozorgmehr",
+  "n": 3,
+  "title_fa": "ابتدای کلیله و دمنه، و هو من کلام بزرجمهر البختکان",
+  "title_en": "Beginning of Kalila and Dimna: words of Buzurgmihr",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 12
+ },
+ {
+  "slug": "borzooye",
+  "n": 4,
+  "title_fa": "باب برزویه الطبیب",
+  "title_en": "Borzuya the physician",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 14
+ },
+ {
+  "slug": "shirogav",
+  "n": 5,
+  "title_fa": "باب الاسد و الثور",
+  "title_en": "The Lion and the Ox",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 44
+ },
+ {
+  "slug": "demne",
+  "n": 6,
+  "title_fa": "باب الفحص عن امر دمنة",
+  "title_en": "Examining the case of Dimna",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 15
+ },
+ {
+  "slug": "kzmba",
+  "n": 7,
+  "title_fa": "باب الحمامة المطوقة و الجرذ والغراب والسلحفاة والظبی",
+  "title_en": "The Ringdove, the Mouse, the Crow, the Tortoise and the Gazelle",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 19
+ },
+ {
+  "slug": "boofozagh",
+  "n": 8,
+  "title_fa": "باب البوم و الغراب",
+  "title_en": "The Owls and the Crows",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 19
+ },
+ {
+  "slug": "boozineobakhe",
+  "n": 9,
+  "title_fa": "باب القرد و السلحفاة",
+  "title_en": "The Monkey and the Tortoise",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 7
+ },
+ {
+  "slug": "zahedorasoo",
+  "n": 10,
+  "title_fa": "باب الزاهد وابن عرس",
+  "title_en": "The Ascetic and the Weasel",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 4
+ },
+ {
+  "slug": "gorbeomoosh",
+  "n": 11,
+  "title_fa": "باب السنور و الجرذ",
+  "title_en": "The Cat and the Mouse",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 3
+ },
+ {
+  "slug": "paadorpar",
+  "n": 12,
+  "title_fa": "باب الملک والطائر فنزة",
+  "title_en": "The King and the bird Fanzah",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 7
+ },
+ {
+  "slug": "shiroshoghal",
+  "n": 13,
+  "title_fa": "باب الاسد و ابن آوی",
+  "title_en": "The Lion and the Jackal",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 14
+ },
+ {
+  "slug": "tirandaz",
+  "n": 14,
+  "title_fa": "باب النابل و اللبوة",
+  "title_en": "The Archer and the Lioness",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 3
+ },
+ {
+  "slug": "zahedomehman",
+  "n": 15,
+  "title_fa": "باب الزاهد والضیف",
+  "title_en": "The Ascetic and the Guest",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 3
+ },
+ {
+  "slug": "shahobaraheme",
+  "n": 16,
+  "title_fa": "باب الملک و البراهمة",
+  "title_en": "The King and the Brahmans",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 20
+ },
+ {
+  "slug": "zargarosayyah",
+  "n": 17,
+  "title_fa": "باب الصائغ و السیاح",
+  "title_en": "The Goldsmith and the Traveller",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 4
+ },
+ {
+  "slug": "shahzade",
+  "n": 18,
+  "title_fa": "باب ابن الملک و اصحابه",
+  "title_en": "The Prince and his Companions",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 9
+ },
+ {
+  "slug": "khtmonshi",
+  "n": 19,
+  "title_fa": "خاتمهٔ مترجم",
+  "title_en": "The translator's conclusion",
+  "title_en_status": "draft: English rendering of the Ganjoor chapter title",
+  "sections": 2
+ }
+]

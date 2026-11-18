@@ -1,0 +1,782 @@
+{
+ "note": "Draft meanings of hard words. Every entry is unverified until \"verified\" is set to true by hand.",
+ "entries": [
+  {
+   "word": "مناصحت",
+   "forms": [
+    "مناصحت"
+   ],
+   "meaning_fa": "نصیحت کردن از روی خیرخواهی",
+   "meaning_en": "giving sincere advice",
+   "occurrences": 27,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "moghaffa/sh19",
+    "shirogav/sh10"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "حصافت",
+   "forms": [
+    "حصافت"
+   ],
+   "meaning_fa": "خردمندی و استواریِ رأی",
+   "meaning_en": "soundness of judgement",
+   "occurrences": 19,
+   "example_sections": [
+    "mghdme-nasr/sh12",
+    "mghdme-nasr/sh24",
+    "moghaffa/sh12"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مفاوضت",
+   "forms": [
+    "مفاوضت",
+    "مفاوضتی"
+   ],
+   "meaning_fa": "گفتگو و رایزنی با یکدیگر",
+   "meaning_en": "conversation, consultation",
+   "occurrences": 22,
+   "example_sections": [
+    "shirogav/sh3",
+    "shirogav/sh30",
+    "shirogav/sh36"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "نهمت",
+   "forms": [
+    "نهمت",
+    "نهمتی"
+   ],
+   "meaning_fa": "آرزوی بزرگ، میل بسیار",
+   "meaning_en": "aspiration, strong desire",
+   "occurrences": 22,
+   "example_sections": [
+    "mghdme-nasr/sh10",
+    "moghaffa/sh2",
+    "borzooye/sh4"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "کیاست",
+   "forms": [
+    "کیاست",
+    "کیاستی"
+   ],
+   "meaning_fa": "زیرکی و هوشمندی",
+   "meaning_en": "shrewdness",
+   "occurrences": 20,
+   "example_sections": [
+    "moghaffa/sh4",
+    "shirogav/sh16",
+    "shirogav/sh44"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "تحرز",
+   "forms": [
+    "تحرز",
+    "تحرزی"
+   ],
+   "meaning_fa": "پرهیز و خود را نگه داشتن از زیان",
+   "meaning_en": "guarding oneself, caution",
+   "occurrences": 25,
+   "example_sections": [
+    "moghaffa/sh14",
+    "shirogav/sh30",
+    "shirogav/sh37"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "عزیمت",
+   "forms": [
+    "عزیمت"
+   ],
+   "meaning_fa": "آهنگ رفتن؛ تصمیم استوار",
+   "meaning_en": "setting out; firm resolve",
+   "occurrences": 33,
+   "example_sections": [
+    "borzooye/sh4",
+    "borzooye/sh8",
+    "shirogav/sh8"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مروت",
+   "forms": [
+    "مروت",
+    "مروتی"
+   ],
+   "meaning_fa": "جوانمردی و بزرگواری",
+   "meaning_en": "manly virtue, generosity",
+   "occurrences": 59,
+   "example_sections": [
+    "moghaffa/sh5",
+    "moghaffa/sh10",
+    "moghaffa/sh12"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "اصطناع",
+   "forms": [
+    "اصطناع",
+    "اصطناعی"
+   ],
+   "meaning_fa": "نیکی کردن و پروردنِ کسی",
+   "meaning_en": "patronage, bestowing favour",
+   "occurrences": 16,
+   "example_sections": [
+    "mghdme-nasr/sh9",
+    "moghaffa/sh21",
+    "borzooye/sh12"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "ملاطفت",
+   "forms": [
+    "ملاطفت",
+    "ملاطفتی"
+   ],
+   "meaning_fa": "مهربانی و نرمی",
+   "meaning_en": "gentleness, kindness",
+   "occurrences": 25,
+   "example_sections": [
+    "shirogav/sh16",
+    "shirogav/sh19",
+    "shirogav/sh26"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مشاورت",
+   "forms": [
+    "مشاورت",
+    "مشاورتی"
+   ],
+   "meaning_fa": "رأی زدن، مشورت کردن",
+   "meaning_en": "consultation",
+   "occurrences": 19,
+   "example_sections": [
+    "moghaffa/sh4",
+    "shirogav/sh16",
+    "shirogav/sh30"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "بسطت",
+   "forms": [
+    "بسطت",
+    "بسطتی"
+   ],
+   "meaning_fa": "گشادگی؛ فراوانی نعمت و قدرت",
+   "meaning_en": "expansiveness, ample power",
+   "occurrences": 15,
+   "example_sections": [
+    "mghdme-nasr/sh7",
+    "mghdme-nasr/sh8",
+    "mghdme-nasr/sh15"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "عقوبت",
+   "forms": [
+    "عقوبت",
+    "عقوبتی"
+   ],
+   "meaning_fa": "کیفر و مجازات",
+   "meaning_en": "punishment",
+   "occurrences": 24,
+   "example_sections": [
+    "moghaffa/sh11",
+    "shirogav/sh13",
+    "shirogav/sh18"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "حیلت",
+   "forms": [
+    "حیلت",
+    "حیلتها",
+    "حیلتی"
+   ],
+   "meaning_fa": "چاره‌جویی؛ نیرنگ",
+   "meaning_en": "stratagem, device",
+   "occurrences": 44,
+   "example_sections": [
+    "mghdme-nasr/sh13",
+    "bozorgmehr/sh1",
+    "borzooye/sh11"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "فکرت",
+   "forms": [
+    "فکرت",
+    "فکرتهای"
+   ],
+   "meaning_fa": "اندیشه",
+   "meaning_en": "thought, reflection",
+   "occurrences": 38,
+   "example_sections": [
+    "mghdme-nasr/sh29",
+    "moghaffa/sh2",
+    "borzooye/sh2"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "شبهت",
+   "forms": [
+    "شبهت",
+    "شبهتی"
+   ],
+   "meaning_fa": "شک و گمان",
+   "meaning_en": "doubt, uncertainty",
+   "occurrences": 27,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "moghaffa/sh11",
+    "bozorgmehr/sh10"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مستولی",
+   "forms": [
+    "مستولی"
+   ],
+   "meaning_fa": "چیره و غالب",
+   "meaning_en": "dominant, prevailing",
+   "occurrences": 19,
+   "example_sections": [
+    "moghaffa/sh9",
+    "borzooye/sh9",
+    "borzooye/sh12"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "نفاذ",
+   "forms": [
+    "نفاذ"
+   ],
+   "meaning_fa": "روا شدن و اجرا شدنِ فرمان",
+   "meaning_en": "taking effect (of an order)",
+   "occurrences": 19,
+   "example_sections": [
+    "mghdme-nasr/sh4",
+    "mghdme-nasr/sh6",
+    "mghdme-nasr/sh7"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مضرت",
+   "forms": [
+    "مضرت",
+    "مضرتی"
+   ],
+   "meaning_fa": "زیان",
+   "meaning_en": "harm",
+   "occurrences": 30,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "bozorgmehr/sh4",
+    "borzooye/sh11"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "شفقت",
+   "forms": [
+    "شفقت",
+    "شفقتی"
+   ],
+   "meaning_fa": "مهربانی و دلسوزی",
+   "meaning_en": "compassion",
+   "occurrences": 30,
+   "example_sections": [
+    "moghaffa/sh5",
+    "borzooye/sh1",
+    "shirogav/sh16"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "ثمرت",
+   "forms": [
+    "ثمرت",
+    "ثمرتی"
+   ],
+   "meaning_fa": "میوه؛ نتیجه",
+   "meaning_en": "fruit; result",
+   "occurrences": 20,
+   "example_sections": [
+    "mghdme-nasr/sh25",
+    "moghaffa/sh15",
+    "borzooye/sh10"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مودت",
+   "forms": [
+    "مودت"
+   ],
+   "meaning_fa": "دوستی",
+   "meaning_en": "affection, friendship",
+   "occurrences": 19,
+   "example_sections": [
+    "moghaffa/sh12",
+    "shirogav/sh28",
+    "demne/sh12"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مبالغت",
+   "forms": [
+    "مبالغت",
+    "مبالغتها",
+    "مبالغتی"
+   ],
+   "meaning_fa": "زیاده‌روی؛ کوشش بسیار",
+   "meaning_en": "exaggeration; great effort",
+   "occurrences": 34,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "moghaffa/sh8",
+    "moghaffa/sh20"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "تجربت",
+   "forms": [
+    "تجربت",
+    "تجربتی"
+   ],
+   "meaning_fa": "آزمودن؛ آزمودگی",
+   "meaning_en": "trial; experience",
+   "occurrences": 26,
+   "example_sections": [
+    "mghdme-nasr/sh12",
+    "moghaffa/sh1",
+    "bozorgmehr/sh4"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "عواقب",
+   "forms": [
+    "عواقب"
+   ],
+   "meaning_fa": "سرانجام‌ها",
+   "meaning_en": "consequences",
+   "occurrences": 23,
+   "example_sections": [
+    "mghdme-nasr/sh20",
+    "borzooye/sh8",
+    "borzooye/sh9"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مقاومت",
+   "forms": [
+    "مقاومت"
+   ],
+   "meaning_fa": "ایستادگی",
+   "meaning_en": "resistance",
+   "occurrences": 14,
+   "example_sections": [
+    "shirogav/sh14",
+    "shirogav/sh20",
+    "shirogav/sh26"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "رغبت",
+   "forms": [
+    "رغبت"
+   ],
+   "meaning_fa": "میل و خواست",
+   "meaning_en": "desire, inclination",
+   "occurrences": 23,
+   "example_sections": [
+    "mghdme-nasr/sh11",
+    "mghdme-nasr/sh23",
+    "mghdme-nasr/sh27"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "اشارت",
+   "forms": [
+    "اشارت",
+    "اشارتی"
+   ],
+   "meaning_fa": "نشانه؛ فرمان",
+   "meaning_en": "sign; intimation",
+   "occurrences": 60,
+   "example_sections": [
+    "mghdme-nasr/sh2",
+    "mghdme-nasr/sh12",
+    "moghaffa/sh10"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "پیرایه",
+   "forms": [
+    "پیرایه"
+   ],
+   "meaning_fa": "آرایه و زیور",
+   "meaning_en": "ornament",
+   "occurrences": 20,
+   "example_sections": [
+    "mghdme-nasr/sh28",
+    "shirogav/sh10",
+    "shirogav/sh20"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "وسیلت",
+   "forms": [
+    "وسیلت"
+   ],
+   "meaning_fa": "دستاویز و راه رسیدن به چیزی",
+   "meaning_en": "means, recourse",
+   "occurrences": 14,
+   "example_sections": [
+    "moghaffa/sh10",
+    "shirogav/sh1",
+    "shirogav/sh6"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مهمات",
+   "forms": [
+    "مهمات"
+   ],
+   "meaning_fa": "کارهای مهم",
+   "meaning_en": "important affairs",
+   "occurrences": 25,
+   "example_sections": [
+    "mghdme-nasr/sh2",
+    "bozorgmehr/sh4",
+    "borzooye/sh13"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "تاویل",
+   "forms": [
+    "تاویل",
+    "تاویلی"
+   ],
+   "meaning_fa": "تفسیر؛ برگرداندنِ سخن به معنایی دیگر",
+   "meaning_en": "interpretation",
+   "occurrences": 27,
+   "example_sections": [
+    "mghdme-nasr/sh2",
+    "borzooye/sh3",
+    "borzooye/sh5"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "قاصر",
+   "forms": [
+    "قاصر"
+   ],
+   "meaning_fa": "ناتوان؛ کوتاه‌آمده",
+   "meaning_en": "inadequate, falling short",
+   "occurrences": 22,
+   "example_sections": [
+    "mghdme-nasr/sh22",
+    "mghdme-nasr/sh27",
+    "moghaffa/sh11"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "معذور",
+   "forms": [
+    "معذور"
+   ],
+   "meaning_fa": "کسی که عذرش پذیرفته است",
+   "meaning_en": "excused",
+   "occurrences": 19,
+   "example_sections": [
+    "mghdme-nasr/sh24",
+    "shirogav/sh6",
+    "shirogav/sh19"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "متابعت",
+   "forms": [
+    "متابعت"
+   ],
+   "meaning_fa": "پیروی",
+   "meaning_en": "following, obedience",
+   "occurrences": 15,
+   "example_sections": [
+    "mghdme-nasr/sh7",
+    "mghdme-nasr/sh30",
+    "borzooye/sh4"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "اعراض",
+   "forms": [
+    "اعراض"
+   ],
+   "meaning_fa": "روی گرداندن",
+   "meaning_en": "turning away",
+   "occurrences": 16,
+   "example_sections": [
+    "mghdme-nasr/sh10",
+    "borzooye/sh7",
+    "shirogav/sh1"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "اکرام",
+   "forms": [
+    "اکرام",
+    "اکرامی"
+   ],
+   "meaning_fa": "گرامی داشتن",
+   "meaning_en": "honouring",
+   "occurrences": 17,
+   "example_sections": [
+    "moghaffa/sh6",
+    "shirogav/sh16",
+    "shirogav/sh23"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "تدارک",
+   "forms": [
+    "تدارک"
+   ],
+   "meaning_fa": "جبران؛ چاره",
+   "meaning_en": "making good, remedy",
+   "occurrences": 30,
+   "example_sections": [
+    "mghdme-nasr/sh5",
+    "shirogav/sh26",
+    "shirogav/sh30"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "تردد",
+   "forms": [
+    "تردد"
+   ],
+   "meaning_fa": "رفت‌وآمد؛ دودلی",
+   "meaning_en": "going to and fro; hesitation",
+   "occurrences": 16,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "borzooye/sh4",
+    "shirogav/sh6"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مقرون",
+   "forms": [
+    "مقرون"
+   ],
+   "meaning_fa": "همراه و پیوسته",
+   "meaning_en": "joined, accompanied",
+   "occurrences": 15,
+   "example_sections": [
+    "mghdme-nasr/sh2",
+    "moghaffa/sh2",
+    "moghaffa/sh17"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "فراخور",
+   "forms": [
+    "فراخور"
+   ],
+   "meaning_fa": "شایسته و متناسب",
+   "meaning_en": "suitable, proportionate",
+   "occurrences": 15,
+   "example_sections": [
+    "shirogav/sh11",
+    "shirogav/sh12",
+    "shirogav/sh14"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "ضمیر",
+   "forms": [
+    "ضمیر",
+    "ضمیرت"
+   ],
+   "meaning_fa": "دل و درون",
+   "meaning_en": "inner mind, heart",
+   "occurrences": 31,
+   "example_sections": [
+    "mghdme-nasr/sh3",
+    "mghdme-nasr/sh4",
+    "borzooye/sh5"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "حوادث",
+   "forms": [
+    "حوادث"
+   ],
+   "meaning_fa": "رویدادها، به‌ویژه ناگوار",
+   "meaning_en": "events, misfortunes",
+   "occurrences": 32,
+   "example_sections": [
+    "mghdme-nasr/sh22",
+    "moghaffa/sh14",
+    "bozorgmehr/sh10"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مخدوم",
+   "forms": [
+    "مخدوم",
+    "مخدومان"
+   ],
+   "meaning_fa": "کسی که به او خدمت می‌کنند",
+   "meaning_en": "master, one who is served",
+   "occurrences": 28,
+   "example_sections": [
+    "shirogav/sh23",
+    "shirogav/sh30",
+    "shirogav/sh37"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "حجام",
+   "forms": [
+    "حجام",
+    "حجامی"
+   ],
+   "meaning_fa": "خون‌گیر، حجامت‌کننده",
+   "meaning_en": "cupper (bloodletter)",
+   "occurrences": 15,
+   "example_sections": [
+    "shirogav/sh18"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "مزاج",
+   "forms": [
+    "مزاج"
+   ],
+   "meaning_fa": "سرشت و طبع",
+   "meaning_en": "temperament",
+   "occurrences": 21,
+   "example_sections": [
+    "mghdme-nasr/sh11",
+    "borzooye/sh3",
+    "shirogav/sh37"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  },
+  {
+   "word": "ایزد",
+   "forms": [
+    "ایزد",
+    "ایزدی"
+   ],
+   "meaning_fa": "خدا",
+   "meaning_en": "God",
+   "occurrences": 29,
+   "example_sections": [
+    "mghdme-nasr/sh6",
+    "mghdme-nasr/sh7",
+    "mghdme-nasr/sh8"
+   ],
+   "source": "draft by Claude (a model); not checked against a dictionary",
+   "verified": false
+  }
+ ]
+}

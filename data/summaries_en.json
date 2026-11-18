@@ -1,0 +1,1256 @@
+{
+ "note": "English summary per section (editorial summary, not a quotation). status: \"empty\" (none yet), \"draft\" (drafted by Claude from the Persian text, unreviewed), \"reviewed\" (set by hand). translation_en: optional full English of the section, filled in by hand; when present the reader shows it as a facing page.",
+ "sections": {
+  "mghdme-nasr/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh19": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh20": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh21": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh22": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh23": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh24": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh25": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh26": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh27": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh28": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh29": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "mghdme-nasr/sh30": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh19": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh20": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "moghaffa/sh21": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "bozorgmehr/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "borzooye/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh3": {
+   "summary_en": "Two jackals, Kalila and Dimna, live among the lion's followers. The more ambitious Dimna asks why the king sits idle; Kalila tells him not to meddle in what is beyond his rank, and warns him with the story of an ape that tried a carpenter's work, was caught by a wedge, and was beaten to death.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh19": {
+   "summary_en": "Kalila says the story was told so that Dimna would see he brought this trouble on himself. Dimna answers that he means to work against the ox by cunning, lists the six ills that ruin a king, and argues that brains beat brute strength; he begins the story of a crow that destroyed a snake by a trick.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh20": {
+   "summary_en": "A crow whose chicks are eaten by a snake plans to blind it; a jackal friend warns that this is foolish and tells of a heron that tricked the fish into leaving their pond and was killed by a crab. He then suggests a safer plan: the crow snatches a woman's jewel and drops it near the snake, so that the people chasing it kill the snake.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh21": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh22": {
+   "summary_en": "The wild animals agree to send the lion one animal a day, so that he stops hunting them. When the lot falls on a hare, he arrives late and tells the angry lion that another lion has taken his meal; he leads the lion to a well, where the lion sees his own reflection, leaps in and drowns. The animals celebrate, and the section ends with a verse (see the margin note).",
+   "status": "draft",
+   "translation_en": "",
+   "note_for_reviewer": "Mentions the verse that is missing in Ganjoor; see arabic_translations.json"
+  },
+  "shirogav/sh23": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh24": {
+   "summary_en": "Three fish live in a hidden pond. When two fishermen plan to net them, the most cautious fish leaves at once, the second pretends to be dead and is thrown back, and the third, who never planned ahead, is caught.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh25": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh26": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh27": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh28": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh29": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh30": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh31": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh32": {
+   "summary_en": "A crow, a wolf and a jackal serve a lion; a camel joins them under his protection. When the wounded lion cannot hunt, the crow talks him into letting the camel be sacrificed. The three then stage a round of offering themselves to the lion, each politely refused; the camel, taken in, offers himself too, and they tear him to pieces.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh33": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh34": {
+   "summary_en": "A pair of sandpipers must choose a place to nest. The female warns that the sea may carry the young away; the male insists the sea will not dare. She warns him with the story of the tortoise who ignored good advice, and he asks how it went.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh35": {
+   "summary_en": "Two ducks and a tortoise are friends in a pond whose water is drying. The ducks agree to carry the tortoise, hanging on a stick, if he keeps silent; when people below shout in wonder, he opens his mouth to answer and falls. The section closes with his reply that fate cannot be avoided.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh36": {
+   "summary_en": "The male sandpiper ignores the warning, the eggs are laid, and the sea washes the chicks away. He gathers the birds, who appeal to the Simurgh; the sea gives the chicks back. The point made to the ox: never despise an enemy. The ox answers that he will not start a fight but must guard himself.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh37": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh38": {
+   "summary_en": "Cold apes mistake a firefly for fire and heap wood on it while a bird warns them it is not fire. A passer-by tells the bird its effort is wasted; when the bird comes down to prove it, the apes seize it and cut off its head. Kalila says Dimna is like the bird, and begins the story of two partners.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh39": {
+   "summary_en": "A clever man and a simple man find a bag of gold, bury most of it under a tree, and the clever one takes it. When he accuses the simple one before a judge, he calls the tree as witness. He asks his father to hide in the tree's hollow to speak as the witness; the father warns him with the story of the frog.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh40": {
+   "summary_en": "A frog whose young are eaten by a snake asks a crab for help. The crab tells him to lay fish from a weasel's hole to the snake's lair; the weasel follows the fish and kills the snake, but afterwards keeps coming back, finds no fish, and eats the frog and his young.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh41": {
+   "summary_en": "The father, moved by greed and love for his son, gives in and hides in the tree. When the judge asks the tree, a voice says the simple man took the gold; the judge has a fire lit around the tree, the father cries for mercy and the truth comes out. The father dies, and the simple man gets his gold back. The moral: scheming ends badly.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh42": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shirogav/sh43": {
+   "summary_en": "A merchant leaves a hundred measures of iron with a friend, who sells it and claims the mice ate it. The merchant takes the friend's son and says a hawk carried him off: if mice can eat iron, a hawk can carry a boy. The friend gives the iron back. The point: when a king acts like this, others lose hope of his loyalty.",
+   "status": "draft",
+   "translation_en": ""
+  },
+  "shirogav/sh44": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "demne/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "kzmba/sh19": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boofozagh/sh19": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "boozineobakhe/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedorasoo/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedorasoo/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedorasoo/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedorasoo/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "gorbeomoosh/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "gorbeomoosh/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "gorbeomoosh/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "paadorpar/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shiroshoghal/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "tirandaz/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "tirandaz/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "tirandaz/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedomehman/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedomehman/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zahedomehman/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh10": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh11": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh12": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh13": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh14": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh15": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh16": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh17": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh18": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh19": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahobaraheme/sh20": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zargarosayyah/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zargarosayyah/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zargarosayyah/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "zargarosayyah/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh3": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh4": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh5": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh6": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh7": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh8": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "shahzade/sh9": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "khtmonshi/sh1": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  },
+  "khtmonshi/sh2": {
+   "summary_en": "",
+   "status": "empty",
+   "translation_en": ""
+  }
+ }
+}

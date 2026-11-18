@@ -1,0 +1,991 @@
+{
+ "note": "Lion and Ox: the 12 hand-aligned tales with their nesting. Other chapters: tale starts guessed from text cues (\"آورده‌اند که\", \"گویند که\", \"حکایت\" in the section title); nesting is not detected. Nothing here is verified.",
+ "chapters": [
+  {
+   "chapter": "mghdme-nasr",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "mghdme-nasr_sh4",
+     "title_fa": "محاسن عدل",
+     "excerpt_fa": "آورده اند که: لاملک بالرجال، و لارجال",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "mghdme-nasr/sh4",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "mghdme-nasr_sh26",
+     "title_fa": "دربارهٔ ترجمه‌های دیگر",
+     "excerpt_fa": "حکایت بوده است نه تفهیم حکمت و",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "mghdme-nasr/sh26",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "mghdme-nasr_sh28",
+     "title_fa": "دربارهٔ روش ترجمه و تألیف نصرالله منشی",
+     "excerpt_fa": "حکایت است. و هر معنی که از",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "mghdme-nasr/sh28",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "moghaffa",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "moghaffa_sh4",
+     "title_fa": "برگزیدن برزویهٔ طبیب برای ترجمهٔ کلیله و دمنه",
+     "excerpt_fa": "گویند که به هندوستان چنین کتابی است،",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "moghaffa/sh4",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "bozorgmehr",
+   "hand_aligned": false,
+   "nodes": []
+  },
+  {
+   "chapter": "borzooye",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "borzooye_sh1",
+     "title_fa": "باب برزویهٔ طبیب",
+     "excerpt_fa": "آورده اند که فاضل تر اطبا آن",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "borzooye/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "borzooye_sh5",
+     "title_fa": "حکایت دزد نادان",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "borzooye/sh5",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "borzooye_sh7",
+     "title_fa": "حکایت بازرگان و جواهرساز چنگنواز",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "borzooye/sh7",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "borzooye_sh10",
+     "title_fa": null,
+     "excerpt_fa": "گویند که صد سال در عذاب دایم",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "borzooye/sh10",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "borzooye_sh13",
+     "title_fa": "حکایت مرد غافل",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "borzooye/sh13",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "shirogav",
+   "hand_aligned": true,
+   "nodes": [
+    {
+     "id": "ape_carpenter",
+     "title_fa": "بوزنه و درودگر",
+     "title_en": "The Ape and the Carpenter",
+     "section": "shirogav/sh3",
+     "sections": [
+      "shirogav/sh3"
+     ],
+     "parent": null,
+     "teller": "ape_carpenter",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "crow_serpent",
+     "title_fa": "زاغ و مار",
+     "title_en": "The Raven and the Serpent",
+     "section": "shirogav/sh19",
+     "sections": [
+      "shirogav/sh19",
+      "shirogav/sh20"
+     ],
+     "parent": null,
+     "teller": null,
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "heron_crab",
+     "title_fa": "ماهی‌خوار و پنج‌پایک",
+     "title_en": "The Heron and the Crab",
+     "section": "shirogav/sh20",
+     "sections": [
+      "shirogav/sh20"
+     ],
+     "parent": "crow_serpent",
+     "teller": null,
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "lion_hare",
+     "title_fa": "شیر و خرگوش",
+     "title_en": "The Lion and the Hare",
+     "section": "shirogav/sh22",
+     "sections": [
+      "shirogav/sh22"
+     ],
+     "parent": null,
+     "teller": null,
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "three_fishes",
+     "title_fa": "سه ماهی",
+     "title_en": "The Three Fishes",
+     "section": "shirogav/sh24",
+     "sections": [
+      "shirogav/sh24"
+     ],
+     "parent": null,
+     "teller": "three_fishes",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "camel",
+     "title_fa": "گرگ و زاغ و شغال (و اشتر)",
+     "title_en": "The Wolf, the Crow, the Jackal and the Camel",
+     "section": "shirogav/sh32",
+     "sections": [
+      "shirogav/sh32"
+     ],
+     "parent": null,
+     "teller": "camel",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "sandpiper",
+     "title_fa": "طیطوی و دریا",
+     "title_en": "The Sandpiper and the Sea",
+     "section": "shirogav/sh34",
+     "sections": [
+      "shirogav/sh34",
+      "shirogav/sh36"
+     ],
+     "parent": null,
+     "teller": "sandpiper",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "tortoise_geese",
+     "title_fa": "باخه و دو بط",
+     "title_en": "The Tortoise and the Geese",
+     "section": "shirogav/sh35",
+     "sections": [
+      "shirogav/sh35"
+     ],
+     "parent": "sandpiper",
+     "teller": "tortoise_geese",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "apes_glowworm",
+     "title_fa": "بوزینگان و کرم شب‌تاب",
+     "title_en": "The Apes and the Glow-worm",
+     "section": "shirogav/sh38",
+     "sections": [
+      "shirogav/sh38"
+     ],
+     "parent": null,
+     "teller": "apes_glowworm",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "two_partners",
+     "title_fa": "دو شریک",
+     "title_en": "The Rogue and the Simpleton",
+     "section": "shirogav/sh39",
+     "sections": [
+      "shirogav/sh39",
+      "shirogav/sh41"
+     ],
+     "parent": null,
+     "teller": "two_partners",
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "frog_snake",
+     "title_fa": "غوک و مار",
+     "title_en": "The Frog and the Snake",
+     "section": "shirogav/sh40",
+     "sections": [
+      "shirogav/sh40"
+     ],
+     "parent": "two_partners",
+     "teller": null,
+     "source": "hand-aligned",
+     "verified": false
+    },
+    {
+     "id": "iron_merchant",
+     "title_fa": "بازرگان آهن‌فروش",
+     "title_en": "The Mice that Ate Iron",
+     "section": "shirogav/sh43",
+     "sections": [
+      "shirogav/sh43"
+     ],
+     "parent": null,
+     "teller": null,
+     "source": "hand-aligned",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "demne",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "demne_sh2",
+     "title_fa": null,
+     "excerpt_fa": "حکایتها خواستی. شبی پلنگ تا بیگاهی پیش",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "demne/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh6",
+     "title_fa": "حکایت زن بازرگان کشمیری",
+     "excerpt_fa": "آورده اند که در شهر کشمیر بازرگانی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "demne/sh6",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh7",
+     "title_fa": null,
+     "excerpt_fa": "گویند که «خاموشی هم داستانیست. » و",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "demne/sh7",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh8",
+     "title_fa": null,
+     "excerpt_fa": "گویند که «هیچ کس بر عذاب صبر",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "demne/sh8",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh10",
+     "title_fa": "حکایت طبیب حاذقی که چشمش ضعیف شده بود",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "demne/sh10",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh11",
+     "title_fa": null,
+     "excerpt_fa": "گویند که «هرگشاده ابرو، که چشم راست",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "demne/sh11",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "demne_sh14",
+     "title_fa": "حکایت زن مرزبان و غلام",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "demne/sh14",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "kzmba",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "kzmba_sh1",
+     "title_fa": "باب دوستی کبوتر و زاغ و موش و باخه و آهو",
+     "excerpt_fa": "حکایت کبوتر و زاغ و موش و",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "kzmba/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "kzmba_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که در ناحیت کشمیر متصیدی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "kzmba/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "kzmba_sh6",
+     "title_fa": null,
+     "excerpt_fa": "گویند که دوستی میان ما ابرار و",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "kzmba/sh6",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "kzmba_sh10",
+     "title_fa": "حکایت زاهد و موش",
+     "excerpt_fa": "حکایت او همان مزاج دارد که آن",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "kzmba/sh10",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "kzmba_sh12",
+     "title_fa": "حکایت صیاد و آهو و خوگ و گرگ",
+     "excerpt_fa": "آورده اند که صیادی روزی شکار رفت",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "kzmba/sh12",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "kzmba_sh15",
+     "title_fa": null,
+     "excerpt_fa": "حکایت صفت همان دوستی حاصل آید که",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "kzmba/sh15",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "boofozagh",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "boofozagh_sh2",
+     "title_fa": "زاغان و بومان",
+     "excerpt_fa": "آورده اند که در کوهی بلند، درختی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "boofozagh/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh4",
+     "title_fa": "حکایت مرغان که می‌خواستند بوم را امیر خود کنند",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh4",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh7",
+     "title_fa": "ادامهٔ حکایت مرغان که می‌خواستند بوم را امیر خود کنند",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh7",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh8",
+     "title_fa": "حکایت زاهد و گوسفند و طراران",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh8",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh10",
+     "title_fa": "حکایت بازرگان و زن و دزد",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh10",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh12",
+     "title_fa": "حکایت زاهد و دزد و دیو",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh12",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh13",
+     "title_fa": "حکایت درودگر و زن خیانتکارش",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh13",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh15",
+     "title_fa": "حکایت موشی که به دعای زاهد مستجاب الدعوه به پیکر دختری درآمد",
+     "excerpt_fa": "",
+     "cue": "section title",
+     "question_cue": false,
+     "section": "boofozagh/sh15",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh16",
+     "title_fa": "سرانجام بومان",
+     "excerpt_fa": "حکایت دل گشای و مثل غریب و",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "boofozagh/sh16",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh18",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که پیری رد ماری اثر",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "boofozagh/sh18",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boofozagh_sh19",
+     "title_fa": null,
+     "excerpt_fa": "حکایت مقرر می گردانیدی و خود سهوهای",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "boofozagh/sh19",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "boozineobakhe",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "boozineobakhe_sh4",
+     "title_fa": null,
+     "excerpt_fa": "گویند که نیکو ننماید که کسی از",
+     "cue": "گویند که",
+     "question_cue": false,
+     "section": "boozineobakhe/sh4",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "boozineobakhe_sh6",
+     "title_fa": "حکایت شیر و روباه و خر",
+     "excerpt_fa": "آورده اند که شیری را گر بر",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "boozineobakhe/sh6",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "zahedorasoo",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "zahedorasoo_sh1",
+     "title_fa": "باب زاهد و راسو",
+     "excerpt_fa": "حکایت آن زاهد است که قدم بی",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "zahedorasoo/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "zahedorasoo_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که زاهدی، زنی پاکیزه اطراف",
+     "cue": "آورده اند که",
+     "question_cue": true,
+     "section": "zahedorasoo/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "zahedorasoo_sh4",
+     "title_fa": null,
+     "excerpt_fa": "حکایت او را انتباهی باشد و از",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "zahedorasoo/sh4",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "gorbeomoosh",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "gorbeomoosh_sh1",
+     "title_fa": "باب گربه و موش",
+     "excerpt_fa": "حکایت گربه و موش است. رای پرسید",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "gorbeomoosh/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "gorbeomoosh_sh2",
+     "title_fa": "حکایت گربه و موش",
+     "excerpt_fa": "آورده اند که به فلان شهر درختی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "gorbeomoosh/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "paadorpar",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "paadorpar_sh1",
+     "title_fa": "باب پادشاه و فنزه",
+     "excerpt_fa": "حکایت آن مرغ است. رای پرسید که:",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "paadorpar/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "paadorpar_sh2",
+     "title_fa": "حکایت مرغ پادشاه",
+     "excerpt_fa": "آورده اند که ملکی بود او را",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "paadorpar/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "paadorpar_sh7",
+     "title_fa": null,
+     "excerpt_fa": "حکایت جمال تخت آرای ملک بر چهره",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "paadorpar/sh7",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "shiroshoghal",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "shiroshoghal_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که در زمین هند شگالی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "shiroshoghal/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "tirandaz",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "tirandaz_sh2",
+     "title_fa": "افسانهٔ شیر و مرد تیرانداز",
+     "excerpt_fa": "آورده اند که شیری ماده با دو",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "tirandaz/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "zahedomehman",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "zahedomehman_sh1",
+     "title_fa": "باب زاهد و مهمان او",
+     "excerpt_fa": "حکایت آن زاهد است. رای پرسید که:",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "zahedomehman/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "zahedomehman_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که در زمین کنوج مردی",
+     "cue": "آورده اند که",
+     "question_cue": true,
+     "section": "zahedomehman/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "zahedomehman_sh3",
+     "title_fa": "حکایت زاغی که خواست خرامیدن کبک بیاموزد",
+     "excerpt_fa": "آورده اند که زاغی کبگی را دید",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "zahedomehman/sh3",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "shahobaraheme",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "shahobaraheme_sh1",
+     "title_fa": "باب پادشاه و برهمنان",
+     "excerpt_fa": "آورده اند که: لو کان بینی و",
+     "cue": "آورده اند که",
+     "question_cue": true,
+     "section": "shahobaraheme/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "shahobaraheme_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که در بلاد هند هبلار",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "shahobaraheme/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "shahobaraheme_sh12",
+     "title_fa": "حکایت دو کبوتر",
+     "excerpt_fa": "آورده اند که جفتی کبوتر دانه فراهم",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "shahobaraheme/sh12",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "zargarosayyah",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "zargarosayyah_sh1",
+     "title_fa": "باب زرگر و سیاح",
+     "excerpt_fa": "حکایت آن مرد زرگر است، رای گفت:",
+     "cue": "حکایت",
+     "question_cue": true,
+     "section": "zargarosayyah/sh1",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "zargarosayyah_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که جماعتی از صیادان در",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "zargarosayyah/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "shahzade",
+   "hand_aligned": false,
+   "nodes": [
+    {
+     "id": "shahzade_sh2",
+     "title_fa": null,
+     "excerpt_fa": "آورده اند که چهار کس در راهی",
+     "cue": "آورده اند که",
+     "question_cue": false,
+     "section": "shahzade/sh2",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    },
+    {
+     "id": "shahzade_sh6",
+     "title_fa": null,
+     "excerpt_fa": "حکایت ملک زاده و جفا های خویش",
+     "cue": "حکایت",
+     "question_cue": false,
+     "section": "shahzade/sh6",
+     "parent": null,
+     "teller": null,
+     "source": "detected from text cues",
+     "nesting": "unknown (all listed flat)",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "chapter": "khtmonshi",
+   "hand_aligned": false,
+   "nodes": []
+  }
+ ]
+}

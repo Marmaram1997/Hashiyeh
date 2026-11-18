@@ -1,0 +1,10 @@
+{
+ "note": "Translations for Arabic spans, keyed by span id. Only entries with a source are shown. Empty entries are not shown.",
+ "translations": {
+  "minovi_sh22": {
+   "translation_en": "By God, I take no joy in his death, for everyone is pledged to death; but part of life's sweetness is to see your enemies die.",
+   "source": "Minovi ed., p. 88",
+   "status": "provided by the project editor with the couplet; the page reference has not been checked by the model"
+  }
+ }
+}
