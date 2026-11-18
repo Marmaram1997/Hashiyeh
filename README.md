@@ -3,6 +3,7 @@
 A digital reading of Nasrollah Monshi's Persian *Kelileh o Demneh*: the Persian life of a world book.
 
 - `data/`: Persian full text (Ganjoor), Keith-Falconer 1885 English OCR, and the hand-aligned dataset for "The Lion and the Ox"
+- `data/ocr_corrections/`: log of every OCR change (JSON and CSV) and a review sheet; corrections are model-applied and not yet human-reviewed. Run `python3 scripts/build_aligned.py` to regenerate.
 - `scripts/`: how the data was fetched and aligned
 - `index.html`, `journey/`, `tales/`, `read/`, `method/`, `about/`: the site pages; `assets/` holds shared CSS/JS and media
 - `design/`: landing-page drafts and images

@@ -1,0 +1,230 @@
+id,tale,stage,rule,line,before,after,context,edit_distance,flag,review
+c001,ape_carpenter,1,margin line number,4100,5,,,,,not yet reviewed
+c002,ape_carpenter,1,footnote marker removed,4102,riage (8). And he saw the carpenter take a small wedge of,riage. And he saw the carpenter take a small wedge of,,,,not yet reviewed
+c003,ape_carpenter,1,margin line number,4105,lo,,,,,not yet reviewed
+c004,ape_carpenter,1,margin line number,4111,15,,,,,not yet reviewed
+c005,ape_carpenter,1,margin line number,4117,20,,,,,not yet reviewed
+c006,ape_carpenter,1,line-end hyphen joined,4102,car- riage,carriage,,,,not yet reviewed
+c007,ape_carpenter,1,line-end hyphen joined,4105,car- penter,carpenter,,,,not yet reviewed
+c008,ape_carpenter,2,letters misread,,tAvo pieces,two pieces,"n a log, and splitting another log into tAvo pieces : the carpenter being like a man riding",2,False,not yet reviewed
+c009,ape_carpenter,2,letters misread,,froin the carpenter,from the carpenter,"h came upon him. He also got punishment froin the carpenter, by whom he was chastised with blows me",2,False,not yet reviewed
+c010,ape_carpenter,2,letters misread,,blows men severe,blows more severe,"arpenter, by whom he was chastised with blows men severe than the violence of the pain caused by",3,False,not yet reviewed
+c011,ape_carpenter,2,punctuation dropped (final full stop),,caused by the log of wood,caused by the log of wood.,re severe than the violence of the pain caused by the log of wood,1,False,not yet reviewed
+c012,crow_serpent,1,margin line number,5067,35,,,,,not yet reviewed
+c013,crow_serpent,1,page header dropped,5074,24  BOOK   OF   KALILAH   AND   DIMNAH.,,,,,not yet reviewed
+c014,crow_serpent,1,margin line number,5080,5,,,,,not yet reviewed
+c015,crow_serpent,1,margin line number,5088,lo,,,,,not yet reviewed
+c016,crow_serpent,1,footnote marker removed,5089,"on the serpent quietly, and destroy (40) his life craftily. And","on the serpent quietly, and destroy his life craftily. And",,,,not yet reviewed
+c017,crow_serpent,1,margin line number,5101,20,,,,,not yet reviewed
+c018,crow_serpent,1,margin line number,5108,25,,,,,not yet reviewed
+c019,crow_serpent,1,margin line number,5114,30,,,,,not yet reviewed
+c020,crow_serpent,1,margin line number,5121,35,,,,,not yet reviewed
+c021,crow_serpent,1,footnote marker removed,5124,"to us and ease (41) the distress of our soul, and counsel us what","to us and ease the distress of our soul, and counsel us what",,,,not yet reviewed
+c022,crow_serpent,1,page header dropped,5128,STORY  OF  THE  LION  AND  THE  OX.  25,,,,,not yet reviewed
+c023,crow_serpent,1,margin line number,5134,5,,,,,not yet reviewed
+c024,crow_serpent,1,margin line number,5141,lo,,,,,not yet reviewed
+c025,crow_serpent,1,margin line number,5147,15,,,,,not yet reviewed
+c026,crow_serpent,1,margin line number,5152,20,,,,,not yet reviewed
+c027,crow_serpent,1,margin line number,5157,25,,,,,not yet reviewed
+c028,crow_serpent,1,footnote marker removed,5158,"peace with him, he ought to fight for himself (-12) strenuously,","peace with him, he ought to fight for himself strenuously,",,,,not yet reviewed
+c029,crow_serpent,1,margin line number,5162,30,,,,,not yet reviewed
+c030,crow_serpent,1,margin line number,5168,35,,,,,not yet reviewed
+c031,crow_serpent,1,page header dropped,5175,2G  BOOK   OF   KALILAH   AND   DIMNAII.,,,,,not yet reviewed
+c032,crow_serpent,1,margin line number,5183,5,,,,,not yet reviewed
+c033,crow_serpent,1,margin line number,5189,lo,,,,,not yet reviewed
+c034,crow_serpent,1,margin line number,5195,15,,,,,not yet reviewed
+c035,crow_serpent,1,footnote marker removed,5199,"in, and put (43) the necklace in the hole. And the j^eople","in, and put the necklace in the hole. And the j^eople",,,,not yet reviewed
+c036,crow_serpent,1,margin line number,5201,20,,,,,not yet reviewed
+c037,crow_serpent,1,line-end hyphen joined,5106,to- day,today,,,,not yet reviewed
+c038,crow_serpent,1,line-end hyphen joined,5170,frau- dulent,fraudulent,,,,not yet reviewed
+c039,crow_serpent,1,line-end hyphen joined,5185,belong- ing,belonging,,,,not yet reviewed
+c040,crow_serpent,2,letters misread,,Kalllah. What did,Kalilah. What did,Kalllah. What did she do ? Dimnah. They say that a certai,1,False,not yet reviewed
+c041,crow_serpent,2,letters misread,,said to Kalllah :,said to Kalilah :,"necklace and killed the serpent. Dimnah said to Kalllah : ' I have told you [this] parable, O bro",1,False,not yet reviewed
+c042,crow_serpent,2,letters misread,,wdiich,which,"tain. And near her was a large hole, in wdiich there lived a powerful black serpent, w",2,False,not yet reviewed
+c043,crow_serpent,2,letters misread,,IS destroyed himself,is destroyed himself,"troy a crab, and from lack of knowledge IS destroyed himself. The Haven. How runs the story about hi",2,False,not yet reviewed
+c044,crow_serpent,2,letters misread,,The Haven. How runs,The Raven. How runs,lack of knowledge is destroyed himself. The Haven. How runs the story about him ? 27ie Jackal. It i,1,False,not yet reviewed
+c045,crow_serpent,2,letters misread,,27ie Jackal.,The Jackal.,e Raven. How runs the story about him ? 27ie Jackal. It is said that in a certain marshy lak,3,False,not yet reviewed
+c046,crow_serpent,2,letters misread,,TIw Heron.,The Heron.,"oul distressed, and why are you sad ? ' TIw Heron. And how should I not be sad who until t",2,False,not yet reviewed
+c047,crow_serpent,2,letters misread,,j^eople,people,"d put the necklace in the hole. And the j^eople coming up, took the necklace and killed",2,False,not yet reviewed
+c048,crow_serpent,2,stray mark (asterisk for opening quote),,saying : * O brother,saying : ' O brother,"mplained to a friend of hers, a jackal, saying : * O brother, I wish to take advice from you in a ce",1,False,not yet reviewed
+c049,lion_hare,1,page header dropped,5229,STORY   OF   THE   LION    AND   THE   OX.  27,,,,,not yet reviewed
+c050,lion_hare,1,margin line number,5235,5,,,,,not yet reviewed
+c051,lion_hare,1,footnote marker removed,5237,one (44) or two of us in a whole day. Now it has seemed,one or two of us in a whole day. Now it has seemed,,,,not yet reviewed
+c052,lion_hare,1,margin line number,5240,lo,,,,,not yet reviewed
+c053,lion_hare,1,margin line number,5245,15,,,,,not yet reviewed
+c054,lion_hare,1,margin line number,5250,20,,,,,not yet reviewed
+c055,lion_hare,1,margin line number,5255,25,,,,,not yet reviewed
+c056,lion_hare,1,margin line number,5260,30,,,,,not yet reviewed
+c057,lion_hare,1,footnote marker removed,5261,"you, who sent me with a (fine) fat hare (45) for your food. But","you, who sent me with a (fine) fat hare for your food. But",,,,not yet reviewed
+c058,lion_hare,1,margin line number,5265,35,,,,,not yet reviewed
+c059,lion_hare,1,margin line number,5278,5,,,,,not yet reviewed
+c060,lion_hare,1,line-end hyphen joined,5241,feed- ing,feeding,,,,not yet reviewed
+c061,lion_hare,1,line-end hyphen joined,5243,fright- ened,frightened,,,,not yet reviewed
+c062,lion_hare,1,line-end hyphen joined,5245,com- pact,compact,,,,not yet reviewed
+c063,lion_hare,1,line-end hyphen joined,5252,con- vey,convey,,,,not yet reviewed
+c064,lion_hare,2,letters misread,,Kalllah. How runs,Kalilah. How runs,Kalllah. How runs the story about him ? Dimnah. They say ,1,False,not yet reviewed
+c065,lion_hare,2,letters misread,,(avIio lived),(who lived), Dimnah. They say that there was a lion (avIio lived) in a certain region abounding in water ,4,False,not yet reviewed
+c066,lion_hare,2,letters misread,,perhaps 1 shall,perhaps I shall,"s the thing will not inconvenience you, perhaps 1 shall be able to free you and myself from the",1,False,not yet reviewed
+c067,lion_hare,2,running page header left in the text,,28 I500K OF KALILAII AND DIMNAII. ,,she reached a certain deep pit in which 28 I500K OF KALILAII AND DIMNAII. there was clear water. And she said; 'He,34,True,not yet reviewed
+c068,lion_hare,2,letters misread,,the Hon and the fat,the lion and the fat,was clear water. And she said; 'Here is the Hon and the fat hare with him. But I fear to go near hi,2,False,not yet reviewed
+c069,lion_hare,2,punctuation dropped (colon read as semicolon),,And she said; 'Here,And she said: 'Here,eep pit in which there was clear water. And she said; 'Here is the lion and the fat hare with him. ,1,False,not yet reviewed
+c070,three_fishes,1,margin line number,5441,15,,,,,not yet reviewed
+c071,three_fishes,1,margin line number,5446,20,,,,,not yet reviewed
+c072,three_fishes,1,margin line number,5451,25,,,,,not yet reviewed
+c073,three_fishes,1,margin line number,5456,30,,,,,not yet reviewed
+c074,three_fishes,1,footnote marker removed,5456,"Then that reflection made itself a subtle plan (51), (namely)","Then that reflection made itself a subtle plan, (namely)",,,,not yet reviewed
+c075,three_fishes,1,margin line number,5461,35,,,,,not yet reviewed
+c076,three_fishes,1,page header dropped,5468,32  BOOK   OF   KALILAII   AND   DIMNATI.,,,,,not yet reviewed
+c077,three_fishes,1,line-end hyphen joined,5470,fisher- men,fishermen,,,,not yet reviewed
+c078,three_fishes,2,letters misread,,brouglit,brought,"ot out of the pool by the conduit which brouglit the water into it, and saved himself fr",2,False,not yet reviewed
+c079,three_fishes,2,letters misread,,ami look him,and took him,"hesitate until the fishermen caught him ami look him. Nay, it seems to me, 0 king, that you ",3,False,not yet reviewed
+c080,three_fishes,2,letters misread,,0 king,O king," him and took him. Nay, it seems to me, 0 king, that you must make haste and put tlie ",1,False,not yet reviewed
+c081,three_fishes,2,letters misread,,tlie ox,the ox," king, that you must make haste and put tlie ox to death, before the thing becomes diff",2,False,not yet reviewed
+c082,camel,1,margin line number,6049,35,,,,,not yet reviewed
+c083,camel,1,page header dropped,6056,44  BOOK   OF   KALILAH   AND   DIMNAH.,,,,,not yet reviewed
+c084,camel,1,margin line number,6062,5,,,,,not yet reviewed
+c085,camel,1,margin line number,6068,lo,,,,,not yet reviewed
+c086,camel,1,footnote marker removed,6071,"that is the news of their hunger, became known (70) to the lion,","that is the news of their hunger, became known to the lion,",,,,not yet reviewed
+c087,camel,1,margin line number,6074,15,,,,,not yet reviewed
+c088,camel,1,margin line number,6080,20,,,,,not yet reviewed
+c089,camel,1,margin line number,6086,25,,,,,not yet reviewed
+c090,camel,1,margin line number,6092,30,,,,,not yet reviewed
+c091,camel,1,margin line number,6098,35,,,,,not yet reviewed
+c092,camel,1,footnote marker removed,6101,"promises t6 the camel, and cannot (71) turn back from them.'","promises t6 the camel, and cannot turn back from them.'",,,,not yet reviewed
+c093,camel,1,page header dropped,6105,STORY  OF  THE  LION  AND  THE  OX.  45,,,,,not yet reviewed
+c094,camel,1,margin line number,6111,5,,,,,not yet reviewed
+c095,camel,1,margin line number,6116,10,,,,,not yet reviewed
+c096,camel,1,margin line number,6121,15,,,,,not yet reviewed
+c097,camel,1,margin line number,6126,20,,,,,not yet reviewed
+c098,camel,1,footnote marker removed,6130,"and gave him an oath, (72) and made a faithful covenant be-","and gave him an oath, and made a faithful covenant be-",,,,not yet reviewed
+c099,camel,1,margin line number,6131,25,,,,,not yet reviewed
+c100,camel,1,margin line number,6136,30,,,,,not yet reviewed
+c101,camel,1,margin line number,6141,35,,,,,not yet reviewed
+c102,camel,1,page header dropped,6148,46  BOOK   OF   KALILAH   AND   DIMNAH.,,,,,not yet reviewed
+c103,camel,1,margin line number,6154,5,,,,,not yet reviewed
+c104,camel,1,margin line number,6160,lo,,,,,not yet reviewed
+c105,camel,1,margin line number,6166,15,,,,,not yet reviewed
+c106,camel,1,margin line number,6172,20,,,,,not yet reviewed
+c107,camel,1,margin line number,6178,25,,,,,not yet reviewed
+c108,camel,1,margin line number,6184,30,,,,,not yet reviewed
+c109,camel,1,margin line number,6190,35,,,,,not yet reviewed
+c110,camel,1,page header dropped,6197,STORY  OF  THE  LION  AND  THE  OX.  47,,,,,not yet reviewed
+c111,camel,1,footnote marker removed,6205,"Now I have related this fable to you, (73) because I am","Now I have related this fable to you, because I am",,,,not yet reviewed
+c112,camel,1,margin line number,6209,10,,,,,not yet reviewed
+c113,camel,1,margin line number,6214,15,,,,,not yet reviewed
+c114,camel,1,line-end hyphen joined,6068,sus- tenance,sustenance,,,,not yet reviewed
+c115,camel,1,line-end hyphen joined,6098,No- thing,Nothing,,,,not yet reviewed
+c116,camel,1,line-end hyphen joined,6126,intel- lect,intellect,,,,not yet reviewed
+c117,camel,1,line-end hyphen joined,6131,be- tween,between,,,,not yet reviewed
+c118,camel,1,line-end hyphen joined,6134,in- solent,insolent,,,,not yet reviewed
+c119,camel,1,line-end hyphen joined,6137,tor- ment,torment,,,,not yet reviewed
+c120,camel,1,line-end hyphen joined,6172,them- selves,themselves,,,,not yet reviewed
+c121,camel,1,line-end hyphen joined,6200,Where- upon,Whereupon,,,,not yet reviewed
+c122,camel,2,letters misread,,remain with yon,remain with you,"The camel answered: 'Until death will I remain with yon.' The lion said: 'Then remain with us, ",1,False,not yet reviewed
+c123,camel,2,letters misread,,t6 the camel,to the camel," the lion, because he has made promises t6 the camel, and cannot turn back from them.' Says ",1,False,not yet reviewed
+c124,camel,2,letters misread,,OAvn nourishment,own nourishment,"r do we grieve at the diminution of our OAvn nourishment, nor are we sad because of our own hung",3,False,not yet reviewed
+c125,camel,2,punctuation dropped,,"king,'and all","king,' and all","fear is on account of you, our lord the king,'and all the anguish of our heart is because of ",1,False,not yet reviewed
+c126,camel,2,letters misread,,0 glory,O glory," our heart is because of your weakness, 0 glory of the race of animals. We glance to th",1,False,not yet reviewed
+c127,camel,2,letters misread,,\dctorious,victorious,"ave conceived an excellent idea, if our \dctorious king will help us.' The king said: 'And",2,False,not yet reviewed
+c128,camel,2,letters misread,,o^\ti hand,own hand," water that he did not dig for with his o^\ti hand, and enjoys the air, but repairs not th",4,False,not yet reviewed
+c129,camel,2,letters misread,,Ave should go,we should go,"of the matter.' The crow said: 'I think Ave should go (to the lion) in a body, we and the cam",2,False,not yet reviewed
+c130,camel,2,letters misread,,agi-eed,agreed,"d the lion will not let him go.' Having agi-eed with one another, and hatched this plot",2,False,not yet reviewed
+c131,camel,2,letters misread,,A\dlling,willing, eat me; for I am agreeable to this and A\dlling.' But the wolf and the crow objected to,3,False,not yet reviewed
+c132,camel,2,stray mark (margin number and asterisk),,5* Now I have related,Now I have related,"y fell upon him and tore him to pieces. 5* Now I have related this fable to you, because I am persuad",3,False,not yet reviewed
+c133,camel,2,italic I read as slash,,But / shall satisfy,But I shall satisfy,"tisfaction.' (Then) the jackal said : ' But / shall satisfy the king's hunger, so let him eat me; f",1,False,not yet reviewed
+c134,camel,2,italic I read as slash,,But / am not thus: so,But I am not thus: so,"inking and foul.' Then said] the wolf: 'But / am not thus: so let the king eat me! (Then) the crow, t",1,False,not yet reviewed
+c135,camel,2,italic I read as slash,,"king, / am not thus","king, I am not thus"," So he said at once : ' But my lord the king, / am not thus. For my flesh is sweet-tasting and my f",1,False,not yet reviewed
+c136,camel,2,stray mark,,days -without,days without," the lion's leavings remained [for some days -without getting food,] and became very famished",1,False,not yet reviewed
+c137,sandpiper,1,margin line number,6257,lo,,,,,not yet reviewed
+c138,sandpiper,1,margin line number,6263,15,,,,,not yet reviewed
+c139,sandpiper,1,footnote marker removed,6264,"species, nor consider your own diminutiveness. (75) For he who","species, nor consider your own diminutiveness. For he who",,,,not yet reviewed
+c140,sandpiper,1,margin line number,6269,20,,,,,not yet reviewed
+c141,sandpiper,1,margin line number,6275,25,,,,,not yet reviewed
+c142,sandpiper,1,margin line number,6281,30,,,,,not yet reviewed
+c143,sandpiper,1,margin line number,6287,35,,,,,not yet reviewed
+c144,sandpiper,1,page header dropped,6294,STORY   OF   THE   LION   AND   THE  OX.  49,,,,,not yet reviewed
+c145,sandpiper,1,footnote marker removed,6297,"tortoise said (76): ""As for you, my companions, it is easier","tortoise said: ""As for you, my companions, it is easier",,,,not yet reviewed
+c146,sandpiper,1,margin line number,6300,5,,,,,not yet reviewed
+c147,sandpiper,1,margin line number,6305,lo,,,,,not yet reviewed
+c148,sandpiper,1,margin line number,6310,15,,,,,not yet reviewed
+c149,sandpiper,1,margin line number,6315,20,,,,,not yet reviewed
+c150,sandpiper,1,margin line number,6320,25,,,,,not yet reviewed
+c151,sandpiper,1,footnote marker removed,6320,the hen-bird laid (77) eggs; and when she had produced young,the hen-bird laid eggs; and when she had produced young,,,,not yet reviewed
+c152,sandpiper,1,margin line number,6325,30,,,,,not yet reviewed
+c153,sandpiper,1,margin line number,6330,35,,,,,not yet reviewed
+c154,sandpiper,1,page header dropped,6336,K.  F.  -A,,,,,not yet reviewed
+c155,sandpiper,1,page header dropped,6339,50  BOOK   OF   KALILAri   AND   DIMNAU.,,,,,not yet reviewed
+c156,sandpiper,1,margin line number,6345,5,,,,,not yet reviewed
+c157,sandpiper,1,footnote marker removed,6349,the Simurg. If we all go in a body to him and (78) all lift up,the Simurg. If we all go in a body to him and all lift up,,,,not yet reviewed
+c158,sandpiper,1,margin line number,6350,lo,,,,,not yet reviewed
+c159,sandpiper,1,margin line number (inside line),6352,lo,,,,,not yet reviewed
+c160,sandpiper,1,margin line number,6355,15,,,,,not yet reviewed
+c161,sandpiper,1,margin line number,6365,20,,,,,not yet reviewed
+c162,sandpiper,1,line-end hyphen joined,6282,hap- pened,happened,,,,not yet reviewed
+c163,sandpiper,1,line-end hyphen joined,6285,abound- ing,abounding,,,,not yet reviewed
+c164,sandpiper,1,line-end hyphen joined,6288,an- other,another,,,,not yet reviewed
+c165,sandpiper,1,line-end hyphen joined,6313,per- ceived,perceived,,,,not yet reviewed
+c166,sandpiper,1,line-end hyphen joined,6316,wilful- ness,wilfulness,,,,not yet reviewed
+c167,sandpiper,1,line-end hyphen joined,6319,conse- quences,consequences,,,,not yet reviewed
+c168,sandpiper,1,line-end hyphen joined,6331,sigh- ing,sighing,,,,not yet reviewed
+c169,sandpiper,1,line-end hyphen joined,6344,assist- ance,assistance,,,,not yet reviewed
+c170,sandpiper,2,letters misread,,The O.r. What,The Ox. What,The O.r. What did he do ? Dimnah. It is related about,2,False,not yet reviewed
+c171,sandpiper,2,margin line number 5 read as a letter,,that is S for eggs,that is for eggs,"ore. When the time came for young ones, that is S for eggs, the hen-bird said to the cock : ' We m",2,False,not yet reviewed
+c172,sandpiper,2,letters misread,,'0 how weak,'O how weak,"ll not hurt us.' His mate said to him : '0 how weak is your mind and puffed up your spirit,",1,False,not yet reviewed
+c173,sandpiper,2,letters misread (question mark and quote read as V),,to her V The hen-bird,to her?' The hen-bird,s.' The cock said : ' And what happened to her V The hen-bird replied : 'It is related that in a cert,2,False,not yet reviewed
+c174,sandpiper,2,letters misread,,geese repUed,geese replied,"tortoise said : "" How can this be?"" The geese repUed: ""We can put down a stick, and do you t",2,False,not yet reviewed
+c175,sandpiper,2,letters misread,,theu' nest,their nest,"took away the young ones, together with theu' nest. But he preserved them and did not dest",2,False,not yet reviewed
+c176,sandpiper,2,letters misread,,wi'onged,wronged,"the sea had done to him, and how he had wi'onged him by taking his cliildren and heirs f",2,False,not yet reviewed
+c177,sandpiper,2,letters misread,,cliildren,children,nd how he had wronged him by taking his cliildren and heirs from him. And he said to them,2,False,not yet reviewed
+c178,sandpiper,2,letters misread,,he Avill hear,he will hear,"ft up our voice in weeping and sighing, he Avill hear our voice and come out to us. And we wi",2,False,not yet reviewed
+c179,apes_glowworm,1,margin line number,6624,30,,,,,not yet reviewed
+c180,apes_glowworm,1,margin line number,6630,35,,,,,not yet reviewed
+c181,apes_glowworm,1,page header dropped,6637,56  BOOK    OF    KALILAH   AND   DIMNAH.,,,,,not yet reviewed
+c182,apes_glowworm,1,margin line number,6643,5,,,,,not yet reviewed
+c183,apes_glowworm,1,footnote marker removed,6645,make bows of wood that will not bend' (87). Then the bird,make bows of wood that will not bend'. Then the bird,,,,not yet reviewed
+c184,apes_glowworm,1,margin line number,6649,lo,,,,,not yet reviewed
+c185,apes_glowworm,1,margin line number,6655,15,,,,,not yet reviewed
+c186,apes_glowworm,1,line-end hyphen joined,6656,van- quished,vanquished,,,,not yet reviewed
+c187,apes_glowworm,2,letters misread,,blo^^ing,blowing,"fire, so do not fatigue yourselves with blo^^ing at (imaginary) fire.' But the apes obey",2,False,not yet reviewed
+c188,apes_glowworm,2,letters misread,,bu'd,bird,apes obeyed not nor hearkened. Then the bu'd came down from her place and began to u,2,False,not yet reviewed
+c189,two_partners,1,margin line number,6661,20,,,,,not yet reviewed
+c190,two_partners,1,margin line number,6668,25,,,,,not yet reviewed
+c191,two_partners,1,margin line number,6674,30,,,,,not yet reviewed
+c192,two_partners,1,margin line number,6680,35,,,,,not yet reviewed
+c193,two_partners,1,footnote marker removed,6680,"other road (88) and took away the darics, and returned to his","other road and took away the darics, and returned to his",,,,not yet reviewed
+c194,two_partners,1,page header dropped,6687,STORY    OF   THE   LION   AND   THE   OX.  57,,,,,not yet reviewed
+c195,two_partners,1,margin line number,6693,5,,,,,not yet reviewed
+c196,two_partners,1,margin line number,6698,10,,,,,not yet reviewed
+c197,two_partners,1,margin line number,6703,15,,,,,not yet reviewed
+c198,two_partners,1,margin line number,6708,20,,,,,not yet reviewed
+c199,two_partners,1,footnote marker removed,6708,"rogue went to his house, and related his whole (89) story to his","rogue went to his house, and related his whole story to his",,,,not yet reviewed
+c200,two_partners,1,margin line number,6713,25,,,,,not yet reviewed
+c201,two_partners,1,margin line number,6718,30,,,,,not yet reviewed
+c202,two_partners,1,margin line number,6723,35,,,,,not yet reviewed
+c203,two_partners,1,page header dropped,6730,58  BOOK   OF   KALILAII   AND   DIMNAH.,,,,,not yet reviewed
+c204,two_partners,1,margin line number,6736,5,,,,,not yet reviewed
+c205,two_partners,1,footnote marker removed,6740,"and fell (90) from the tree, knocking at the door of death. So","and fell from the tree, knocking at the door of death. So",,,,not yet reviewed
+c206,two_partners,1,margin line number,6742,lo,,,,,not yet reviewed
+c207,two_partners,1,margin line number,6748,15,,,,,not yet reviewed
+c208,two_partners,1,line-end hyphen joined,6680,an- other,another,,,,not yet reviewed
+c209,two_partners,1,line-end hyphen joined,6697,wrong- fully,wrongfully,,,,not yet reviewed
+c210,two_partners,2,letters misread,,Kalllah. It is,Kalilah. It is,"Dimnah. How runs the story about them ? Kalllah. It is related that a certain crafty rogue, an",1,False,not yet reviewed
+c211,two_partners,2,letters misread,,(^ay),(Nay)," to take them (all) by fraud, replied: '(^ay) but let us take of them, you and I, as ",1,False,not yet reviewed
+c212,two_partners,2,stray mark,,the .simpleton said,the simpleton said,"nd wrongfully. Some time having passed, the .simpleton said to the rogue : ' We are in need (of mon",1,False,not yet reviewed
+c213,two_partners,2,stray mark (asterisk for opening quote),,saying : * The tree,saying : ' The tree,for me.' Then the judge wondered at his saying : * The tree will witness for me.' And he directed t,1,False,not yet reviewed
+c214,two_partners,2,punctuation dropped,,for himself And the judge,for himself. And the judge,at a surety be taken from the simpleton for himself And the judge directed the surety to bring him on the,1,False,not yet reviewed
+c215,iron_merchant,1,footnote marker removed,6807,chant rich (92) in property and goods. And he wished to set,chant rich in property and goods. And he wished to set,,,,not yet reviewed
+c216,iron_merchant,1,margin line number,6808,25,,,,,not yet reviewed
+c217,iron_merchant,1,margin line number,6813,30,,,,,not yet reviewed
+c218,iron_merchant,1,margin line number,6818,35,,,,,not yet reviewed
+c219,iron_merchant,1,page header dropped,6825,60  BOOK    OF   KALILAH    AND    DIMNAH.,,,,,not yet reviewed
+c220,iron_merchant,1,margin line number,6831,5,,,,,not yet reviewed
+c221,iron_merchant,1,margin line number,6837,lo,,,,,not yet reviewed
+c222,iron_merchant,1,footnote marker removed,6837,'In truth it is I who took your iron; because (93) it is impossi-,'In truth it is I who took your iron; because it is impossi-,,,,not yet reviewed
+c223,iron_merchant,1,margin line number,6844,15,,,,,not yet reviewed
+c224,iron_merchant,1,line-end hyphen joined,6807,mer- chant,merchant,,,,not yet reviewed
+c225,iron_merchant,1,line-end hyphen joined,6832,per- haps,perhaps,,,,not yet reviewed
+c226,iron_merchant,1,line-end hyphen joined,6838,impossi- ble,impossible,,,,not yet reviewed
+c227,iron_merchant,2,letters misread,,liis mind,his mind,"o the boy's father, and seeing him with liis mind troubled and the appearance of his face",2,False,not yet reviewed
+c228,iron_merchant,2,letters misread,,ofif a boy,off a boy,ied: 'But who (ever) saw an eagle carry ofif a boy?' The merchant said: 'In the land where,1,False,not yet reviewed
+c229,iron_merchant,2,letters misread,,fall mil come,fall will come,"s his mean condition, without doubt his fall mil come suddenly.",2,False,not yet reviewed

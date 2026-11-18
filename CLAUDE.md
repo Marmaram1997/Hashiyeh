@@ -18,14 +18,17 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 
 ## Data (in /data)
 - `kelile_monshi.json`: full Monshi text from the Ganjoor API (ganjoor.net/monshi/kelile-demni). 19 chapters, 250 sections, about 85,000 words. Each section has `verses` with `pos` (Ganjoor's verse position field), which separates prose lines from poetry lines.
-- `keith_falconer_1885_ocr.txt`: archive.org OCR of Keith-Falconer, *Kalilah and Dimnah* (Cambridge, 1885). Public domain. Still noisy.
+- `keith_falconer_1885_ocr.txt`: archive.org OCR of Keith-Falconer, *Kalilah and Dimnah* (Cambridge, 1885). Public domain. Noisy; never edit it, correct it through the scripts below.
+- `ocr_corrections/`: `changes.json`/`changes.csv` (every change: tale, stage, rule, before, after, context, edit distance, review status), `review_sample.csv` (25 random stage-1 changes plus all model substitutions, with an empty `correct? (y/n)` column for the human check). All entries are `not yet reviewed`.
 - `lion_ox_aligned.json`: 12 tales from the chapter "The Lion and the Ox", hand-aligned. Persian sections (whole Ganjoor sections, which can include frame dialogue), English line spans from the OCR, parent/child nesting, teller.
   - Tellers checked against the text: Ape and Carpenter (Kalila → Dimna), Three Fishes (Dimna → Lion), Camel (Ox → Dimna), Sandpiper (Dimna → Ox), Apes and Glow-worm (Kalila → Dimna), Two Partners (Kalila → Dimna), Tortoise and Geese (hen-bird → her mate). The rest still need labelling.
   - Finding: the Frog and the Snake (nested in the Two Partners) is in Monshi but not in the later Syriac version.
 
 ## Scripts (in /scripts)
 - `fetch_kelile.py`: downloads the whole book from the Ganjoor API into `data/kelile_monshi.json`.
-- `build_aligned.py`: builds `lion_ox_aligned.json` from the two sources. The English line ranges are hard-coded and were set by hand.
+- `ocr_clean.py`: stage 1, deterministic rules (page headers, margin line numbers, footnote markers, line-end hyphens). Holds the tale line spans.
+- `ocr_correct.py`: stage 2, model-chosen substitutions (old, new, reason), each applied exactly once with a uniqueness check, plus an `UNRESOLVED` list of doubtful spots left as in the OCR. Cuts nested tales from their parent. Writes `data/ocr_corrections/`.
+- `build_aligned.py`: builds `lion_ox_aligned.json` (runs both OCR stages). Each tale has `en_text` (corrected), `en_text_raw_ocr`, `en_source_lines`, `en_changes`, `en_status`.
 
 ## What exists
 - Site pages (static, clean URLs, shared `assets/site.css` and `assets/site.js` with the EN/FA switch and header): `/` cover, `/journey`, `/tales` (atlas with margin panel, reads `data/lion_ox_aligned.json`; its "Read this tale" button opens the reader), `/read` (side-by-side reader, loads `data/lion_ox_aligned.json`; `/read#tale_id` opens a tale; reached only from The Tales, shows The Tales as the active menu item and a link back to the map at `/tales#tale_id`), `/method`, `/about`. The cover and header have no "Read" link. Language choice is kept in localStorage (`hashiyeh-lang`). Pages use absolute paths, so serve with `npm run dev`; file:// will not work.
@@ -38,7 +41,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 
 ## Notes
 - Cover background is the video's own colour (#F6ECDD, sampled from the frames) so no rectangle shows; the cover stays light even in dark mode. Tree is 78vh tall; nothing scrolls on desktop.
-- English ranges in `scripts/build_aligned.py` start at each tale's opening question ("How runs the story about him?"), with a few obvious OCR name typos fixed.
+- English tales start at their opening question and end at the teller's own moral (spans in `scripts/ocr_clean.py`); the previous hand-set ranges are gone. They start at each tale's opening question ("How runs the story about him?"), with a few obvious OCR name typos fixed.
 - Contact links on /about come from the `CONTACT` object in `about/index.html`; empty CV/LinkedIn values are not shown.
 
 ## Cover behaviour
@@ -57,3 +60,6 @@ Ivory paper #F8F0E4 / #F7F1E3, ink #1F1B16, lapis #2E4A9E, burnt orange #A2471F,
 
 ## References
 Closest existing project: Kalila wa-Dimna Edition, FU Berlin (kalila-and-dimna.fu-berlin.de), focused on Arabic manuscripts. Models: Decameron Web (Brown), Intertextual Dante (Columbia), Shakespeare and Company Project (Princeton), Atlante Calvino (Geneva + DensityDesign), Kindred Britain (Stanford).
+
+## OCR post-correction (done, human review pending)
+Rule: fix only clear OCR errors, never reword, log every change. Applied by a model; a human has NOT yet checked the sample, so never say the English is human-reviewed. Next: fill `correct? (y/n)` in `review_sample.csv`, report the error rate, and re-OCR the scans only if it is too high. Doubtful spots are in `UNRESOLVED`.
