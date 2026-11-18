@@ -19,6 +19,7 @@
 @media(prefers-color-scheme:dark){.gutter{background:linear-gradient(90deg,transparent,rgba(0,0,0,.18) 42%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.18) 58%,transparent)}}
 .run{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:center;padding-bottom:7px;border-bottom:1px solid var(--rule)}
 .page.fa .run{letter-spacing:0;font-size:14px;text-transform:none}
+.himg{height:84px;margin-top:10px;overflow:hidden;border:1px solid var(--gold);flex:none}.himg[hidden]{display:none}.himg img{display:block;width:112%;max-width:none;margin-inline-start:-6%;height:100%;object-fit:cover}
 .ptitle{font-weight:400;font-size:21px;line-height:1.25;text-align:center;margin:12px 0 10px}
 .page.fa .ptitle{font-size:23px}
 .vp{position:relative;flex:1;min-height:0;overflow:hidden}
@@ -81,7 +82,7 @@ html[dir=rtl] .ribbon{letter-spacing:0;font-size:14px}
  .book[data-show=fa] #pL{display:none}.book[data-show=en] #pR{display:none}
  .gutter{display:none}
  .page.l,.page.r{border-radius:5px;box-shadow:1px 1px 0 var(--edge1),3px 2px 0 var(--edge2),0 10px 24px var(--shade)}
- .page{padding:20px 22px 2px}
+ .page{padding:20px 22px 2px}.himg{height:64px}
  .page.en .flow{font-size:17px}.page.fa .flow{font-size:18px}
  .toc{padding:50px 16px 16px}.ti .e{max-width:48%;font-size:16px}.ti .f{max-width:48%;font-size:17px}
  .ribbon{left:auto;right:10px;transform:none;width:62px}
@@ -94,10 +95,10 @@ html[dir=rtl] .ribbon{letter-spacing:0;font-size:14px}
  <div class="phonesw" role="group" aria-label="Page language"><button type="button" data-pl="fa" class="fa" aria-pressed="false">فارسی</button><button type="button" data-pl="en" aria-pressed="false">English</button></div>
  <div class="book" id="book" data-show="fa">
   <section class="page l en" id="pL" lang="en" dir="ltr" aria-label="English page">
-   <div class="run">Kalilah and Dimnah · 1885</div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
+   <div class="run">Kalilah and Dimnah · 1885</div><div class="himg" hidden><img alt="" width="1086" height="1448"></div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
   </section>
   <section class="page r fa" id="pR" lang="fa" dir="rtl" aria-label="صفحهٔ فارسی">
-   <div class="run">کلیله و دمنه · نصرالله منشی</div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
+   <div class="run">کلیله و دمنه · نصرالله منشی</div><div class="himg" hidden><img alt="" width="1086" height="1448"></div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
   </section>
   <div class="gutter" aria-hidden="true"></div>
   <button type="button" class="ribbon" id="ribbon" aria-expanded="false" aria-controls="toc"></button>
@@ -138,18 +139,21 @@ function faLines(s){var out=[],ins=s.inserts||[],skip={};
   if(!k){out.push("<p>"+esc(p)+"</p>");return}
   if(j===k.replaces_lines[0])out.push('<div class="ins"><div class="beyt" lang="'+k.lang+'" dir="rtl"><span>'+esc(k.hemistichs[0])+"</span><span>"+esc(k.hemistichs[1])+'</span></div><div class="mnote"><div>'+esc(k.note_fa)+'</div><div lang="en" dir="ltr">'+esc(k.note_en)+" Translation: ‘"+esc(k.translation_en)+"’</div></div></div>")});
  return out.join("")}
+var HEAD={lion_hare:{src:"/assets/lion-hare-well.jpg",fa:{pos:"50% 42%",alt:"جزئیاتی از نگارهٔ شیر و خرگوش: شیر بر لبهٔ چاه خم شده و تصویر خود را در آب می‌بیند."},en:{pos:"50% 66%",alt:"Detail of the Lion and the Hare painting: a hare sits beside a stone well."}}};
+function setHead(t){var h=HEAD[t.id];["fa","en"].forEach(function(l){var d=P[l].el.querySelector(".himg"),im=d.querySelector("img");
+ if(!h){d.hidden=true;return}d.hidden=false;im.src=h.src;im.alt=h[l].alt;im.style.objectPosition=h[l].pos})}
 function buildTale(){var t=tale(),par=t.parent?D.tales.find(function(x){return x.id===t.parent}):null;
- P.fa.title.textContent=t.fa_title;P.en.title.textContent=t.en_title||ABS_T;
+ setHead(t);P.fa.title.textContent=t.fa_title;P.en.title.textContent=t.en_title||ABS_T;
  P.fa.flow.innerHTML=t.fa_sections.map(function(s){return '<div class="sec">'+esc(s.title)+"</div>"+faLines(s)}).join("");
  P.en.flow.innerHTML=t.en_text?"<p>"+esc(t.en_text)+"</p>":'<p class="absent">'+esc(ABS)+"</p>";
  var teller=VER.indexOf(t.id)>=0?t.teller:"not yet checked";
  var en=[];
  if(t.en_text)en.push("Keith-Falconer 1885, from the later Syriac: a sibling version, not a translation of Monshi","OCR lines "+t.en_source_lines.join("–"),"model-corrected, not yet human-reviewed");
  else en.push("Not found in the later Syriac version");
- en.push("Told by: "+esc(teller));if(par)en.push("Nested inside: "+esc(par.en_title));if(t.en_text)en.push(t.en_words+" words");
+ en.push("Told by: "+esc(teller));if(par)en.push("Nested inside: "+esc(par.en_title));if(t.en_text)en.push(t.en_words+" words");if(HEAD[t.id])en.push("Headpiece: AI-generated image, in the manner of Persian manuscript painting");
  P.en.fn.innerHTML=en.map(function(x){return x.indexOf("Told by")===0||x.indexOf("Nested")===0?x:esc(x)}).join(" · ");
  var fa=["نصرالله منشی",'<a href="'+esc(t.fa_sections[0].url)+'">گنجور ↗</a>'];
- if(par)fa.push("درون «"+esc(par.fa_title)+"»");fa.push(fd(t.fa_words)+" واژه");
+ if(par)fa.push("درون «"+esc(par.fa_title)+"»");fa.push(fd(t.fa_words)+" واژه");if(HEAD[t.id])fa.push("تصویر سرصفحه: ساخته‌شده با هوش مصنوعی");
  P.fa.fn.innerHTML=fa.join(" · ");
  $("backmap").href="/tales#"+t.id}
 function measure(){var ph=phone();$("book").dataset.show=pl();
