@@ -8,6 +8,14 @@ A digital reading of Nasrollah Monshi's Persian *Kelileh o Demneh*: the Persian 
 - `design/`: landing-page drafts and images
 - `CLAUDE.md`: project context and decisions, for Claude Code
 
+To run the site locally (needs Node 18+, no installs):
+
+```
+npm run dev
+```
+
+then open http://localhost:3000. Set `PORT=4000 npm run dev` for another port.
+
 To rebuild the data:
 
 ```
