@@ -4,218 +4,287 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-:root{--paper:#FCF6EA;--edge1:#E6DABB;--edge2:#D8CAA5;--edge3:#CBBB92;--shade:rgba(60,40,10,.14)}
-@media(prefers-color-scheme:dark){:root{--paper:#2B2722;--edge1:#3A352E;--edge2:#46403A;--edge3:#524B42;--shade:rgba(0,0,0,.45)}}
+:root{--arc:#5B6F4A;--sheet:rgba(31,27,22,.35)}
+html[data-theme=dark]{--arc:#A9BF98}
+@media(prefers-color-scheme:dark){html:not([data-theme]){--arc:#A9BF98}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.stage{max-width:1180px;margin:0 auto;padding:10px 28px 0}
-.top{display:flex;justify-content:space-between;align-items:baseline;gap:8px 20px;flex-wrap:wrap;font-size:14px;color:var(--mute);margin:0 auto 14px;max-width:1120px}
-.top a{color:var(--orange)}
-/* the book */
-.book{position:relative;direction:ltr;display:grid;grid-template-columns:1fr 1fr;max-width:1120px;margin:0 auto;height:calc(100vh - 175px);height:calc(100dvh - 175px);min-height:470px;max-height:800px;perspective:2600px}
-.page{position:relative;display:flex;flex-direction:column;height:100%;min-width:0;background:var(--paper);padding:24px 46px 4px}
-.page.l{border-radius:5px 0 0 5px;box-shadow:-1px 1px 0 var(--edge1),-3px 2px 0 var(--edge2),-5px 3px 0 var(--edge3),0 14px 30px var(--shade)}
-.page.r{border-radius:0 5px 5px 0;box-shadow:1px 1px 0 var(--edge1),3px 2px 0 var(--edge2),5px 3px 0 var(--edge3),0 14px 30px var(--shade)}
-.gutter{position:absolute;top:0;bottom:0;left:50%;width:110px;transform:translateX(-50%);pointer-events:none;z-index:2;background:linear-gradient(90deg,transparent,rgba(50,30,5,.07) 42%,rgba(50,30,5,.17) 50%,rgba(50,30,5,.07) 58%,transparent)}
-@media(prefers-color-scheme:dark){.gutter{background:linear-gradient(90deg,transparent,rgba(0,0,0,.18) 42%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.18) 58%,transparent)}}
-.run{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:center;padding-bottom:7px;border-bottom:1px solid var(--rule)}
-.page.fa .run{letter-spacing:0;font-size:14px;text-transform:none}
-.himg{height:84px;margin-top:10px;overflow:hidden;border:1px solid var(--gold);flex:none}.himg[hidden]{display:none}.himg img{display:block;width:112%;max-width:none;margin-inline-start:-6%;height:100%;object-fit:cover}
-.ptitle{font-weight:400;font-size:21px;line-height:1.25;text-align:center;margin:12px 0 10px}
-.page.fa .ptitle{font-size:23px}
-.vp{position:relative;flex:1;min-height:0;overflow:hidden}
-.flow{position:absolute;top:0;bottom:0;column-fill:auto;overflow:visible}
-.page.en .flow{left:0;direction:ltr;font-size:17.5px;line-height:1.58;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-.page.fa .flow{right:0;direction:rtl;font-family:"Noto Naskh Arabic",serif;font-size:18px;line-height:2.05;text-align:justify}
-.flow p{margin:0 0 .5em;orphans:1;widows:1}
-.flow .sec{font-size:12px;color:var(--mute);margin:10px 0 2px;break-after:avoid;letter-spacing:0}
-.flow .ins{break-inside:avoid;margin:.4em 0 .7em}
-.flow .beyt{display:flex;flex-wrap:wrap;justify-content:center;gap:0 2.2em;text-align:center;font-family:"Noto Naskh Arabic",serif;font-size:19px;line-height:2.3;color:var(--ink)}
-.flow .beyt span{flex:0 1 auto}
-.flow .mnote{font-size:12.5px;line-height:1.5;color:var(--mute);border-inline-start:2px solid var(--gold);padding-inline-start:10px;margin-top:4px;text-align:start;hyphens:none}
-.flow .mnote div[lang=en]{font-family:"EB Garamond",Georgia,serif;font-size:13px;margin-top:3px}
-.flow .absent{color:var(--mute);font-style:italic}
-.fn{font-size:12.5px;line-height:1.45;color:var(--mute);border-top:1px solid var(--rule);padding-top:6px;margin-top:8px}
-.fn a{color:var(--mute)}
-.page.fa .fn{font-family:"Noto Naskh Arabic",serif;font-size:13.5px;line-height:1.7}
-.pn{position:relative;height:36px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--mute);letter-spacing:.06em}
-/* turning */
-.leaf,.stat{position:absolute;top:0;bottom:0;width:50%}
-.stat{z-index:3}.stat.sR{left:50%}.stat.sL{left:0}
-.leaf{z-index:4;transform-style:preserve-3d}.leaf.lL{left:0;transform-origin:100% 50%}.leaf.lR{left:50%;transform-origin:0 50%}
-.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.face.back{transform:rotateY(180deg)}
-.face .page,.stat .page{position:absolute;inset:0;height:100%;width:100%;box-shadow:none}
-.leaf{filter:drop-shadow(0 0 14px var(--shade))}
-/* nav */
-.nav{position:absolute;bottom:4px;z-index:5;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:6px 12px;color:var(--ink);font-size:15px}
-.nav:hover:not(:disabled){color:var(--lapis)}.nav:disabled{opacity:.28;cursor:default}
-.nav.next{left:18px}.nav.prev{right:18px}
-.nav .arr{font-size:22px;line-height:1}
-/* bookmark ribbon */
-.ribbon{position:absolute;z-index:6;top:-9px;left:50%;transform:translateX(-50%);width:76px;height:60px;padding:17px 4px 0;background:var(--orange);color:#FBF3E4;font-size:12.5px;letter-spacing:.06em;clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%);text-align:center}
-.ribbon:hover,.ribbon[aria-expanded=true]{background:var(--lapis);color:#FBF3E4}
-html[dir=rtl] .ribbon{letter-spacing:0;font-size:14px}
-/* contents */
-.toc{position:absolute;inset:0;z-index:7;background:var(--paper);border-radius:5px;padding:40px 8% 12px;overflow:auto;box-shadow:0 14px 30px var(--shade)}
-.toc[hidden]{display:none}
-.toc h2{font-weight:400;font-size:24px;display:flex;justify-content:center;gap:.6em;direction:ltr;margin:0 0 2px;line-height:1.3}
-.toc h2 .fa{color:var(--mute)}
-.toc .sub{text-align:center;font-size:13px;line-height:1.4;color:var(--mute);margin:0 0 8px}
-.toc ol{list-style:none;margin:0;padding:0}
-.ti{display:flex;align-items:baseline;gap:10px;width:100%;direction:ltr;padding:2px 4px;min-height:32px;color:var(--ink);text-align:start;font-size:17px}
-.ti.child{padding-left:26px}.ti.child .e,.ti.child .f{font-size:16px}
-.ti .e{flex:none;max-width:46%}
-.ti .ld{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:16px}
-.ti .f{flex:none;max-width:46%;direction:rtl;font-family:"Noto Naskh Arabic",serif;font-size:18px;line-height:1.7}
-.ti:hover,.ti[aria-current=true]{color:var(--lapis)}
-.ti[aria-current=true] .e,.ti[aria-current=true] .f{border-bottom:1px solid var(--lapis)}
-.toc .close{position:absolute;top:14px;right:16px;font-size:22px;min-width:44px;min-height:44px}
-.cap{max-width:760px;margin:22px auto 0;font-size:15px;color:var(--mute);text-align:center}
-.phonesw{display:none}
+/* sticky bar */
+.rbar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.rb{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;padding:6px 16px;font-size:15px}
+.rb button,.rb select{font-size:14px;color:var(--ink);border:1px solid var(--line);background:transparent;padding:4px 10px;min-height:36px;border-radius:0}
+.rb button[aria-pressed=true],.rb button[aria-expanded=true]{border-color:var(--lapis);color:var(--lapis)}
+.rb select{max-width:210px;font-family:inherit}
+.crumbs{flex:1 1 280px;min-width:0;color:var(--mute);font-size:14px;line-height:1.5}
+.crumbs span+span::before{content:" › ";color:var(--gold)}
+.crumbs .here{color:var(--ink)}
+.ctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.grp{display:inline-flex}.grp button+button{margin-inline-start:-1px}
+.grp .a1{font-size:13px}.grp .a2{font-size:16px}.grp .a3{font-size:19px}
+.prog{height:3px;background:var(--rule)}.prog i{display:block;height:100%;width:0;background:var(--lapis)}
+/* layout */
+.rd{direction:ltr;display:grid;grid-template-columns:300px minmax(0,1fr);align-items:start}
+.rd.collapsed{grid-template-columns:0 minmax(0,1fr)}
+.rd.collapsed .side{visibility:hidden;overflow:hidden;border:0}
+.side{position:sticky;top:var(--rbh,96px);height:calc(100vh - var(--rbh,96px));overflow:auto;border-inline-end:1px solid var(--rule);padding:14px 14px 80px;font-size:15px}
+html[dir=rtl] .side{direction:rtl}
+.tabs{display:flex;gap:4px;margin-bottom:10px}.tabs button{flex:1;border:1px solid var(--line);color:var(--ink);font-size:14px;min-height:36px}
+.tabs button[aria-selected=true]{background:var(--lapis);border-color:var(--lapis);color:#F8F0E4}
+.side .note{font-size:13px;color:var(--mute);margin:0 0 10px;line-height:1.5}
+.tn{display:block;width:100%;text-align:start;padding:7px 8px;border-inline-start:3px solid transparent;border-top:1px solid var(--rule);color:var(--ink);min-height:40px}
+.tn .f{font-family:"Noto Naskh Arabic",serif;font-size:17px;direction:rtl;display:block;text-align:start}
+.tn .e{font-size:13px;color:var(--mute);display:block}
+.tn .u{display:inline-block;font-size:11px;border:1px solid var(--gold);padding:0 6px;margin-top:2px;color:var(--mute)}
+.tn[aria-current=true]{background:rgba(46,74,158,.09);border-inline-start-color:var(--lapis)}
+.tn.anc{border-inline-start-color:var(--gold)}
+.nest{margin-inline-start:14px;border-inline-start:1px solid var(--gold)}
+.bmi{display:flex;gap:8px;align-items:center;border-top:1px solid var(--rule);padding:6px 0}.bmi a{flex:1;color:var(--ink);text-decoration:none}.bmi button{font-size:18px}
+/* document */
+.doc{min-width:0;padding:22px 20px 120px}
+.chh{max-width:38em;margin:6px auto 26px;text-align:center}
+.chh .k{margin-bottom:4px}
+.chh h1{font-family:"Noto Naskh Arabic",serif;font-weight:600;font-size:32px;line-height:1.6;margin:0;direction:rtl}
+.chh .en{color:var(--mute);font-size:17px}
+.sec{max-width:38em;margin:0 auto 54px;scroll-margin-top:calc(var(--rbh,96px) + 10px)}
+.sec.wide{max-width:min(1100px,100%)}
+.sh{display:flex;align-items:center;gap:12px;direction:rtl;border-top:1px solid var(--gold);padding-top:10px;max-width:38em;margin:0 auto}
+.snum{color:var(--orange);font-family:"Noto Naskh Arabic",serif;font-size:15px}
+.stitle{flex:1;font-family:"Noto Naskh Arabic",serif;font-size:21px;font-weight:600;margin:0;line-height:1.6}
+.bm{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;color:var(--mute)}
+.bm svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+.bm[aria-pressed=true]{color:var(--orange)}.bm[aria-pressed=true] svg{fill:currentColor}
+.taleline{max-width:38em;margin:8px auto 0;direction:rtl;font-family:"Noto Naskh Arabic",serif;font-size:16px;color:var(--mute)}
+.taleline b{color:var(--ink);font-weight:600}
+.taleline .tl{display:inline-block;border:1px solid var(--line);padding:0 8px;margin-inline-start:8px;color:var(--ink);font-size:14px}
+.taleline .tl i{font-style:normal;font-family:"EB Garamond",serif;direction:ltr;unicode-bidi:isolate;color:var(--mute)}
+.sum{max-width:38em;margin:12px auto 0;border:1px solid var(--gold);padding:10px 14px;font-size:16px;line-height:1.55;direction:ltr;text-align:left}
+.sum .lab{display:flex;gap:8px;align-items:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.badge{border:1px solid var(--orange);color:var(--orange);padding:0 7px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:34px;direction:ltr;margin-top:14px}
+.txt{--fs:22px;font-family:"Noto Naskh Arabic",serif;font-size:var(--fs);line-height:2.25;direction:rtl;text-align:justify;margin-top:14px;max-width:38em;margin-inline:auto}
+.pair .txt{margin-top:0;max-width:none}
+.en-pg{font-size:calc(var(--fs) - 3px);line-height:1.65;direction:ltr;text-align:left}
+.en-pg h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:400;margin:0 0 6px}
+.txt p{margin:0 0 .7em}
+.beyt{display:flex;justify-content:center;gap:0 3em;text-align:center;margin:.4em 0;line-height:2.1;flex-wrap:wrap}
+.beyt span{flex:0 1 auto}
+.vline{text-align:center;margin:.3em 0}
+.ar{font-size:.92em;color:var(--arc)}
+.has-tr{cursor:pointer;border-bottom:1px solid var(--arc)}
+.gl{border-bottom:1px dotted var(--mute);cursor:help}
+.ins{margin:.5em 0 .8em}
+.mnote{font-size:13.5px;line-height:1.6;color:var(--mute);border-inline-start:2px solid var(--gold);padding-inline-start:10px;margin-top:4px;text-align:start;direction:rtl;font-family:"Noto Naskh Arabic",serif}
+.mnote div[lang=en]{direction:ltr;font-family:"EB Garamond",Georgia,serif;font-size:14px;margin-top:4px;text-align:left}
+#pop{position:fixed;z-index:50;max-width:300px;background:var(--card);color:var(--ink);border:1px solid var(--gold);padding:8px 12px;font-size:15px;line-height:1.5;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+#pop[hidden]{display:none}
+#pop .w{font-family:"Noto Naskh Arabic",serif;font-size:18px;direction:rtl;display:block}
+#pop .fa{display:block;font-size:16px}#pop .e{display:block;direction:ltr;text-align:left}
+#pop small{display:block;color:var(--mute);margin-top:4px;font-size:12px;direction:ltr;text-align:left}
+/* bottom bar */
+.pn{position:fixed;bottom:0;inset-inline:0;z-index:15;background:var(--bg);border-top:1px solid var(--rule);display:flex;justify-content:center;align-items:center;gap:18px;padding:6px 12px;direction:ltr}
+.pn button{border:1px solid var(--line);color:var(--ink);min-height:40px;padding:6px 16px;font-size:15px}
+.pn button:disabled{opacity:.35;cursor:default}.pn .pos{color:var(--mute);font-size:14px;min-width:90px;text-align:center}
+@media(max-width:860px){.pair{grid-template-columns:1fr}.pair .en-pg{order:2}}
 @media(max-width:760px){
- .stage{padding:8px 14px 0}
- .phonesw{display:flex;justify-content:center;gap:0;margin:0 auto 10px;border:1px solid var(--gold);width:max-content}
- .phonesw button{padding:6px 22px;min-height:40px;color:var(--ink);font-size:16px}
- .phonesw button[aria-pressed=true]{background:var(--lapis);color:#FBF3E4}
- .phonesw .fa{font-size:18px}
- .book{grid-template-columns:1fr;height:calc(100vh - 290px);height:calc(100dvh - 290px);min-height:420px}
- .book[data-show=fa] #pL{display:none}.book[data-show=en] #pR{display:none}
- .gutter{display:none}
- .page.l,.page.r{border-radius:5px;box-shadow:1px 1px 0 var(--edge1),3px 2px 0 var(--edge2),0 10px 24px var(--shade)}
- .page{padding:20px 22px 2px}.himg{height:64px}
- .page.en .flow{font-size:17px}.page.fa .flow{font-size:18px}
- .toc{padding:50px 16px 16px}.ti .e{max-width:48%;font-size:16px}.ti .f{max-width:48%;font-size:17px}
- .ribbon{left:auto;right:10px;transform:none;width:62px}
+ .rd,.rd.collapsed{grid-template-columns:minmax(0,1fr)}
+ .side,.rd.collapsed .side{position:fixed;inset:auto 0 0 0;top:auto;height:62vh;z-index:40;background:var(--bg);border:0;border-top:2px solid var(--gold);transform:translateY(105%);transition:transform .3s ease;visibility:visible;padding:16px 16px 70px}
+ .rd.sheet .side{transform:none;box-shadow:0 -10px 30px rgba(0,0,0,.25)}
+ .sheetback{position:fixed;inset:0;background:var(--sheet);z-index:35}
+ .sheetback[hidden]{display:none}
+ .doc{padding:16px 14px 110px}.txt{--fs:20px}
+ .rb{padding:6px 10px}.crumbs{flex-basis:100%;order:3}
+ .stitle{font-size:19px}
 }
-</style></head><body data-page="read"><header id="hdr" class="hdr"></header>
-<main>
+@media(min-width:761px){.sheetback{display:none}}
+</style></head><body data-page="read">
+<header id="hdr" class="hdr"></header>
 <h1 class="sr" data-k="h1"></h1>
-<div class="stage">
- <div class="top"><a id="backmap" href="/tales" data-k="backMap"></a><span data-k="hint"></span></div>
- <div class="phonesw" role="group" aria-label="Page language"><button type="button" data-pl="fa" class="fa" aria-pressed="false">فارسی</button><button type="button" data-pl="en" aria-pressed="false">English</button></div>
- <div class="book" id="book" data-show="fa">
-  <section class="page l en" id="pL" lang="en" dir="ltr" aria-label="English page">
-   <div class="run">Kalilah and Dimnah · 1885</div><div class="himg" hidden><img alt="" width="1086" height="1448"></div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
-  </section>
-  <section class="page r fa" id="pR" lang="fa" dir="rtl" aria-label="صفحهٔ فارسی">
-   <div class="run">کلیله و دمنه · نصرالله منشی</div><div class="himg" hidden><img alt="" width="1086" height="1448"></div><h2 class="ptitle"></h2><div class="vp"><div class="flow"></div></div><div class="fn"></div><div class="pn"></div>
-  </section>
-  <div class="gutter" aria-hidden="true"></div>
-  <button type="button" class="ribbon" id="ribbon" aria-expanded="false" aria-controls="toc"></button>
-  <button type="button" class="nav next" id="nNext"><span class="arr" aria-hidden="true">←</span><span class="lbl"></span></button>
-  <button type="button" class="nav prev" id="nPrev"><span class="lbl"></span><span class="arr" aria-hidden="true">→</span></button>
-  <div class="toc" id="toc" role="region" hidden>
-   <button type="button" class="close" id="tocClose">×</button>
-   <h2><span data-k="tocE"></span><span class="fa">فهرست</span></h2>
-   <p class="sub" data-k="tocSub"></p><ol id="tocList"></ol>
+<div class="rbar" id="rbar">
+ <div class="rb">
+  <button type="button" id="btnMap" aria-expanded="true" aria-controls="side" data-k="map"></button>
+  <nav class="crumbs" id="crumbs" data-alt="crumbL"></nav>
+  <div class="ctl">
+   <select id="chSel" data-alt="chL"></select>
+   <span class="grp" role="group" data-alt="fsL"><button type="button" class="a1" data-fs="0" aria-label="Small text">A</button><button type="button" class="a2" data-fs="1" aria-label="Medium text">A</button><button type="button" class="a3" data-fs="2" aria-label="Large text">A</button></span>
+   <span class="grp" role="group" data-alt="thL"><button type="button" data-th="light" data-k="thLight"></button><button type="button" data-th="sepia" data-k="thSepia"></button><button type="button" data-th="dark" data-k="thDark"></button></span>
   </div>
  </div>
- <p class="cap" data-k="cap"></p>
+ <div class="prog" aria-hidden="true"><i id="bar"></i></div>
 </div>
-<footer class="w foot" style="margin-top:36px"><span data-k="foot"></span></footer></main>
+<div class="rd" id="rd">
+ <aside class="side" id="side" data-alt="sideL">
+  <div class="tabs" role="tablist"><button type="button" role="tab" id="tabMap" aria-selected="true" data-k="map"></button><button type="button" role="tab" id="tabBm" aria-selected="false" data-k="bm"></button></div>
+  <div id="sideBody"></div>
+ </aside>
+ <main class="doc" id="doc"><p id="loading" class="chh" data-k="loading"></p></main>
+</div>
+<div class="sheetback" id="sheetback" hidden></div>
+<div class="pn" id="pn"><button type="button" id="prev"></button><span class="pos" id="pos" aria-live="polite"></span><button type="button" id="next"></button></div>
+<div id="pop" role="tooltip" hidden></div>
 <script src="/assets/site.js"></script>
 <script>
-H.add({en:{title:"Read",backMap:"← Back to the map of tales",h1:"The Lion and the Ox: one chapter, two branches",hint:"Turn pages with ← → or swipe",tocE:"Contents",tocSub:"The Lion and the Ox, tales nested as the book nests them",ribbonL:"Contents",ribbonT:"Open the contents",closeT:"Close the contents",nextL:"Next",prevL:"Previous",nextT:"Next page",prevT:"Previous page",
-cap:"Persian: Naṣrullāh Munshī (12th c.). English: Keith-Falconer (1885), made from the later Syriac version. It is a sibling version, not a translation of Monshi. Both come down from Ibn al-Muqaffaʿ's Arabic.",
-foot:"Persian: ganjoor.net, whole sections that contain each tale (frame dialogue included). English: archive.org OCR of Keith-Falconer, Kalilah and Dimnah (Cambridge 1885), after OCR post-correction: a model fixed only clear scanning errors, every change is logged in the project repository, and the corrections have not yet been checked by a human. Prototype, first pass."},
-fa:{title:"خواندن",backMap:"→ بازگشت به نقشهٔ حکایت‌ها",h1:"شیر و گاو: یک باب، دو شاخه",hint:"ورق زدن با ← → یا کشیدن انگشت",tocE:"Contents",tocSub:"باب شیر و گاو، حکایت‌ها تودرتو همان‌گونه که در کتاب آمده‌اند",ribbonL:"فهرست",ribbonT:"باز کردن فهرست",closeT:"بستن فهرست",nextL:"بعدی",prevL:"قبلی",nextT:"صفحهٔ بعد",prevT:"صفحهٔ پیش",
-cap:"فارسی: نثر نصرالله منشی (سدهٔ ششم هجری). انگلیسی: ترجمهٔ کیث فالکونر (۱۸۸۵) از نسخهٔ سریانیِ متأخر؛ نسخه‌ای همتبار است، نه ترجمهٔ منشی. هر دو از عربیِ ابن مقفع می‌آیند.",
-foot:"فارسی: گنجور، بخش‌های کامل شامل هر حکایت (با گفتگوی چارچوب). انگلیسی: OCR آرشیو اینترنتی از کیث فالکونر، کلیله و دمنه (کمبریج ۱۸۸۵)، پس از پساصلاح OCR: یک مدل فقط خطاهای آشکار اسکن را اصلاح کرده، همهٔ تغییرها در مخزن پروژه ثبت شده و هنوز انسانی بازبینی نشده‌اند. نمونهٔ اولیه، گام نخست."}});
-var D=null,T=[],idx=0,sp=0,cnt={fa:1,en:1},W={fa:300,en:300},GAP=40,busy=false,built=false,phoneLang=null,lastLang=null;
-var VER=["ape_carpenter","three_fishes","camel","sandpiper","apes_glowworm","two_partners","tortoise_geese"];
+H.add({
+en:{title:"Read",h1:"Kelileh o Demneh in Persian",map:"Story map",bm:"Bookmarks",loading:"Loading the text…",crumbL:"Where you are",chL:"Chapter",fsL:"Text size",thL:"Theme",sideL:"Story map and bookmarks",
+ thLight:"Light",thSepia:"Sepia",thDark:"Dark",prev:"‹ Previous section",next:"Next section ›",secOf:"section %n of %t",summary:"English summary",draft:"draft",
+ bmAdd:"Bookmark this section",bmDel:"Remove bookmark",noBm:"No bookmarks yet. Use the ribbon icon at the top of a section.",
+ treeHand:"Hand-aligned tales of this chapter, with nesting.",treeAuto:"Tales guessed from text cues. Not verified; nesting is not detected.",treeNone:"No tale starts detected in this chapter.",unver:"unverified",
+ glNote:"draft meaning, not verified",arNote:"Arabic. Translation:",ch:"Chapter",tales:"tale",tellsWord:"tells",open:"Open",
+ notePrefix:"",transHead:"English translation"},
+fa:{title:"خواندن",h1:"کلیله و دمنه به فارسی",map:"نقشهٔ حکایت‌ها",bm:"نشان‌ها",loading:"در حال بارگذاری متن…",crumbL:"جای شما در کتاب",chL:"باب",fsL:"اندازهٔ متن",thL:"پوسته",sideL:"نقشهٔ حکایت‌ها و نشان‌ها",
+ thLight:"روشن",thSepia:"سپیا",thDark:"تیره",prev:"‹ بخش پیشین",next:"بخش بعد ›",secOf:"بخش %n از %t",summary:"خلاصهٔ انگلیسی",draft:"پیش‌نویس",
+ bmAdd:"نشان‌گذاری این بخش",bmDel:"برداشتن نشان",noBm:"هنوز نشانی ندارید. از نماد نوار در بالای هر بخش استفاده کنید.",
+ treeHand:"حکایت‌های همتراز‌شدهٔ این باب با دست، به‌همراه تودرتویی.",treeAuto:"حکایت‌هایی که از نشانه‌های متن حدس زده شده‌اند. تأییدنشده؛ تودرتویی شناسایی نشده است.",treeNone:"در این باب آغاز حکایتی شناسایی نشد.",unver:"تأییدنشده",
+ glNote:"معنای پیش‌نویس، تأییدنشده",arNote:"عربی. ترجمه:",ch:"باب",tales:"حکایت",tellsWord:"می‌گوید",open:"باز کردن",
+ notePrefix:"",transHead:"ترجمهٔ انگلیسی"}});
 var $=function(i){return document.getElementById(i)},esc=function(s){return H.esc(s)};
-var P={fa:{el:$("pR")},en:{el:$("pL")}};
-["fa","en"].forEach(function(l){var e=P[l].el;P[l].title=e.querySelector(".ptitle");P[l].vp=e.querySelector(".vp");P[l].flow=e.querySelector(".flow");P[l].fn=e.querySelector(".fn");P[l].pn=e.querySelector(".pn")});
+var DB={},CH=[],SECS=[],SID={},curId=null,curCh=null,lastHash="";
+var FSKEY="hashiyeh-fs",THKEY="hashiyeh-theme",BMKEY="hashiyeh-bookmarks",LASTKEY="hashiyeh-last";
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 function fd(n){return String(n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]})}
-function phone(){return window.matchMedia("(max-width:760px)").matches}
-function reduced(){return window.matchMedia("(prefers-reduced-motion:reduce)").matches}
-function pl(){return phoneLang||H.lang}
-function total(){return phone()?cnt[pl()]:Math.max(cnt.fa,cnt.en)}
-function tale(){return T[idx]}
-var ABS_T="Not in this branch",ABS="The later Syriac version has no “Frog and the Snake” tale inside “The Rogue and the Simpleton”. This one shows up in the Persian only.";
-function faLines(s){var out=[],ins=s.inserts||[],skip={};
- s.text.split("\n").forEach(function(p,j){
-  var k=ins.find(function(x){return x.replaces_lines.indexOf(j)>=0});
-  if(!k){out.push("<p>"+esc(p)+"</p>");return}
-  if(j===k.replaces_lines[0])out.push('<div class="ins"><div class="beyt" lang="'+k.lang+'" dir="rtl"><span>'+esc(k.hemistichs[0])+"</span><span>"+esc(k.hemistichs[1])+'</span></div><div class="mnote"><div>'+esc(k.note_fa)+'</div><div lang="en" dir="ltr">'+esc(k.note_en)+" Translation: ‘"+esc(k.translation_en)+"’</div></div></div>")});
- return out.join("")}
-var HEAD={lion_hare:{src:"/assets/lion-hare-well.jpg",fa:{pos:"50% 42%",alt:"جزئیاتی از نگارهٔ شیر و خرگوش: شیر بر لبهٔ چاه خم شده و تصویر خود را در آب می‌بیند."},en:{pos:"50% 66%",alt:"Detail of the Lion and the Hare painting: a hare sits beside a stone well."}}};
-function setHead(t){var h=HEAD[t.id];["fa","en"].forEach(function(l){var d=P[l].el.querySelector(".himg"),im=d.querySelector("img");
- if(!h){d.hidden=true;return}d.hidden=false;im.src=h.src;im.alt=h[l].alt;im.style.objectPosition=h[l].pos})}
-function buildTale(){var t=tale(),par=t.parent?D.tales.find(function(x){return x.id===t.parent}):null;
- setHead(t);P.fa.title.textContent=t.fa_title;P.en.title.textContent=t.en_title||ABS_T;
- P.fa.flow.innerHTML=t.fa_sections.map(function(s){return '<div class="sec">'+esc(s.title)+"</div>"+faLines(s)}).join("");
- P.en.flow.innerHTML=t.en_text?"<p>"+esc(t.en_text)+"</p>":'<p class="absent">'+esc(ABS)+"</p>";
- var teller=VER.indexOf(t.id)>=0?t.teller:"not yet checked";
- var en=[];
- if(t.en_text)en.push("Keith-Falconer 1885, from the later Syriac: a sibling version, not a translation of Monshi","OCR lines "+t.en_source_lines.join("–"),"model-corrected, not yet human-reviewed");
- else en.push("Not found in the later Syriac version");
- en.push("Told by: "+esc(teller));if(par)en.push("Nested inside: "+esc(par.en_title));if(t.en_text)en.push(t.en_words+" words");if(HEAD[t.id])en.push("Headpiece: AI-generated image, in the manner of Persian manuscript painting");
- P.en.fn.innerHTML=en.map(function(x){return x.indexOf("Told by")===0||x.indexOf("Nested")===0?x:esc(x)}).join(" · ");
- var fa=["نصرالله منشی",'<a href="'+esc(t.fa_sections[0].url)+'">گنجور ↗</a>'];
- if(par)fa.push("درون «"+esc(par.fa_title)+"»");fa.push(fd(t.fa_words)+" واژه");if(HEAD[t.id])fa.push("تصویر سرصفحه: ساخته‌شده با هوش مصنوعی");
- P.fa.fn.innerHTML=fa.join(" · ");
- $("backmap").href="/tales#"+t.id}
-function measure(){var ph=phone();$("book").dataset.show=pl();
- ["fa","en"].forEach(function(l){var o=P[l];if(ph&&l!==pl())return;
-  var w=Math.floor(o.vp.getBoundingClientRect().width);if(w<10)return;W[l]=w;
-  o.flow.style.transform="none";o.flow.style.width=w+"px";o.flow.style.columnWidth=w+"px";o.flow.style.columnGap=GAP+"px";
-  cnt[l]=Math.max(1,Math.round((o.flow.scrollWidth+GAP)/(w+GAP)))})}
-function place(){var ph=phone(),tot=total();sp=Math.max(0,Math.min(sp,tot-1));
- $("book").dataset.show=pl();
- ["fa","en"].forEach(function(l){var o=P[l];if(ph&&l!==pl())return;
-  o.flow.style.visibility=sp<cnt[l]?"visible":"hidden";
-  o.flow.style.transform="translateX("+((l==="fa"?1:-1)*sp*(W[l]+GAP))+"px)";
-  var n=ph?sp+1:(l==="fa"?2*sp+1:2*sp+2);o.pn.textContent=l==="fa"?fd(n):n});
- $("nNext").disabled=idx>=T.length-1&&sp>=tot-1;$("nPrev").disabled=idx<=0&&sp<=0;
- document.querySelectorAll(".phonesw button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.pl===pl()))});
- try{history.replaceState(null,"","#"+tale().id+(sp>0?"/"+(sp+1):""))}catch(e){}
- document.querySelectorAll(".ti").forEach(function(b){b.setAttribute("aria-current",String(+b.dataset.i===idx))})}
-function setState(ni,ns){if(ni!==idx||!built){idx=ni;buildTale();built=true;measure()}
- sp=ns==="last"?total()-1:ns;place()}
-function snap(el){var c=el.cloneNode(true);c.removeAttribute("id");c.querySelectorAll("[id]").forEach(function(x){x.removeAttribute("id")});c.setAttribute("aria-hidden","true");c.setAttribute("inert","");return c}
-function box(cls){var d=document.createElement("div");d.className=cls;return d}
-function fade(){$("book").animate([{opacity:0},{opacity:1}],{duration:reduced()?1:260,easing:"ease-out"})}
-function flip(dir,oldL,oldR){var book=$("book");busy=true;
- var leaf=box("leaf "+(dir>0?"lL":"lR")),front=box("face front"),back=box("face back"),stat=box("stat "+(dir>0?"sR":"sL"));
- if(dir>0){stat.appendChild(oldR);front.appendChild(oldL);back.appendChild(snap(P.fa.el))}
- else{stat.appendChild(oldL);front.appendChild(oldR);back.appendChild(snap(P.en.el))}
- leaf.appendChild(front);leaf.appendChild(back);book.appendChild(stat);book.appendChild(leaf);
- var a=leaf.animate([{transform:"rotateY(0deg)"},{transform:"rotateY("+(dir>0?180:-180)+"deg)"}],{duration:400,easing:"ease-in-out"});
- var done=function(){if(leaf.parentNode){leaf.remove();stat.remove()}busy=false};a.onfinish=done;a.oncancel=done}
-function step(dir){if(busy||$("toc").hidden===false)return;
- var tot=total(),ni=idx,ns=sp+dir;
- if(ns>=tot){if(idx>=T.length-1)return;ni=idx+1;ns=0}else if(ns<0){if(idx<=0)return;ni=idx-1;ns="last"}
- var anim=!phone()&&!reduced(),oL,oR;if(anim){oL=snap(P.en.el);oR=snap(P.fa.el)}
- setState(ni,ns);if(anim)flip(dir,oL,oR);else fade()}
-function openTale(i){closeToc(false);if(i!==idx||sp!==0){setState(i,0)}fade();$("ribbon").focus()}
-function openToc(){var t=$("toc");t.hidden=false;$("ribbon").setAttribute("aria-expanded","true");var c=t.querySelector('[aria-current="true"]');(c||$("tocClose")).focus({preventScroll:true});t.scrollTop=0}
-function closeToc(f){$("toc").hidden=true;$("ribbon").setAttribute("aria-expanded","false");if(f!==false)$("ribbon").focus()}
-function buildToc(){$("tocList").innerHTML=D.tales.map(function(t,i){return '<li><button type="button" class="ti'+(t.parent?" child":"")+'" data-i="'+i+'"><span class="e">'+esc(t.en_title||"The Frog and the Snake")+'</span><span class="ld" aria-hidden="true"></span><span class="f" lang="fa">'+esc(t.fa_title)+"</span></button></li>"}).join("")}
-function chrome(){$("ribbon").textContent=H.t("ribbonL");$("ribbon").setAttribute("aria-label",H.t("ribbonT"));$("ribbon").title=H.t("ribbonT");
- $("toc").setAttribute("aria-label",H.t("ribbonL"));$("tocClose").setAttribute("aria-label",H.t("closeT"));
- $("nNext").setAttribute("aria-label",H.t("nextT"));$("nPrev").setAttribute("aria-label",H.t("prevT"));
- $("nNext").querySelector(".lbl").textContent=H.t("nextL");$("nPrev").querySelector(".lbl").textContent=H.t("prevL")}
-function parse(){var m=/^#([a-z_]+)(?:\/(\d+))?$/.exec(location.hash);if(!m)return null;var i=T.findIndex(function(t){return t.id===m[1]});return i<0?null:{i:i,s:m[2]?+m[2]-1:0}}
-function relayout(){if(!built)return;measure();place()}
-function draw(){chrome();if(!D)return;
- if(!built){var p=parse()||{i:Math.max(0,T.findIndex(function(t){return t.id==="lion_hare"})),s:0};phoneLang=H.lang;lastLang=H.lang;buildToc();setState(p.i,p.s)}
- else if(lastLang!==H.lang){lastLang=H.lang;setPl(H.lang)}}
-function setPl(l){var a=total();phoneLang=l;measure();var b=total();sp=a>1?Math.round(sp/(a-1)*(b-1)):0;place()}
-H.on(draw);H.init();
-$("ribbon").onclick=function(){$("toc").hidden?openToc():closeToc()};
-$("tocClose").onclick=function(){closeToc()};
-$("tocList").addEventListener("click",function(e){var b=e.target.closest(".ti");if(b)openTale(+b.dataset.i)});
-$("nNext").onclick=function(){step(1)};$("nPrev").onclick=function(){step(-1)};
-document.querySelectorAll(".phonesw button").forEach(function(b){b.onclick=function(){if(b.dataset.pl!==pl())setPl(b.dataset.pl)}});
-document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("toc").hidden){closeToc();return}
- if(e.metaKey||e.ctrlKey||e.altKey)return;if(e.key==="ArrowLeft")step(1);else if(e.key==="ArrowRight")step(-1)});
-document.addEventListener("click",function(e){if(!$("toc").hidden&&!e.target.closest("#toc")&&!e.target.closest("#ribbon"))closeToc(false)});
-var tx=null;$("book").addEventListener("touchstart",function(e){tx=e.touches.length===1?[e.touches[0].clientX,e.touches[0].clientY]:null},{passive:true});
-$("book").addEventListener("touchend",function(e){if(!tx||!$("toc").hidden)return;var c=e.changedTouches[0],dx=c.clientX-tx[0],dy=c.clientY-tx[1];tx=null;
- if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.4)step(dx>0?1:-1)},{passive:true});
-window.addEventListener("hashchange",function(){if(!D||busy)return;var p=parse();if(p&&(p.i!==idx||p.s!==sp))setState(p.i,p.s)});
-var rt=null;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(relayout,120)});
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(relayout);
-fetch("/data/lion_ox_aligned.json").then(function(r){return r.json()}).then(function(d){D=d;T=d.tales;draw()}).catch(function(){P.en.flow.textContent="Data could not be loaded. Serve the site with npm run dev."});
+function bms(){try{return JSON.parse(ls(BMKEY)||"[]")||[]}catch(e){return[]}}
+function setBms(a){ls(BMKEY,JSON.stringify(a))}
+var NORM=function(t){return t.replace(/[ً-ٰٟ‌]/g,"")};
+/* ---------- data ---------- */
+var FILES={book:"kelile_monshi",chapters:"chapters",tree:"tale_tree",tellers:"tellers",ar:"arabic_spans",artr:"arabic_translations",gl:"glossary",sum:"summaries_en",al:"lion_ox_aligned"};
+function load(){return Promise.all(Object.keys(FILES).map(function(k){return fetch("/data/"+FILES[k]+".json").then(function(r){if(!r.ok)throw new Error(FILES[k]);return r.json()}).then(function(j){DB[k]=j})})).then(prep)}
+function slugOf(u){return u.replace(/\/$/,"").split("/").pop()}
+function prep(){
+ CH=DB.book.chapters.map(function(c,i){var m=DB.chapters[i];c.n=i+1;c.title_en=m.title_en;c.sections.forEach(function(s,j){s.sid=c.slug+"/"+slugOf(s.url);s.chapter=c;s.idx=j;SECS.push(s);SID[s.sid]=s});return c});
+ DB.arBy={};DB.ar.spans.forEach(function(s){if(s.inserted)return;var k=s.section+"|"+s.line;(DB.arBy[k]=DB.arBy[k]||[]).push(s)});
+ for(var k in DB.arBy)DB.arBy[k].sort(function(a,b){return a.start-b.start});
+ DB.glMap={};DB.gl.entries.forEach(function(e){e.forms.forEach(function(f){DB.glMap[NORM(f)]=e})});
+ DB.nodes={};DB.tree.chapters.forEach(function(c){DB.nodes[c.chapter]=c.nodes});
+ DB.insBy={};DB.al.tales.forEach(function(t){t.fa_sections.forEach(function(s){if(s.inserts)DB.insBy["shirogav/"+slugOf(s.url)]=s.inserts})});
+ DB.taleBy={};DB.al.tales.forEach(function(t){DB.taleBy[t.id]=t});
+ $("chSel").innerHTML=CH.map(function(c){return '<option value="'+c.slug+'">'+c.n+". "+esc(H.lang==="fa"?c.title:c.title_en)+"</option>"}).join("")}
+/* ---------- text rendering ---------- */
+function gloss(t){return esc(t).replace(/[ء-يٱ-ۓ]+/g,function(w){var e=DB.glMap[NORM(w)];return e?'<span class="gl" tabindex="0" data-g="'+esc(e.word)+'">'+w+"</span>":w})}
+function line(v,sid){var sp=DB.arBy[sid+"|"+v.order],t=v.text,o="",c=0;
+ (sp||[]).forEach(function(s){var tr=DB.artr.translations[s.id];o+=gloss(t.slice(c,s.start))+'<span class="ar'+(tr&&tr.translation_en?" has-tr":"")+'" '+(tr&&tr.translation_en?'tabindex="0" role="button" data-ar="'+s.id+'"':"")+' lang="ar">'+esc(t.slice(s.start,s.end))+"</span>";c=s.end});
+ return o+gloss(t.slice(c))}
+function insBlock(ins){var tr=DB.artr.translations["minovi_sh22"];return '<div class="ins"><div class="beyt"><span class="ar has-tr" lang="ar" tabindex="0" role="button" data-ar="minovi_sh22">'+esc(ins.hemistichs[0])+'</span><span class="ar has-tr" lang="ar" tabindex="0" role="button" data-ar="minovi_sh22">'+esc(ins.hemistichs[1])+'</span></div><div class="mnote"><div>'+esc(ins.note_fa)+'</div><div lang="en" dir="ltr">'+esc(ins.note_en)+"</div></div></div>"}
+function body(s){var v=s.verses,ins=(DB.insBy[s.sid]||[])[0],skip={},o="";
+ if(ins)ins.replaces_lines.forEach(function(i){skip[i]=1});
+ for(var i=0;i<v.length;i++){
+  if(ins&&i===ins.replaces_lines[0]){o+=insBlock(ins);continue}
+  if(skip[i])continue;
+  var x=v[i];
+  if(x.pos===-1)o+="<p>"+line(x,s.sid)+"</p>";
+  else if(x.pos===0&&v[i+1]&&v[i+1].pos===1&&!skip[i+1]){o+='<div class="beyt"><span>'+line(x,s.sid)+"</span><span>"+line(v[i+1],s.sid)+"</span></div>";i++}
+  else o+='<div class="vline">'+line(x,s.sid)+"</div>"}
+ return o}
+function trans(s){var t=DB.sum.sections[s.sid];return t&&t.translation_en&&t.translation_en.trim()?t.translation_en:""}
+function tellersFor(node){var t=DB.tellers.tellers[node.teller];return t||null}
+function secHTML(s){
+ var sm=DB.sum.sections[s.sid]||{},m=s.title.match(/^بخش\s*([\d۰-۹]+)\s*-?\s*(.*)$/),num=m?m[1]:"",name=m?m[2]:s.title;
+ var tr=trans(s),bm=bms().some(function(b){return b.id===s.sid});
+ var nodes=(DB.nodes[s.chapter.slug]||[]).filter(function(n){return n.section===s.sid&&n.source==="hand-aligned"});
+ var tl=nodes.map(function(n){var t=tellersFor(n);return '<p class="taleline">حکایت: <b>'+esc(n.title_fa)+'</b>'+(t?'<span class="tl">'+esc(t.fa)+' <i>/ '+esc(t.en)+"</i></span>":"")+"</p>"}).join("");
+ var sum=sm.summary_en?'<div class="sum" lang="en"><div class="lab"><span>'+H.t("summary")+"</span>"+(sm.status!=="reviewed"?'<span class="badge">'+H.t("draft")+"</span>":"")+"</div>"+esc(sm.summary_en)+"</div>":"";
+ var txt='<div class="txt" lang="fa" dir="rtl">'+body(s)+"</div>";
+ var main=tr?'<div class="pair"><div class="en-pg" lang="en"><h3>'+H.t("transHead")+"</h3>"+tr.split(/\n+/).map(function(p){return "<p>"+esc(p)+"</p>"}).join("")+"</div>"+txt+"</div>":txt;
+ return '<article class="sec'+(tr?" wide":"")+'" id="s_'+s.sid.replace("/","_")+'" data-sid="'+s.sid+'"><header class="sh"><span class="snum">بخش '+esc(num)+'</span><h2 class="stitle">'+esc(name)+'</h2><button type="button" class="bm" data-bm="'+s.sid+'" aria-pressed="'+bm+'" title="'+H.t(bm?"bmDel":"bmAdd")+'" aria-label="'+H.t(bm?"bmDel":"bmAdd")+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></header>'+tl+sum+main+"</article>"}
+/* ---------- chapter / navigation ---------- */
+function renderChapter(slug){var c=CH.find(function(x){return x.slug===slug});if(!c)return;curCh=c;
+ $("chSel").value=slug;
+ $("doc").innerHTML='<div class="chh"><p class="k">'+H.t("ch")+" "+(H.lang==="fa"?fd(c.n):c.n)+'</p><h1>'+esc(c.title)+'</h1><div class="en">'+esc(c.title_en)+"</div></div>"+c.sections.map(secHTML).join("");
+ curId=null;buildSide();window.scrollTo(0,0)}
+function go(sid,smooth){var s=SID[sid];if(!s)return;if(!curCh||curCh!==s.chapter)renderChapter(s.chapter.slug);
+ var el=document.getElementById("s_"+sid.replace("/","_"));if(el){var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;el.scrollIntoView({block:"start",behavior:smooth&&!rm?"smooth":"auto"})}
+ setCur(sid,true)}
+function resolveHash(h){h=decodeURIComponent((h||"").replace(/^#/,""));if(!h)return null;
+ if(SID[h])return h;var c=CH.find(function(x){return x.slug===h});if(c)return c.sections[0].sid;
+ var t=DB.taleBy[h];if(t)return "shirogav/"+slugOf(t.fa_sections[0].url);return null}
+function nodeFor(sid){var ns=DB.nodes[SID[sid].chapter.slug]||[];return ns.filter(function(n){return(n.sections||[n.section]).indexOf(sid)>=0})}
+function crumbs(sid){var s=SID[sid],c=s.chapter,out=[],fa=H.lang==="fa",ns=nodeFor(sid).filter(function(n){return n.source==="hand-aligned"});
+ out.push('<span>'+esc(fa?c.title:c.title_en)+"</span>");
+ if(ns.length){var n=ns[ns.length-1],chain=[],p=n;while(p){chain.unshift(p);p=p.parent?ns.concat(DB.nodes[c.slug]).find(function(x){return x.id===p.parent}):null}
+  chain.forEach(function(x,i){if(i===chain.length-1){var t=tellersFor(x);if(t){var a=(fa?t.fa:t.en).split(fa?" ← ":" → ");out.push("<span>"+esc(a[0]+(fa?" برای "+a[1]+" "+H.t("tellsWord"):" "+H.t("tellsWord")+" "+a[1]))+"</span>")}}
+   out.push('<span'+(i===chain.length-1?' class="here"':"")+">"+esc(fa?x.title_fa:x.title_en)+"</span>")})}
+ else{var m=s.title.match(/^بخش\s*([\d۰-۹]+)/);out.push('<span class="here">'+(fa?"بخش "+(m?m[1]:""):"Section "+(s.idx+1))+"</span>")}
+ $("crumbs").innerHTML=out.join("")}
+function setCur(sid,force){if(sid===curId&&!force)return;curId=sid;var s=SID[sid];
+ crumbs(sid);ls(LASTKEY,sid);
+ var h="#"+sid;if(h!==lastHash){lastHash=h;try{history.replaceState(null,"",h)}catch(e){}}
+ var i=SECS.indexOf(s);$("prev").disabled=i<=0;$("next").disabled=i>=SECS.length-1;
+ $("pos").textContent=H.t("secOf").replace("%n",H.lang==="fa"?fd(s.idx+1):s.idx+1).replace("%t",H.lang==="fa"?fd(s.chapter.sections.length):s.chapter.sections.length);
+ document.querySelectorAll(".tn").forEach(function(b){b.removeAttribute("aria-current");b.classList.remove("anc")});
+ var cur=nodeFor(sid);cur.forEach(function(n){var b=document.querySelector('.tn[data-n="'+n.id+'"]');if(b)b.setAttribute("aria-current","true")});
+ cur.forEach(function(n){var p=n.parent;while(p){var b=document.querySelector('.tn[data-n="'+p+'"]');if(b&&!b.getAttribute("aria-current"))b.classList.add("anc");var pn=(DB.nodes[s.chapter.slug]||[]).find(function(x){return x.id===p});p=pn&&pn.parent}})}
+function step(d){var i=SECS.indexOf(SID[curId||SECS[0].sid])+d;if(i>=0&&i<SECS.length)go(SECS[i].sid,true)}
+/* ---------- side panel ---------- */
+var tab="map";
+function buildSide(){$("tabMap").setAttribute("aria-selected",String(tab==="map"));$("tabBm").setAttribute("aria-selected",String(tab==="bm"));
+ if(tab==="bm"){var b=bms();$("sideBody").innerHTML=b.length?b.map(function(x){var s=SID[x.id];return s?'<div class="bmi"><a href="/read#'+x.id+'" data-go="'+x.id+'"><span class="f fa">'+esc(s.chapter.title)+"</span><br><span class=\"e\" style=\"font-size:13px;color:var(--mute)\">"+esc(s.title)+'</span></a><button type="button" data-bm="'+x.id+'" aria-label="'+H.t("bmDel")+'">×</button></div>':""}).join(""):'<p class="note">'+H.t("noBm")+"</p>";return}
+ var c=curCh,ns=DB.nodes[c.slug]||[],hand=ns.length&&ns[0].source==="hand-aligned";
+ var note='<p class="note">'+H.t(!ns.length?"treeNone":hand?"treeHand":"treeAuto")+"</p>";
+ function item(n){var kids=ns.filter(function(x){return x.parent===n.id});
+  var t=n.title_fa||n.excerpt_fa||"",e=n.title_en||"";
+  return '<button type="button" class="tn" data-n="'+n.id+'" data-go="'+n.section+'"><span class="f">'+esc(t)+"</span>"+(e?'<span class="e">'+esc(e)+"</span>":"")+(hand?"":'<span class="u">'+H.t("unver")+"</span>")+"</button>"+(kids.length?'<div class="nest">'+kids.map(item).join("")+"</div>":"")}
+ $("sideBody").innerHTML=note+ns.filter(function(n){return !n.parent}).map(item).join("");
+ if(curId)setCur(curId,true)}
+/* ---------- popover ---------- */
+var pop=$("pop"),popFor=null;
+function showPop(el){var h="";
+ if(el.dataset.g){var e=DB.gl.entries.find(function(x){return x.word===el.dataset.g});if(!e)return;h='<span class="w">'+esc(e.word)+'</span><span class="fa">'+esc(e.meaning_fa)+'</span><span class="e">'+esc(e.meaning_en)+"</span><small>"+H.t(e.verified?"":"glNote")+(e.verified?"":"")+"</small>"}
+ else if(el.dataset.ar){var t=DB.artr.translations[el.dataset.ar];if(!t||!t.translation_en)return;h='<span class="e"><small style="margin:0 0 4px">'+H.t("arNote")+"</small>"+esc(t.translation_en)+"</span><small>"+esc(t.source||"")+"</small>"}
+ else return;
+ pop.innerHTML=h;pop.hidden=false;popFor=el;var r=el.getBoundingClientRect(),pw=pop.offsetWidth,ph=pop.offsetHeight;
+ var x=Math.max(8,Math.min(innerWidth-pw-8,r.left+r.width/2-pw/2)),y=r.bottom+8;if(y+ph>innerHeight-8)y=Math.max(8,r.top-ph-8);
+ pop.style.left=x+"px";pop.style.top=y+"px"}
+function hidePop(){pop.hidden=true;popFor=null}
+/* ---------- events ---------- */
+document.addEventListener("click",function(e){var t=e.target;
+ var g=t.closest&&t.closest("[data-go]");if(g){e.preventDefault();go(g.dataset.go,true);if(matchMedia("(max-width:760px)").matches)sheet(false);return}
+ var b=t.closest&&t.closest("[data-bm]");if(b){toggleBm(b.dataset.bm);return}
+ var p=t.closest&&t.closest(".gl,[data-ar]");if(p){popFor===p?hidePop():showPop(p);return}
+ if(!t.closest("#pop"))hidePop()});
+document.addEventListener("mouseover",function(e){var p=e.target.closest&&e.target.closest(".gl");if(p&&matchMedia("(hover:hover)").matches)showPop(p)});
+document.addEventListener("mouseout",function(e){var p=e.target.closest&&e.target.closest(".gl");if(p&&matchMedia("(hover:hover)").matches)hidePop()});
+document.addEventListener("keydown",function(e){
+ if(e.key==="Escape"){hidePop();sheet(false);return}
+ if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches(".gl,[data-ar]")){e.preventDefault();popFor===e.target?hidePop():showPop(e.target);return}
+ if(e.metaKey||e.ctrlKey||e.altKey||/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;
+ if(e.key==="ArrowLeft"){e.preventDefault();step(1)}else if(e.key==="ArrowRight"){e.preventDefault();step(-1)}});
+function toggleBm(id){var a=bms(),i=a.findIndex(function(x){return x.id===id});if(i>=0)a.splice(i,1);else a.push({id:id,ts:Date.now()});setBms(a);
+ document.querySelectorAll('.bm[data-bm="'+id+'"]').forEach(function(b){var on=i<0;b.setAttribute("aria-pressed",String(on));b.title=b.ariaLabel=H.t(on?"bmDel":"bmAdd");b.setAttribute("aria-label",b.title)});
+ if(tab==="bm")buildSide()}
+function sheet(on){var rd=$("rd");if(!matchMedia("(max-width:760px)").matches)return;rd.classList.toggle("sheet",on);$("sheetback").hidden=!on;$("btnMap").setAttribute("aria-expanded",String(on))}
+$("btnMap").onclick=function(){if(matchMedia("(max-width:760px)").matches){sheet(!$("rd").classList.contains("sheet"))}else{var c=$("rd").classList.toggle("collapsed");$("btnMap").setAttribute("aria-expanded",String(!c))}};
+$("sheetback").onclick=function(){sheet(false)};
+$("tabMap").onclick=function(){tab="map";buildSide()};$("tabBm").onclick=function(){tab="bm";buildSide()};
+$("prev").onclick=function(){step(-1)};$("next").onclick=function(){step(1)};
+$("chSel").onchange=function(){go(CH.find(function(c){return c.slug===$("chSel").value}).sections[0].sid)};
+document.querySelectorAll("[data-fs]").forEach(function(b){b.onclick=function(){setFs(+b.dataset.fs)}});
+document.querySelectorAll("[data-th]").forEach(function(b){b.onclick=function(){setTh(b.dataset.th)}});
+var FS=["19px","22px","26px"],FSM=["18px","20px","23px"];
+function setFs(i,save){var m=matchMedia("(max-width:760px)").matches;$("doc").style.setProperty("--fs",(m?FSM:FS)[i]);document.querySelectorAll("[data-fs]").forEach(function(b){b.setAttribute("aria-pressed",String(+b.dataset.fs===i))});if(save!==false)ls(FSKEY,String(i))}
+function setTh(t,save){if(t==="light"||t==="sepia"||t==="dark")document.documentElement.dataset.theme=t;document.querySelectorAll("[data-th]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.th===t))});if(save!==false)ls(THKEY,t)}
+/* scroll spy + progress */
+var tick=false;
+function onScroll(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;if(!curCh)return;
+ var secs=document.querySelectorAll(".sec"),y=(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--rbh"))||96)+60,cur=null;
+ for(var i=0;i<secs.length;i++){if(secs[i].getBoundingClientRect().top<=y)cur=secs[i];else break}
+ if(!cur&&secs.length)cur=secs[0];if(cur)setCur(cur.dataset.sid);
+ var d=$("doc"),r=d.getBoundingClientRect(),tot=r.height-innerHeight+120,p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):0;$("bar").style.width=(p*100)+"%"})}
+addEventListener("scroll",onScroll,{passive:true});
+function measure(){document.documentElement.style.setProperty("--rbh",$("rbar").offsetHeight+"px")}
+addEventListener("resize",function(){measure();setFs(+(ls(FSKEY)||1),false)});
+/* language: re-render chrome and the current chapter */
+H.on(function(){
+ if(!DB.book)return;
+ var v=$("chSel").value;$("chSel").innerHTML=CH.map(function(c){return '<option value="'+c.slug+'">'+c.n+". "+esc(H.lang==="fa"?c.title:c.title_en)+"</option>"}).join("");$("chSel").value=v;
+ $("prev").textContent=H.t("prev");$("next").textContent=H.t("next");
+ if(curCh){var keep=curId;var y=scrollY;renderChapterKeep(keep,y)}});
+function renderChapterKeep(id,y){var slug=curCh.slug;renderChapter(slug);window.scrollTo(0,y);if(id)setCur(id,true)}
+H.init();
+document.querySelectorAll("[data-fs]").forEach(function(b,i){b.title=b.getAttribute("aria-label")});
+setTh(ls(THKEY)||"",false);
+load().then(function(){
+ measure();setFs(+(ls(FSKEY)||1),false);
+ $("prev").textContent=H.t("prev");$("next").textContent=H.t("next");
+ var sid=resolveHash(location.hash)||(SID[ls(LASTKEY)]?ls(LASTKEY):CH[0].sections[0].sid);
+ renderChapter(SID[sid].chapter.slug);requestAnimationFrame(function(){measure();go(sid,false);if(matchMedia("(max-width:760px)").matches)$("rd").classList.remove("sheet");else if(!$("rd").classList.contains("collapsed"))$("btnMap").setAttribute("aria-expanded","true")});
+ if(matchMedia("(max-width:760px)").matches)$("btnMap").setAttribute("aria-expanded","false");
+ addEventListener("hashchange",function(){var t=resolveHash(location.hash);if(t&&"#"+t!==lastHash)go(t,true)});
+}).catch(function(e){$("doc").innerHTML='<p class="chh">Could not load the data ('+esc(e.message)+"). Serve the site with npm run dev.</p>"});
 </script></body></html>

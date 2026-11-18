@@ -61,7 +61,7 @@ function drawPanel(){
  var len=t.en_text?H.t("len").replace("%p",num(t.fa_words)).replace("%e",num(t.en_words)):H.t("lenP").replace("%p",num(t.fa_words));
  p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num(D.tales.indexOf(t)+2<10?"0"+(D.tales.indexOf(t)+2):D.tales.indexOf(t)+2)+' ]</span><h2>'+H.esc(title(t))+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">'+H.esc(t.fa_title)+'</span>'+fig(t.id,fa)+'<p>'+s+'</p><span class="draft">'+H.t("draft")+'</span>'+
  '<div class="sec"><span class="tag">'+H.t("position")+'</span>'+H.esc(pos)+'</div><div class="sec"><span class="tag">'+H.t("teller")+'</span>'+H.esc(tell)+'</div><div class="sec"><span class="tag">'+H.t("across")+'</span>'+(t.en_text?H.t("both"):H.t("frogV"))+'</div><div class="sec"><span class="tag">'+H.t("size")+'</span>'+len+'</div>'+
- '<p style="margin-top:20px"><a class="cta" href="/read/#'+t.id+'"><span>'+H.t("open")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>'}
+ '<p style="margin-top:20px"><a class="cta" href="/read#shirogav/'+t.fa_sections[0].url.replace(/\/$/,"").split("/").pop()+'"><span>'+H.t("open")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>'}
 function draw(){if(!D){document.getElementById("tree").textContent=H.t("err");return}drawTree();drawPanel()}
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".item");if(b){sel=b.dataset.id;try{history.replaceState(null,"","#"+sel)}catch(x){}draw()}});
 H.on(draw);H.init();

@@ -1,5 +1,8 @@
 :root{--bg:#F8F0E4;--ink:#1F1B16;--mute:#6B5F4E;--lapis:#2E4A9E;--orange:#A2471F;--gold:#B8963E;--card:#F3EAD9;--rule:#E3D7B8;--line:#D9CBA8}
 @media(prefers-color-scheme:dark){:root{--bg:#1C1A17;--ink:#ECE4D6;--mute:#A89E8C;--lapis:#8FA8EE;--orange:#E08A63;--card:#262320;--rule:#3A352E;--line:#4A443A}}
+html[data-theme=light]{--bg:#F8F0E4;--ink:#1F1B16;--mute:#6B5F4E;--lapis:#2E4A9E;--orange:#A2471F;--card:#F3EAD9;--rule:#E3D7B8;--line:#D9CBA8}
+html[data-theme=sepia]{--bg:#EBDDBE;--ink:#2B2218;--mute:#675A44;--lapis:#2E4A9E;--orange:#9A431C;--card:#E3D3AE;--rule:#D3C096;--line:#C4AF82}
+html[data-theme=dark]{--bg:#1C1A17;--ink:#ECE4D6;--mute:#A89E8C;--lapis:#8FA8EE;--orange:#E08A63;--card:#262320;--rule:#3A352E;--line:#4A443A}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "EB Garamond",Georgia,serif}

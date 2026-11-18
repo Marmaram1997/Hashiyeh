@@ -3,12 +3,12 @@
   var C = {
     en: {
       tagline: "Kalila and Dimna, read in the margins",
-      nJourney: "The Journey", nTales: "The Tales", nRead: "Read", nMethod: "Method", nAbout: "About",
+      nJourney: "The Journey", nTales: "The Tales", nRead: "Read", nVersions: "Other versions", nMethod: "Method", nAbout: "About",
       cover: "← Cover", coverTitle: "Back to the cover", langLabel: "Language", mainNav: "Main"
     },
     fa: {
       tagline: "کلیله و دمنه، خوانده‌شده در حاشیه",
-      nJourney: "سفر کتاب", nTales: "حکایت‌ها", nRead: "خواندن", nMethod: "روش", nAbout: "دربارهٔ پروژه",
+      nJourney: "سفر کتاب", nTales: "حکایت‌ها", nRead: "خواندن", nVersions: "نسخه‌های دیگر", nMethod: "روش", nAbout: "دربارهٔ پروژه",
       cover: "→ صفحهٔ نخست", coverTitle: "بازگشت به صفحهٔ نخست", langLabel: "زبان", mainNav: "پیمایش اصلی"
     }
   };
@@ -18,7 +18,7 @@
     lang = q === "fa" || q === "en" ? q : st === "fa" ? "fa" : "en";
   } catch (e) {}
 
-  var LINKS = [["/journey", "nJourney", "journey"], ["/tales", "nTales", "tales"], ["/method", "nMethod", "method"], ["/about", "nAbout", "about"]];
+  var LINKS = [["/read", "nRead", "read"], ["/journey", "nJourney", "journey"], ["/tales", "nTales", "tales"], ["/versions", "nVersions", "versions"], ["/method", "nMethod", "method"], ["/about", "nAbout", "about"]];
 
   var H = (window.H = {
     get lang() { return lang; },
@@ -31,7 +31,7 @@
   });
 
   function header() {
-    var page = document.body.dataset.page || ""; if (page === "read") page = "tales";
+    var page = document.body.dataset.page || "";
     return '<div class="hdr-left"><a class="back" href="/" title="' + H.t("coverTitle") + '">' + H.t("cover") + "</a>" +
       '<a class="brand" href="/"><b>حاشیه</b><i>Hashiyeh</i></a></div>' +
       '<nav aria-label="' + H.t("mainNav") + '">' +
