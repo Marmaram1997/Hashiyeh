@@ -33,6 +33,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
   - `Main.dc.html`: opening section, "A book that travelled" timeline, three ways in, method and data, footer.
   - `TreeLanding.dc.html`: the tale tree as nested frames, with a margin panel.
   - `CypressVersion.dc.html`: the latest direction. A cypress intro screen, "The Persian life of a world book", the narrative atlas with margin panel, "Enter a story. Find another inside.", "How the margin is made".
+- `assets/cypress-wind.mp4` / `.webm`: web-compressed loop of the cypress swaying in the wind (AI-generated, 20 s, no audio), used on the landing page with `cypress.jpg` as poster.
 - `design/assets/`: `cypress.jpg` (hero) and `lion-court.jpg` (Dimna presents the ox to the Lion).
 
 ## Landing page behaviour

@@ -40,7 +40,7 @@ aside{border-inline-start:1px solid #D9CBA8;padding-inline-start:20px}aside h2{f
 header{position:sticky;top:0;z-index:5;background:var(--bg)}
 .intro{height:100vh;height:100svh;position:relative}
 .cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;font-size:14px;color:var(--mute);text-decoration:none}
-.tree,.treeslot .inflow{border:1px solid var(--gold)}
+.tree,.treeslot .inflow{border:1px solid var(--gold);object-fit:cover;aspect-ratio:3/4;background:var(--card)}
 .tree{position:fixed;top:50%;left:0;z-index:2;pointer-events:none;will-change:transform,opacity;transform-origin:center}
 .treeslot{min-height:420px}.treeslot .inflow{display:none}
 .hero>div:first-child{will-change:opacity,transform}
@@ -53,14 +53,14 @@ footer{border-top:1px solid var(--gold);padding:28px 0 60px;color:var(--mute);fo
 <header id="top"><div class="brand"><b>حاشیه</b><i>HASHIYEH</i><span data-k="tagline" style="color:var(--mute);font-size:14px"></span></div>
 <nav><a href="#journey" data-k="navJourney"></a><a href="#atlas" data-k="navExplore"></a><a href="reader/" data-k="navRead"></a><a href="#method" data-k="navMethod"></a>
 <span><button id="en" aria-pressed="true">EN</button>/<button id="fa" aria-pressed="false">فارسی</button></span></nav></header>
-<img id="tree" class="tree" src="assets/cypress.jpg" alt="" data-alt="cypressAlt">
+<video id="tree" class="tree" poster="assets/cypress.jpg" muted loop playsinline autoplay preload="auto" role="img" aria-label="" data-alt="cypressAlt"><source src="assets/cypress-wind.mp4" type="video/mp4"><source src="assets/cypress-wind.webm" type="video/webm"></video>
 <main class="w">
 <section class="intro" id="intro" aria-hidden="true"><a href="#hero" class="cue"><span data-k="scroll"></span><span>↓</span></a></section>
 <section class="hero" id="hero"><div><p class="k" data-k="kicker"></p><h1><span data-k="h1a"></span><br><em data-k="h1b"></em></h1>
 <p style="font-size:22px;line-height:1.5" data-k="lead"></p><p style="color:var(--mute)" data-k="sub"></p>
 <a class="cta" href="reader/"><span data-k="cta"></span><span aria-hidden="true">↗</span></a>
 <p class="k" style="margin-top:28px" data-k="projectBy"></p><p style="margin:0;font-size:20px" data-k="author"></p><p style="margin:0;color:var(--mute);font-size:15px" data-k="skills"></p></div>
-<div class="treeslot" id="slot"><img class="inflow" src="assets/cypress.jpg" alt="" aria-hidden="true"></div></section>
+<div class="treeslot" id="slot"><video class="inflow" id="inflow" poster="assets/cypress.jpg" muted loop playsinline preload="none" aria-hidden="true"><source src="assets/cypress-wind.mp4" type="video/mp4"><source src="assets/cypress-wind.webm" type="video/webm"></video></div></section>
 <div class="band"><b>حاشیه</b><span data-k="band"></span><span class="badge" data-k="badge"></span></div>
 <section id="journey" class="journey"><p class="k" data-k="jKicker"></p><h2 class="big" data-k="jTitle"></h2><p data-k="jLead"></p><ol id="jlist"></ol></section>
 <section id="atlas" class="atlas"><div class="frame"><span class="tag" data-k="atlasLabel"></span><br>
@@ -97,7 +97,7 @@ var lang="en",pick=2;
 function set(k,v){document.querySelectorAll('[data-k="'+k+'"]').forEach(function(e){e.textContent=v})}
 function render(){var fa=lang==="fa",t=T[lang];document.documentElement.lang=lang;document.documentElement.dir=fa?"rtl":"ltr";
 document.querySelectorAll("[data-k]").forEach(function(e){if(t[e.dataset.k]!=null)e.textContent=t[e.dataset.k]});
-document.querySelectorAll("[data-alt]").forEach(function(e){e.alt=t[e.dataset.alt]});
+document.querySelectorAll("[data-alt]").forEach(function(e){e.alt=t[e.dataset.alt];if(e.tagName==="VIDEO")e.setAttribute("aria-label",t[e.dataset.alt])});
 ["a0","a1","a2"].forEach(function(id,i){document.getElementById(id).textContent=fa?D[i].fa:D[i].en});
 var ol=document.getElementById("list");ol.innerHTML="";
 D.forEach(function(d,i){var li=document.createElement("li"),b=document.createElement("button");b.setAttribute("aria-pressed",i===pick);
@@ -115,6 +115,8 @@ document.getElementById("en").onclick=function(){lang="en";render()};document.ge
 var tree=document.getElementById("tree"),slot=document.getElementById("slot"),hero=document.getElementById("hero"),nav=document.querySelector("header nav");
 var txt=hero.firstElementChild,rm=matchMedia("(prefers-reduced-motion:reduce)");
 function cl(x){return Math.max(0,Math.min(1,x))}
+var inflow=document.getElementById("inflow");
+function vid(){var m=innerWidth<820||rm.matches;if(rm.matches){tree.pause();inflow.pause();return}if(innerWidth<820){tree.pause();inflow.play().catch(function(){})}else{inflow.pause();tree.play().catch(function(){})}}
 function upd(){
  var vh=innerHeight,vw=innerWidth,desk=vw>=820,w0=Math.min(460,vw*.7,vh*.62);
  if(rm.matches){nav.style.opacity=1;txt.style.opacity=1;return}
@@ -128,7 +130,7 @@ function upd(){
  var t=cl((vh*.95-txt.getBoundingClientRect().top)/(vh*.4));
  txt.style.opacity=t;txt.style.transform="translateY("+(1-t)*24+"px)";
 }
-addEventListener("scroll",function(){requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);rm.addEventListener&&rm.addEventListener("change",upd);
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(upd);upd();
+addEventListener("scroll",function(){requestAnimationFrame(upd)},{passive:true});addEventListener("resize",function(){upd();vid()});rm.addEventListener&&rm.addEventListener("change",upd);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(upd);upd();vid();
 })();
 </script></body></html>
