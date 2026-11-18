@@ -22,6 +22,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 - `ocr_corrections/`: `changes.json`/`changes.csv` (every change: tale, stage, rule, before, after, context, edit distance, review status), `review_sample.csv` (25 random stage-1 changes plus all model substitutions, with an empty `correct? (y/n)` column for the human check). All entries are `not yet reviewed`.
 - `lion_ox_aligned.json`: 12 tales from the chapter "The Lion and the Ox", hand-aligned. Persian sections (whole Ganjoor sections, which can include frame dialogue), English line spans from the OCR, parent/child nesting, teller.
   - Tellers checked against the text: Ape and Carpenter (Kalila → Dimna), Three Fishes (Dimna → Lion), Camel (Ox → Dimna), Sandpiper (Dimna → Ox), Apes and Glow-worm (Kalila → Dimna), Two Partners (Kalila → Dimna), Tortoise and Geese (hen-bird → her mate). The rest still need labelling.
+  - `fa_sections[].inserts`: text added from another source where Ganjoor has a placeholder, kept apart from the Ganjoor `text`. Now: the Arabic couplet in the Lion and the Hare (replaces lines 10–11), source "Minovi ed., p. 88", cited by the project editor; the page reference has not been checked. Defined in `scripts/build_aligned.py` (`INSERTS`); the reader swaps the lines and shows a margin note.
   - Finding: the Frog and the Snake (nested in the Two Partners) is in Monshi but not in the later Syriac version.
 
 ## Scripts (in /scripts)

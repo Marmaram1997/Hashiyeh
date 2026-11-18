@@ -19,10 +19,22 @@ tales=[
  dict(id="frog_snake",fa_title="غوک و مار",en_title=None,teller="Rogue → Simpleton (Persian only)",parent="two_partners",fa=[40]),
  dict(id="iron_merchant",fa_title="بازرگان آهن‌فروش",en_title="The Mice that Ate Iron",teller="Kalilah → Dimnah",parent=None,fa=[43]),
 ]
+# Text added from a critical edition where the Ganjoor text has a placeholder. The Ganjoor lines stay in
+# fa_sections[].text untouched; the reader swaps the listed lines for the insertion. Kept separate on purpose.
+INSERTS={("lion_hare",0):[dict(
+ replaces_lines=[10,11],kind="verse",lang="ar",
+ hemistichs=["وَاللّهِ لَمْ أَشْمَتْ بِهِ ، فَالْكُلُّ رَهْنٌ لِلْمَماتِ","لٰكِنَّ مِنْ طِيبِ الْحَياةِ أَنْ تَرَى مَوْتَ الْعُداةِ"],
+ source="Minovi ed., p. 88",
+ note_fa="این بیت عربی در متن گنجور نیامده بود؛ از تصحیح مجتبی مینوی، ص ۸۸، افزوده شد.",
+ note_en="Arabic couplet missing from the Ganjoor text; added from Mojtaba Minovi's critical edition, p. 88.",
+ translation_en="By God, I take no joy in his death, for everyone is pledged to death; but part of life's sweetness is to see your enemies die.",
+ status="added from the cited edition by the project editor; page reference not checked by the model")]}
 out=[]
 for t in tales:
     f=t.pop('fa')
     t['fa_sections']=fa_text(f)
+    for i,sec in enumerate(t['fa_sections']):
+        if (t['id'],i) in INSERTS: sec['inserts']=INSERTS[(t['id'],i)]
     k=t['id']
     t['en_text']=EN_FINAL.get(k)
     t['en_text_raw_ocr']=EN_RAW.get(k)

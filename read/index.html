@@ -27,6 +27,11 @@
 .page.fa .flow{right:0;direction:rtl;font-family:"Noto Naskh Arabic",serif;font-size:18px;line-height:2.05;text-align:justify}
 .flow p{margin:0 0 .5em;orphans:1;widows:1}
 .flow .sec{font-size:12px;color:var(--mute);margin:10px 0 2px;break-after:avoid;letter-spacing:0}
+.flow .ins{break-inside:avoid;margin:.4em 0 .7em}
+.flow .beyt{display:flex;flex-wrap:wrap;justify-content:center;gap:0 2.2em;text-align:center;font-family:"Noto Naskh Arabic",serif;font-size:19px;line-height:2.3;color:var(--ink)}
+.flow .beyt span{flex:0 1 auto}
+.flow .mnote{font-size:12.5px;line-height:1.5;color:var(--mute);border-inline-start:2px solid var(--gold);padding-inline-start:10px;margin-top:4px;text-align:start;hyphens:none}
+.flow .mnote div[lang=en]{font-family:"EB Garamond",Georgia,serif;font-size:13px;margin-top:3px}
 .flow .absent{color:var(--mute);font-style:italic}
 .fn{font-size:12.5px;line-height:1.45;color:var(--mute);border-top:1px solid var(--rule);padding-top:6px;margin-top:8px}
 .fn a{color:var(--mute)}
@@ -127,9 +132,15 @@ function pl(){return phoneLang||H.lang}
 function total(){return phone()?cnt[pl()]:Math.max(cnt.fa,cnt.en)}
 function tale(){return T[idx]}
 var ABS_T="Not in this branch",ABS="The later Syriac version has no “Frog and the Snake” tale inside “The Rogue and the Simpleton”. This one shows up in the Persian only.";
+function faLines(s){var out=[],ins=s.inserts||[],skip={};
+ s.text.split("\n").forEach(function(p,j){
+  var k=ins.find(function(x){return x.replaces_lines.indexOf(j)>=0});
+  if(!k){out.push("<p>"+esc(p)+"</p>");return}
+  if(j===k.replaces_lines[0])out.push('<div class="ins"><div class="beyt" lang="'+k.lang+'" dir="rtl"><span>'+esc(k.hemistichs[0])+"</span><span>"+esc(k.hemistichs[1])+'</span></div><div class="mnote"><div>'+esc(k.note_fa)+'</div><div lang="en" dir="ltr">'+esc(k.note_en)+" Translation: ‘"+esc(k.translation_en)+"’</div></div></div>")});
+ return out.join("")}
 function buildTale(){var t=tale(),par=t.parent?D.tales.find(function(x){return x.id===t.parent}):null;
  P.fa.title.textContent=t.fa_title;P.en.title.textContent=t.en_title||ABS_T;
- P.fa.flow.innerHTML=t.fa_sections.map(function(s){return '<div class="sec">'+esc(s.title)+"</div>"+s.text.split("\n").map(function(p){return "<p>"+esc(p)+"</p>"}).join("")}).join("");
+ P.fa.flow.innerHTML=t.fa_sections.map(function(s){return '<div class="sec">'+esc(s.title)+"</div>"+faLines(s)}).join("");
  P.en.flow.innerHTML=t.en_text?"<p>"+esc(t.en_text)+"</p>":'<p class="absent">'+esc(ABS)+"</p>";
  var teller=VER.indexOf(t.id)>=0?t.teller:"not yet checked";
  var en=[];

@@ -77,7 +77,7 @@
     5096,
     5172
    ],
-   "en_changes": 0,
+   "en_changes": null,
    "en_status": "model-corrected under logged rules; not yet human-reviewed",
    "fa_words": 905,
    "en_words": 687
@@ -92,7 +92,26 @@
     {
      "title": "بخش ۲۲ - شیر و خرگوش",
      "url": "https://ganjoor.net/monshi/kelile-demni/shirogav/sh22",
-     "text": "آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود و برعکس آن روی فلک را منور گردانیده، از هر شاخی هزار ستاره تابان و در هر ستاره هزار سپهر حیران \nسحاب گویی یاقوت ریخت برمینا\nنسیم گویی شنگرف بیخت برزنگار\nبخار چشم هوا و بخور روی زمین \nز چشم دایه باغ است و روی بچه خار\nوحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود. روزی فراهم آمدند و جمله نزدیک شیر رفتند و گفتند: تو هر روز پس از رنج بسیار و مشقت فراوان از مایکی شکار می‌توانی شکست و ما پیوسته در بلا و تو در تگاپوی و طلب. اکنون چیزی اندیشیده ایم که ترا دران فراغت و ما را امن و راحت باشد. اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد. یک روز قرعه بر خرگوش آمد. یاران را گفت: اگر در فرستادن من توقفی کنید من شما را از جور این جبار خون خوار باز رهانم. گفتند: مضایقتی نیست. او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد. شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده، چنانکه آب دهان او خشک ایستاده بود و نقض عهد را در خاک می‌جست. \nخرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟ گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای. \nخرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی.\nو گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم. شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید، او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد. \nخرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد. همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند، و این بیت را ورد ساختند: \n[بیت در منبع ما نیست]\n[بیت در منبع ما نیست]"
+     "text": "آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود و برعکس آن روی فلک را منور گردانیده، از هر شاخی هزار ستاره تابان و در هر ستاره هزار سپهر حیران \nسحاب گویی یاقوت ریخت برمینا\nنسیم گویی شنگرف بیخت برزنگار\nبخار چشم هوا و بخور روی زمین \nز چشم دایه باغ است و روی بچه خار\nوحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود. روزی فراهم آمدند و جمله نزدیک شیر رفتند و گفتند: تو هر روز پس از رنج بسیار و مشقت فراوان از مایکی شکار می‌توانی شکست و ما پیوسته در بلا و تو در تگاپوی و طلب. اکنون چیزی اندیشیده ایم که ترا دران فراغت و ما را امن و راحت باشد. اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد. یک روز قرعه بر خرگوش آمد. یاران را گفت: اگر در فرستادن من توقفی کنید من شما را از جور این جبار خون خوار باز رهانم. گفتند: مضایقتی نیست. او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد. شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده، چنانکه آب دهان او خشک ایستاده بود و نقض عهد را در خاک می‌جست. \nخرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟ گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای. \nخرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی.\nو گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم. شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید، او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد. \nخرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد. همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند، و این بیت را ورد ساختند: \n[بیت در منبع ما نیست]\n[بیت در منبع ما نیست]",
+     "inserts": [
+      {
+       "replaces_lines": [
+        10,
+        11
+       ],
+       "kind": "verse",
+       "lang": "ar",
+       "hemistichs": [
+        "وَاللّهِ لَمْ أَشْمَتْ بِهِ ، فَالْكُلُّ رَهْنٌ لِلْمَماتِ",
+        "لٰكِنَّ مِنْ طِيبِ الْحَياةِ أَنْ تَرَى مَوْتَ الْعُداةِ"
+       ],
+       "source": "Minovi ed., p. 88",
+       "note_fa": "این بیت عربی در متن گنجور نیامده بود؛ از تصحیح مجتبی مینوی، ص ۸۸، افزوده شد.",
+       "note_en": "Arabic couplet missing from the Ganjoor text; added from Mojtaba Minovi's critical edition, p. 88.",
+       "translation_en": "By God, I take no joy in his death, for everyone is pledged to death; but part of life's sweetness is to see your enemies die.",
+       "status": "added from the cited edition by the project editor; page reference not checked by the model"
+      }
+     ]
     }
    ],
    "en_text": "Kalilah. How runs the story about him ? Dimnah. They say that there was a lion (who lived) in a certain region abounding in water and thickly grown with grass. And in it were a number of animals of different kinds. But in none of those things did they take any pleasure, on account of their fear of the lion who lived in that region. Then those animals came in a body to the lion, and said to him : ' O king, it is only by hard toil and severe labour that you can get one or two of us in a whole day. Now it has seemed good to us to make a treaty with you, and that you give us a sacred oath that you will not molest us any further. We (on our part) will send you every day one animal at your feeding time; so that you may not have labour and fatigue, and fill your belly with bean food, and that we (too) may not be frightened away from grazing, but may take our food without fear.' Then the lion inclined his ear to their words, and made a compact with them, conditional on this thing. After a little time, the lot fell on a certain hare, that she should be food for the lion. Then the hare said to the animals: 'If you will grant me a little favour, as the thing will not inconvenience you, perhaps I shall be able to free you and myself from the evil of this lion.' The animals answered: 'Lo we are all before you, and willing to hear you.' The hare said: 'Instruct your messenger to convey me to the lion slowly and not hurriedly, deliberately and not hastily; so that I may linger on the road a little until his dinner-time is past, and the lion, being hungry, gets angry.' And the animals did as the hare had said. Then the hare began to go along by slow degrees. And she drew near to the lion when he was hungry and vexed, enraged and incensed. And he came out walking in an angry mood. On seeing the hare, he said to her: 'Who are you? And whence do you come?' The hare said: 'I am the messenger of the animals to you, who sent me with a (fine) fat hare for your food. But when it reached this region, a certain lion came out and seized it, saying to me: 'This land, with these animals that are in it, belongs to me.' And I said to him: 'This land is the property of such and such a lion.' But my words profited nothing with him, for you he reviled, and me he drove empty-handed from before him.' Whereupon the lion got angry and said to her: 'Come and show me this lion who dared to seize my food.' And the hare went on till she reached a certain deep pit in which there was clear water. And she said: 'Here is the lion and the fat hare with him. But I fear to go near him. (So) pray place me against your breast that I may not be afraid of him, and I will show you where he is.' When he had placed her against his breast, she showed him his own reflection and hers in this clear water. Whereupon the lion leaped in to snatch the hare from the breast of the other lion. And he fell into the pit, while the hare escaped to the other side.",
@@ -202,7 +221,7 @@
     6283,
     6316
    ],
-   "en_changes": 0,
+   "en_changes": null,
    "en_status": "model-corrected under logged rules; not yet human-reviewed",
    "fa_words": 379,
    "en_words": 329
@@ -276,7 +295,7 @@
    "en_text": null,
    "en_text_raw_ocr": null,
    "en_source_lines": null,
-   "en_changes": 0,
+   "en_changes": null,
    "en_status": null,
    "fa_words": 175,
    "en_words": 0
