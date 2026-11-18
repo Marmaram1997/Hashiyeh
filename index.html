@@ -37,19 +37,30 @@ aside{border-inline-start:1px solid #D9CBA8;padding-inline-start:20px}aside h2{f
 .journey li{background:var(--card);border:1px solid var(--rule);padding:16px;display:flex;flex-direction:column;gap:6px}
 .journey li.fa-stop{background:var(--lapis);color:#F8F0E4;border-color:var(--lapis)}.journey li.fa-stop .tag{color:#E3D7B8}
 .journey li.core{outline:3px solid var(--gold);outline-offset:3px}.journey strong{font-size:21px;font-weight:600}.journey li span.d{font-size:16px;line-height:1.5}
+header{position:sticky;top:0;z-index:5;background:var(--bg)}
+.intro{height:100vh;height:100svh;position:relative}
+.cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;font-size:14px;color:var(--mute);text-decoration:none}
+.tree,.treeslot .inflow{border:1px solid var(--gold)}
+.tree{position:fixed;top:50%;left:0;z-index:2;pointer-events:none;will-change:transform,opacity;transform-origin:center}
+.treeslot{min-height:420px}.treeslot .inflow{display:none}
+.hero>div:first-child{will-change:opacity,transform}
+@media(max-width:819px){header{position:static}nav{gap:12px;font-size:15px}.treeslot{min-height:0}.treeslot .inflow{display:block}}
+@media(prefers-reduced-motion:reduce){.intro{display:none}.tree{display:none}.treeslot .inflow{display:block}}
 footer{border-top:1px solid var(--gold);padding:28px 0 60px;color:var(--mute);font-size:15px}
 .badge{font-size:12px;border:1px solid var(--gold);padding:2px 8px;display:inline-block}
 @media(prefers-color-scheme:dark){:root{--bg:#1C1A17;--ink:#ECE4D6;--mute:#A89E8C;--lapis:#8FA8EE;--orange:#E08A63;--card:#262320;--rule:#3A352E}li button[aria-pressed=true]{background:#2A2621}}
 </style></head><body>
-<header><div class="brand"><b>حاشیه</b><i>HASHIYEH</i><span data-k="tagline" style="color:var(--mute);font-size:14px"></span></div>
+<header id="top"><div class="brand"><b>حاشیه</b><i>HASHIYEH</i><span data-k="tagline" style="color:var(--mute);font-size:14px"></span></div>
 <nav><a href="#journey" data-k="navJourney"></a><a href="#atlas" data-k="navExplore"></a><a href="reader/" data-k="navRead"></a><a href="#method" data-k="navMethod"></a>
 <span><button id="en" aria-pressed="true">EN</button>/<button id="fa" aria-pressed="false">فارسی</button></span></nav></header>
+<img id="tree" class="tree" src="assets/cypress.jpg" alt="" data-alt="cypressAlt">
 <main class="w">
-<section class="hero"><div><p class="k" data-k="kicker"></p><h1><span data-k="h1a"></span><br><em data-k="h1b"></em></h1>
+<section class="intro" id="intro" aria-hidden="true"><a href="#hero" class="cue"><span data-k="scroll"></span><span>↓</span></a></section>
+<section class="hero" id="hero"><div><p class="k" data-k="kicker"></p><h1><span data-k="h1a"></span><br><em data-k="h1b"></em></h1>
 <p style="font-size:22px;line-height:1.5" data-k="lead"></p><p style="color:var(--mute)" data-k="sub"></p>
 <a class="cta" href="reader/"><span data-k="cta"></span><span aria-hidden="true">↗</span></a>
 <p class="k" style="margin-top:28px" data-k="projectBy"></p><p style="margin:0;font-size:20px" data-k="author"></p><p style="margin:0;color:var(--mute);font-size:15px" data-k="skills"></p></div>
-<div><img src="assets/cypress.jpg" alt="" data-alt="cypressAlt"></div></section>
+<div class="treeslot" id="slot"><img class="inflow" src="assets/cypress.jpg" alt="" aria-hidden="true"></div></section>
 <div class="band"><b>حاشیه</b><span data-k="band"></span><span class="badge" data-k="badge"></span></div>
 <section id="journey" class="journey"><p class="k" data-k="jKicker"></p><h2 class="big" data-k="jTitle"></h2><p data-k="jLead"></p><ol id="jlist"></ol></section>
 <section id="atlas" class="atlas"><div class="frame"><span class="tag" data-k="atlasLabel"></span><br>
@@ -99,4 +110,25 @@ document.getElementById("jlist").innerHTML=J[lang].t.map(function(x){return'<li 
 document.getElementById("steps").innerHTML=S[lang].map(function(s){return"<div><b>"+s[0]+"</b> <strong>"+s[1]+"</strong><br>"+s[2]+"</div>"}).join("");
 document.getElementById("en").setAttribute("aria-pressed",!fa);document.getElementById("fa").setAttribute("aria-pressed",fa)}
 document.getElementById("en").onclick=function(){lang="en";render()};document.getElementById("fa").onclick=function(){lang="fa";render()};render();
+
+(function(){
+var tree=document.getElementById("tree"),slot=document.getElementById("slot"),hero=document.getElementById("hero"),nav=document.querySelector("header nav");
+var txt=hero.firstElementChild,rm=matchMedia("(prefers-reduced-motion:reduce)");
+function cl(x){return Math.max(0,Math.min(1,x))}
+function upd(){
+ var vh=innerHeight,vw=innerWidth,desk=vw>=820,w0=Math.min(460,vw*.7,vh*.62);
+ if(rm.matches){nav.style.opacity=1;txt.style.opacity=1;return}
+ var p=cl(scrollY/(vh*.7)),e=p*p*(3-2*p);
+ nav.style.opacity=e;nav.style.pointerEvents=e<.5?"none":"auto";
+ var sr=slot.getBoundingClientRect(),x1=desk?sr.left+sr.width/2:vw/2,w1=desk?Math.min(sr.width,420):w0*.6;
+ var x=vw/2+(x1-vw/2)*e,s=1+(w1/w0-1)*e,r=hero.getBoundingClientRect(),o;
+ o=desk?cl((r.bottom-vh*.6)/(vh*.25)):1-e;
+ tree.style.width=w0+"px";tree.style.opacity=o;
+ tree.style.transform="translate("+(x-w0/2)+"px,-50%) scale("+s+")";
+ var t=cl((vh*.95-txt.getBoundingClientRect().top)/(vh*.4));
+ txt.style.opacity=t;txt.style.transform="translateY("+(1-t)*24+"px)";
+}
+addEventListener("scroll",function(){requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);rm.addEventListener&&rm.addEventListener("change",upd);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(upd);upd();
+})();
 </script></body></html>

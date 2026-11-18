@@ -35,6 +35,9 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
   - `CypressVersion.dc.html`: the latest direction. A cypress intro screen, "The Persian life of a world book", the narrative atlas with margin panel, "Enter a story. Find another inside.", "How the margin is made".
 - `design/assets/`: `cypress.jpg` (hero) and `lion-court.jpg` (Dimna presents the ox to the Lion).
 
+## Landing page behaviour
+First screen shows only the cypress, centred. Scrolling moves it to the right (left in Persian) and fades the text in; on phones it shrinks and fades into an in-flow image. With reduced motion the intro is skipped. Implemented in `index.html` (fixed `#tree` plus a small scroll script).
+
 ## Visual direction
 Ivory paper #F8F0E4 / #F7F1E3, ink #1F1B16, lapis #2E4A9E, burnt orange #A2471F, gold #B8963E (thin rules only), sage green. Ruled borders (jadval) and nested frames as the structural motif. Avoid arabesque backgrounds, parchment textures, gradients and emoji.
 
