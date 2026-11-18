@@ -13,7 +13,7 @@ header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;paddin
 .brand{display:flex;gap:10px;align-items:baseline}.brand b{font-family:"Noto Naskh Arabic",serif;font-size:24px;color:var(--orange)}
 .brand i{font-style:normal;font-size:12px;letter-spacing:.18em}nav{display:flex;gap:18px;align-items:center}nav a{color:var(--ink);text-decoration:none}
 button{font:inherit;background:none;border:0;cursor:pointer;color:var(--mute);padding:6px}button[aria-pressed=true]{color:var(--lapis);text-decoration:underline}
-.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:48px 0 72px}.hero>*{flex:1 1 380px;min-width:0}
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:48px 0 72px}.hero>*{flex:1 1 300px;min-width:0}@media(min-width:600px){.hero{flex-wrap:nowrap;gap:36px}}
 .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:0}
 h1{font-size:clamp(40px,7vw,72px);line-height:1.05;font-weight:400;margin:14px 0}h1 em{color:var(--lapis)}
 .cta{display:inline-flex;gap:30px;background:var(--lapis);color:var(--bg);padding:12px 22px;text-decoration:none;min-height:44px;align-items:center}
@@ -40,11 +40,11 @@ aside{border-inline-start:1px solid #D9CBA8;padding-inline-start:20px}aside h2{f
 header{position:sticky;top:0;z-index:5;background:var(--bg)}
 .intro{height:100vh;height:100svh;position:relative}
 .cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;font-size:14px;color:var(--mute);text-decoration:none}
-.tree,.treeslot .inflow{border:1px solid var(--gold);object-fit:cover;aspect-ratio:3/4;background:var(--card)}
+.tree,.treeslot .inflow{object-fit:cover;aspect-ratio:3/4;background:transparent;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
 .tree{position:fixed;top:50%;left:0;z-index:2;pointer-events:none;will-change:transform,opacity;transform-origin:center}
 .treeslot{min-height:420px}.treeslot .inflow{display:none}
 .hero>div:first-child{will-change:opacity,transform}
-@media(max-width:819px){header{position:static}nav{gap:12px;font-size:15px}.treeslot{min-height:0}.treeslot .inflow{display:block}}
+@media(max-width:599px){header{position:static}nav{gap:12px;font-size:15px}.treeslot{min-height:0}.treeslot .inflow{display:block}}
 @media(prefers-reduced-motion:reduce){.intro{display:none}.tree{display:none}.treeslot .inflow{display:block}}
 footer{border-top:1px solid var(--gold);padding:28px 0 60px;color:var(--mute);font-size:15px}
 .badge{font-size:12px;border:1px solid var(--gold);padding:2px 8px;display:inline-block}
@@ -116,15 +116,15 @@ var tree=document.getElementById("tree"),slot=document.getElementById("slot"),he
 var txt=hero.firstElementChild,rm=matchMedia("(prefers-reduced-motion:reduce)");
 function cl(x){return Math.max(0,Math.min(1,x))}
 var inflow=document.getElementById("inflow");
-function vid(){var m=innerWidth<820||rm.matches;if(rm.matches){tree.pause();inflow.pause();return}if(innerWidth<820){tree.pause();inflow.play().catch(function(){})}else{inflow.pause();tree.play().catch(function(){})}}
+function vid(){var m=innerWidth<600||rm.matches;if(rm.matches){tree.pause();inflow.pause();return}if(innerWidth<600){tree.pause();inflow.play().catch(function(){})}else{inflow.pause();tree.play().catch(function(){})}}
 function upd(){
- var vh=innerHeight,vw=innerWidth,desk=vw>=820,w0=Math.min(460,vw*.7,vh*.62);
+ var vh=innerHeight,vw=innerWidth,desk=vw>=600,w0=Math.min(460,vw*.7,vh*.62);
  if(rm.matches){nav.style.opacity=1;txt.style.opacity=1;return}
  var p=cl(scrollY/(vh*.7)),e=p*p*(3-2*p);
  nav.style.opacity=e;nav.style.pointerEvents=e<.5?"none":"auto";
  var sr=slot.getBoundingClientRect(),x1=desk?sr.left+sr.width/2:vw/2,w1=desk?Math.min(sr.width,420):w0*.6;
  var x=vw/2+(x1-vw/2)*e,s=1+(w1/w0-1)*e,r=hero.getBoundingClientRect(),o;
- o=desk?cl((r.bottom-vh*.6)/(vh*.25)):1-e;
+ o=desk?cl((r.bottom-vh*.6)/(vh*.25)):1-cl(p*1.6);
  tree.style.width=w0+"px";tree.style.opacity=o;
  tree.style.transform="translate("+(x-w0/2)+"px,-50%) scale("+s+")";
  var t=cl((vh*.95-txt.getBoundingClientRect().top)/(vh*.4));
