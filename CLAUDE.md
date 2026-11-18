@@ -38,6 +38,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
   - `CypressVersion.dc.html`: the latest direction. A cypress intro screen, "The Persian life of a world book", the narrative atlas with margin panel, "Enter a story. Find another inside.", "How the margin is made".
 - `assets/cypress-wind.mp4` / `.webm`: web-compressed loop of the cypress swaying in the wind (AI-generated, 20 s, no audio), used on the landing page with `cypress.jpg` as poster.
 - `design/assets/`: `cypress.jpg` (hero) and `lion-court.jpg` (Dimna presents the ox to the Lion).
+- `assets/lion-hare-well.jpg`: AI-generated image for the Lion and the Hare, shown in the /tales margin panel for that tale (`IMG` map in `tales/index.html`). `assets/lion-court.jpg` is shown at the top of /tales. Both labelled AI-generated.
 
 ## Notes
 - Cover background is the video's own colour (#F6ECDD, sampled from the frames) so no rectangle shows; the cover stays light even in dark mode. Tree is 78vh tall; nothing scrolls on desktop.

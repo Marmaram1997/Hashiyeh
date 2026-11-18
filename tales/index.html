@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <title>The Tales · Hashiyeh</title>
-<style>.hd2{display:flex;gap:40px;align-items:flex-start;justify-content:space-between;padding-bottom:8px}.hd2>div{flex:1;min-width:0}.fig{margin:0;flex:0 0 210px}.fig img{display:block;width:100%;height:auto}.fig figcaption{font-size:12.5px;line-height:1.45;color:var(--mute);margin-top:6px}@media(max-width:700px){.hd2{flex-direction:column;gap:22px}.fig{flex:none;width:min(300px,80%)}}</style></head>
+<style>.hd2{display:flex;gap:40px;align-items:flex-start;justify-content:space-between;padding-bottom:8px}.hd2>div{flex:1;min-width:0}.fig{margin:0;flex:0 0 210px}.fig img{display:block;width:100%;height:auto}.fig figcaption{font-size:12.5px;line-height:1.45;color:var(--mute);margin-top:6px}.pfig{margin:12px 0 4px;max-width:250px}.pfig img{display:block;width:100%;height:auto}.pfig figcaption{font-size:12.5px;line-height:1.45;color:var(--mute);margin-top:6px}@media(max-width:700px){.hd2{flex-direction:column;gap:22px}.fig{flex:none;width:min(300px,80%)}}</style></head>
 <body data-page="tales"><header id="hdr" class="hdr"></header>
 <main class="w">
 <section class="pagehead hd2"><div><p class="k" data-k="kicker"></p><h1 class="big" data-k="h1"></h1><p class="lead" data-k="lead"></p></div>
@@ -50,6 +50,8 @@ function drawTree(){
  var roots=D.tales.filter(function(t){return !t.parent});
  var ch='<button class="item" data-id="chapter" aria-pressed="'+on+'"><span class="tag" style="width:24px">'+num("01")+'</span><span class="nm" style="font-size:20px">'+(H.lang==="fa"?"شیر و گاو":"The Lion and the Ox")+'</span><span class="tag">'+H.t("tag")+'</span></button>';
  document.getElementById("tree").innerHTML=ch+'<div class="nest">'+roots.map(function(t){return item(t,0)}).join("")+"</div>"}
+var IMG={lion_hare:{src:"/assets/lion-hare-well.jpg",alt:["Manuscript-style painting: a lion leans over a round stone well and looks at his reflection in the dark blue water, while a hare sits at the left watching him.","نگاره‌ای به شیوهٔ نگارگری ایرانی: شیری بر لبهٔ چاهی سنگی خم شده و تصویر خود را در آب آبی تیره می‌بیند؛ خرگوشی در سمت چپ نشسته و او را تماشا می‌کند."],cap:["The Lion and the Hare at the well. AI-generated image in the manner of Persian manuscript painting; not a historical manuscript.","شیر و خرگوش کنار چاه. تصویر ساخته‌شده با هوش مصنوعی به شیوهٔ نگارگری ایرانی؛ نسخهٔ تاریخی نیست."]}};
+function fig(id,fa){var m=IMG[id];if(!m)return"";var i=fa?1:0;return '<figure class="pfig"><img src="'+m.src+'" width="1086" height="1448" loading="lazy" alt="'+H.esc(m.alt[i])+'"><figcaption>'+m.cap[i]+"</figcaption></figure>"}
 function drawPanel(){
  var fa=H.lang==="fa",p=document.getElementById("panel"),s=SUM[sel][fa?1:0];
  if(sel==="chapter"){p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num("01")+' ]</span><h2>'+(fa?"شیر و گاو":"The Lion and the Ox")+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">شیر و گاو</span><p>'+s+'</p><span class="draft">'+H.t("draft")+'</span><div class="sec"><span class="tag">'+H.t("position")+'</span>'+H.t("chapPos")+'</div><div class="sec"><span class="tag">'+H.t("across")+'</span>'+H.t("both")+'</div><p style="margin-top:20px"><a class="cta" href="/read/"><span>'+H.t("openCh")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>';return}
@@ -57,7 +59,7 @@ function drawPanel(){
  var pos=par?H.t("inTale").replace("%s",title(par)):H.t("inCh");
  var tell=VERIFIED.indexOf(t.id)>=0?who(t.teller):H.t("pending");
  var len=t.en_text?H.t("len").replace("%p",num(t.fa_words)).replace("%e",num(t.en_words)):H.t("lenP").replace("%p",num(t.fa_words));
- p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num(D.tales.indexOf(t)+2<10?"0"+(D.tales.indexOf(t)+2):D.tales.indexOf(t)+2)+' ]</span><h2>'+H.esc(title(t))+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">'+H.esc(t.fa_title)+'</span><p>'+s+'</p><span class="draft">'+H.t("draft")+'</span>'+
+ p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num(D.tales.indexOf(t)+2<10?"0"+(D.tales.indexOf(t)+2):D.tales.indexOf(t)+2)+' ]</span><h2>'+H.esc(title(t))+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">'+H.esc(t.fa_title)+'</span>'+fig(t.id,fa)+'<p>'+s+'</p><span class="draft">'+H.t("draft")+'</span>'+
  '<div class="sec"><span class="tag">'+H.t("position")+'</span>'+H.esc(pos)+'</div><div class="sec"><span class="tag">'+H.t("teller")+'</span>'+H.esc(tell)+'</div><div class="sec"><span class="tag">'+H.t("across")+'</span>'+(t.en_text?H.t("both"):H.t("frogV"))+'</div><div class="sec"><span class="tag">'+H.t("size")+'</span>'+len+'</div>'+
  '<p style="margin-top:20px"><a class="cta" href="/read/#'+t.id+'"><span>'+H.t("open")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>'}
 function draw(){if(!D){document.getElementById("tree").textContent=H.t("err");return}drawTree();drawPanel()}
