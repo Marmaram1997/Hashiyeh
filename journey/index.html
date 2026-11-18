@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<title>The Journey · Hashiyeh</title></head>
+<body data-page="journey"><header id="hdr" class="hdr"></header>
+<main class="w">
+<section class="pagehead journey"><p class="k" data-k="kicker"></p><h1 class="big" data-k="h1"></h1><p class="lead" data-k="lead"></p><ol id="jlist"></ol></section>
+<footer class="foot"><span data-k="note"></span></footer>
+</main>
+<script src="/assets/site.js"></script>
+<script>
+var J={en:[["India · Sanskrit","Panchatantra","Animal fables written to teach princes how to rule.",0],["Persia · Pahlavi · 6th c.","Borzuya","A physician at the court of Khosrow I brings the book from India. His translation is lost.",1],["Arabic · c. 750","Ibn al-Muqaffaʿ","A Persian writing in Arabic. Every later version descends from his.",1],["Persian · 12th c.","Nasrollah Monshi","Recasts the Arabic as ornate Persian prose, woven with verse. The text this project reads.",2],["Castile · 1251","Calila e Dimna","One of the European branches, translated from the Arabic for the future Alfonso X.",0],["Herat · Persian · 15th c.","Anvar-i Soheili","Kashefi’s new Persian retelling, copied and illustrated again and again.",1]],
+fa:[["هند · سنسکریت","پنچه‌تنتره","حکایت‌هایی برای آموختن آیین کشورداری به شاهزادگان.",0],["ایران · پهلوی · قرن ششم میلادی","برزویه","طبیب دربار انوشیروان کتاب را از هند می‌آورد. ترجمهٔ او از میان رفته است.",1],["عربی · حدود ۷۵۰ میلادی","ابن مقفع","ایرانی‌ای که به عربی می‌نوشت. همهٔ نسخه‌های بعدی از ترجمهٔ او می‌آیند.",1],["فارسی · قرن ششم هجری","نصرالله منشی","متن عربی را به نثر فنی فارسی برمی‌گرداند و با شعر می‌آراید. متنی که این پروژه می‌خواند.",2],["کاستیل · ۱۲۵۱ میلادی","کلیله و دمنهٔ کاستیلی","یکی از شاخه‌های اروپایی، ترجمه از عربی برای آلفونسوی دهم پیش از پادشاهی‌اش.",0],["هرات · فارسی · قرن نهم هجری","انوار سهیلی","بازنویسی تازهٔ حسین واعظ کاشفی که بارها نسخه‌برداری و نگارگری شد.",1]]};
+H.add({en:{title:"The Journey",kicker:"The journey",h1:"A book that travelled",lead:"Four of its six stops pass through Persian hands. The highlighted ones are Persian.",note:"Editorial summaries of each stop, not quotations."},
+fa:{title:"سفر کتاب",kicker:"سفر کتاب",h1:"کتابی که سفر کرد",lead:"چهار منزل از شش منزل این سفر از دست ایرانیان گذشته است. منزل‌های ایرانی پررنگ شده‌اند.",note:"خلاصه‌های تحریری هر منزل، نه نقل‌قول."}});
+function draw(){document.getElementById("jlist").innerHTML=J[H.lang].map(function(x){return '<li class="'+(x[3]?"fa-stop":"")+(x[3]==2?" core":"")+'"><span class="tag">'+x[0]+'</span><strong>'+x[1]+'</strong><span class="d">'+x[2]+'</span></li>'}).join("")}
+H.on(draw);H.init();
+</script></body></html>

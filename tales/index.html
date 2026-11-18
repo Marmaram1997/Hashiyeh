@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<title>The Tales · Hashiyeh</title></head>
+<body data-page="tales"><header id="hdr" class="hdr"></header>
+<main class="w">
+<section class="pagehead" style="padding-bottom:8px"><p class="k" data-k="kicker"></p><h1 class="big" data-k="h1"></h1><p class="lead" data-k="lead"></p></section>
+<section class="atlas">
+<div class="frame"><span class="tag" data-k="atlasLabel"></span><div id="tree" style="margin-top:10px"></div><p style="font-size:13px;color:var(--mute);margin:14px 0 0" data-k="atlasNote"></p></div>
+<aside class="margin" aria-live="polite"><span class="tag" data-k="inMargin"></span><div id="panel"></div></aside>
+</section>
+<footer class="foot"><span data-k="note"></span></footer>
+</main>
+<script src="/assets/site.js"></script>
+<script>
+var VERIFIED=["ape_carpenter","three_fishes","camel","sandpiper","apes_glowworm","two_partners","tortoise_geese"];
+var EN={two_partners:"The Two Partners",frog_snake:"The Frog and the Snake"};
+var SUM={
+chapter:["The frame of the first chapter: the jackal Dimna turns the Lion against his trusted friend, the ox Shanzabeh.","قاب باب نخست: شغالی به نام دمنه، شیر را با دوست مورد اعتمادش، گاو شنزبه، دشمن می‌کند."],
+ape_carpenter:["An ape copies a carpenter, pulls out the wedge holding a split log open, and gets his tail crushed.","بوزینه‌ای کار درودگر را تقلید می‌کند، میخ شکاف تنه را بیرون می‌کشد و دمش در شکاف گیر می‌افتد."],
+crow_serpent:["A raven whose young are eaten by a serpent asks a jackal for advice. He tells her to lure people to the serpent’s hole with a stolen necklace.","زاغی که مار بچه‌هایش را می‌خورد از شغالی چاره می‌خواهد. شغال می‌گوید گردنبندی برباید تا مردم او را تا سوراخ مار دنبال کنند."],
+heron_crab:["A heron carries fishes away one by one to eat them. The crab he carries last grips his throat and kills him.","مرغ ماهی‌خوار ماهیان را یکی‌یکی می‌برد و می‌خورد؛ خرچنگی که می‌برد گلویش را می‌فشارد و او را می‌کشد."],
+lion_hare:["The animals agree to send a lion one animal a day. The hare lures him into a pit by showing him his own reflection.","جانوران می‌پذیرند هر روز یکی را نزد شیر بفرستند. خرگوش شیر را با نشان دادن تصویر خودش در آب به چاه می‌کشاند."],
+three_fishes:["Three fishes of different wits meet the fishermen: one leaves at once, one plays dead, one hesitates and is caught.","سه ماهی با هوش‌های گوناگون به صیادان برمی‌خورند: یکی بی‌درنگ می‌گریزد، یکی خود را به مردن می‌زند، یکی دودل می‌ماند و گرفتار می‌شود."],
+camel:["A wolf, a crow and a jackal plot to have their lion master eat the camel who has joined them.","گرگ و زاغ و شغال نقشه می‌کشند تا شیرِ ولی‌نعمتشان شتری را که به آنان پیوسته بخورد."],
+sandpiper:["A pair of sandpipers nests by the sea and the sea takes their young. The birds win them back with the Simurg’s help.","دو طیطوی کنار دریا آشیان می‌سازند و دریا بچه‌هایشان را می‌برد. پرندگان با یاری سیمرغ آنها را باز می‌ستانند."],
+tortoise_geese:["Two geese carry a tortoise by a stick. She opens her mouth to answer the crowd and falls.","دو مرغابی لاک‌پشتی را با چوبی می‌برند. او برای پاسخ به مردم دهان می‌گشاید و می‌افتد."],
+apes_glowworm:["Apes mistake a glow-worm for fire. A bird who tries to correct them is killed.","بوزینگان کرم شب‌تاب را آتش می‌پندارند و پرنده‌ای را که می‌خواهد آنان را آگاه کند می‌کشند."],
+two_partners:["A rogue cheats his simple partner and hides his father in a hollow tree as a false witness.","شریکی حیله‌گر، شریک ساده‌دلش را فریب می‌دهد و پدرش را در درختی پنهان می‌کند تا گواهی دروغ دهد."],
+frog_snake:["A small tale nested in the Two Partners, found in Monshi but not in the later Syriac version.","حکایتی کوتاه درون «دو شریک»؛ در متن منشی هست، اما در نسخهٔ سریانیِ متأخر نیست."],
+iron_merchant:["A merchant whose iron was “eaten by mice” gets it back by claiming that an eagle carried off a boy.","بازرگانی که آهنش را «موش خورده» می‌گویند، با ادعای اینکه عقابی کودکی را برده، آهنش را بازمی‌ستاند."]};
+var NM={Kalilah:["Kalila","کلیله"],Dimnah:["Dimna","دمنه"],Lion:["the Lion","شیر"],Ox:["the Ox","گاو"],"Hen-bird":["the hen-bird","مرغ ماده"],"Cock-bird":["her mate","جفتش"],Jackal:["the Jackal","شغال"],Raven:["the Raven","زاغ"]};
+H.add({en:{title:"The Tales",kicker:"The narrative atlas",h1:"The tales",lead:"Twelve tales from the chapter “The Lion and the Ox”, nested the way the book nests them. Select one to see its place in the margin.",atlasLabel:"The narrative atlas",atlasNote:"Nested frames show which tale sits inside which. Tellers are shown only where they were checked against the text.",inMargin:"In the margin",position:"Position",teller:"Told by",across:"Across versions",size:"Length",open:"Open in the side-by-side reader",draft:"Draft summary · not yet reviewed",tag:"Chapter",tagT:"Tale",tagN:"Nested tale",pending:"Not yet labelled.",chapPos:"The book’s first story chapter, told by the Brahman to the king of India.",inCh:"Inside “The Lion and the Ox.”",inTale:"Inside “%s,” within “The Lion and the Ox.”",both:"In the project’s Persian text and in its later-Syriac comparator.",frogV:"In Monshi’s Persian; not found in the later-Syriac comparator. Source verification still pending.",len:"Persian %p words · English (OCR) %e words",lenP:"Persian %p words · no English counterpart",note:"Summaries are editorial, not source quotations. English comparison text: Keith-Falconer (1885), a sibling version from the later Syriac branch, not a translation of Monshi.",err:"The tale data could not be loaded. Run the site through a web server (npm run dev) or open it online."},
+fa:{title:"حکایت‌ها",kicker:"اطلس روایت",h1:"حکایت‌ها",lead:"دوازده حکایت از باب «شیر و گاو»، تودرتو همان‌گونه که در کتاب آمده‌اند. یکی را برگزینید تا جایگاهش را در حاشیه ببینید.",atlasLabel:"اطلس روایت",atlasNote:"قاب‌های تودرتو نشان می‌دهند کدام حکایت درون کدام است. راوی فقط در جاهایی آمده که با متن سنجیده شده است.",inMargin:"در حاشیه",position:"جایگاه در روایت",teller:"راوی",across:"مقایسهٔ نسخه‌ها",size:"اندازه",open:"بازکردن در خوانش دوستونه",draft:"خلاصهٔ پیش‌نویس · هنوز بازبینی نشده",tag:"باب",tagT:"حکایت",tagN:"حکایت در حکایت",pending:"هنوز برچسب نخورده است.",chapPos:"نخستین باب داستانی کتاب؛ برهمن آن را برای رای هند روایت می‌کند.",inCh:"درون باب «شیر و گاو».",inTale:"درون «%s»، در باب «شیر و گاو».",both:"هم در متن فارسی پروژه و هم در متن مقایسه‌ای سریانیِ متأخر.",frogV:"در متن فارسی منشی آمده، اما در متن مقایسه‌ای سریانیِ متأخر یافت نشده است. بررسی منابع هنوز انجام نشده است.",len:"فارسی %p واژه · انگلیسی (OCR) %e واژه",lenP:"فارسی %p واژه · بدون همتای انگلیسی",note:"خلاصه‌ها تحریری‌اند، نه نقل‌قول از متن. متن مقایسه‌ای انگلیسی: کیث فالکونر (۱۸۸۵)، نسخه‌ای همتبار از شاخهٔ سریانیِ متأخر، نه ترجمهٔ منشی.",err:"داده‌های حکایت‌ها بارگذاری نشد. سایت را با یک وب‌سرور (npm run dev) اجرا کنید یا آنلاین باز کنید."}});
+var D=null,sel="chapter";
+function num(n){return H.lang==="fa"?String(n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]}):String(n)}
+function enT(t){return EN[t.id]||t.en_title||""}
+function title(t){return H.lang==="fa"?t.fa_title:enT(t)}
+function who(s){return s.split("→").map(function(x){x=x.trim();var m=NM[x.replace(/ \(.*/,"")];return m?m[H.lang==="fa"?1:0]:x}).join(H.lang==="fa"?" ← ":" → ")}
+function kids(id){return D.tales.filter(function(t){return t.parent===id})}
+function item(t,lvl){var on=sel===t.id;
+ var h='<button class="item" data-id="'+t.id+'" aria-pressed="'+on+'"><span class="tag" style="width:24px">'+num(D.tales.indexOf(t)+2<10?"0"+(D.tales.indexOf(t)+2):D.tales.indexOf(t)+2)+'</span><span class="nm">'+H.esc(title(t))+'</span><span class="tag">'+H.t(lvl?"tagN":"tagT")+'</span></button>';
+ var k=kids(t.id);if(k.length)h+='<div class="nest">'+k.map(function(c){return item(c,1)}).join("")+"</div>";return h}
+function drawTree(){
+ var on=sel==="chapter";
+ var roots=D.tales.filter(function(t){return !t.parent});
+ var ch='<button class="item" data-id="chapter" aria-pressed="'+on+'"><span class="tag" style="width:24px">'+num("01")+'</span><span class="nm" style="font-size:20px">'+(H.lang==="fa"?"شیر و گاو":"The Lion and the Ox")+'</span><span class="tag">'+H.t("tag")+'</span></button>';
+ document.getElementById("tree").innerHTML=ch+'<div class="nest">'+roots.map(function(t){return item(t,0)}).join("")+"</div>"}
+function drawPanel(){
+ var fa=H.lang==="fa",p=document.getElementById("panel"),s=SUM[sel][fa?1:0];
+ if(sel==="chapter"){p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num("01")+' ]</span><h2>'+(fa?"شیر و گاو":"The Lion and the Ox")+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">شیر و گاو</span><p>'+s+'</p><span class="draft">'+H.t("draft")+'</span><div class="sec"><span class="tag">'+H.t("position")+'</span>'+H.t("chapPos")+'</div><div class="sec"><span class="tag">'+H.t("across")+'</span>'+H.t("both")+'</div><p style="margin-top:20px"><a class="cta" href="/read/"><span>'+H.t("open")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>';return}
+ var t=D.tales.find(function(x){return x.id===sel}),par=t.parent&&D.tales.find(function(x){return x.id===t.parent});
+ var pos=par?H.t("inTale").replace("%s",title(par)):H.t("inCh");
+ var tell=VERIFIED.indexOf(t.id)>=0?who(t.teller):H.t("pending");
+ var len=t.en_text?H.t("len").replace("%p",num(t.fa_words)).replace("%e",num(t.en_words)):H.t("lenP").replace("%p",num(t.fa_words));
+ p.innerHTML='<span class="tag" style="color:var(--orange)">[ '+num(D.tales.indexOf(t)+2<10?"0"+(D.tales.indexOf(t)+2):D.tales.indexOf(t)+2)+' ]</span><h2>'+H.esc(title(t))+'</h2><span class="fa" style="color:var(--orange);font-size:20px;display:block">'+H.esc(t.fa_title)+'</span><p>'+s+'</p><span class="draft">'+H.t("draft")+'</span>'+
+ '<div class="sec"><span class="tag">'+H.t("position")+'</span>'+H.esc(pos)+'</div><div class="sec"><span class="tag">'+H.t("teller")+'</span>'+H.esc(tell)+'</div><div class="sec"><span class="tag">'+H.t("across")+'</span>'+(t.en_text?H.t("both"):H.t("frogV"))+'</div><div class="sec"><span class="tag">'+H.t("size")+'</span>'+len+'</div>'+
+ '<p style="margin-top:20px"><a class="cta" href="/read/#'+t.id+'"><span>'+H.t("open")+'</span><span aria-hidden="true">'+(fa?"↖":"↗")+'</span></a></p>'}
+function draw(){if(!D){document.getElementById("tree").textContent=H.t("err");return}drawTree();drawPanel()}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".item");if(b){sel=b.dataset.id;draw()}});
+H.on(draw);H.init();
+fetch("/data/lion_ox_aligned.json").then(function(r){return r.json()}).then(function(d){D=d;var h=location.hash.slice(1);if(h&&SUM[h])sel=h;draw()}).catch(function(){draw()});
+</script></body></html>

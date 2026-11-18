@@ -4,7 +4,7 @@ A digital reading of Nasrollah Monshi's Persian *Kelileh o Demneh*: the Persian 
 
 - `data/`: Persian full text (Ganjoor), Keith-Falconer 1885 English OCR, and the hand-aligned dataset for "The Lion and the Ox"
 - `scripts/`: how the data was fetched and aligned
-- `reader/`: side-by-side reader (served at /reader/)
+- `index.html`, `journey/`, `tales/`, `read/`, `method/`, `about/`: the site pages; `assets/` holds shared CSS/JS and media
 - `design/`: landing-page drafts and images
 - `CLAUDE.md`: project context and decisions, for Claude Code
 

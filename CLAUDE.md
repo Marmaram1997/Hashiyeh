@@ -28,7 +28,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 - `build_aligned.py`: builds `lion_ox_aligned.json` from the two sources. The English line ranges are hard-coded and were set by hand.
 
 ## What exists
-- `reader/lion_ox_reader.html`: a working, self-contained side-by-side reader for the 12 tales (data embedded).
+- Site pages (static, clean URLs, shared `assets/site.css` and `assets/site.js` with the EN/FA switch and header): `/` cover, `/journey`, `/tales` (atlas with margin panel, reads `data/lion_ox_aligned.json`), `/read` (side-by-side reader, data embedded; `/read#tale_id` opens a tale), `/method`, `/about`. Language choice is kept in localStorage (`hashiyeh-lang`). Pages use absolute paths, so serve with `npm run dev`; file:// will not work.
 - `design/*.dc.html`: three landing-page drafts made in Claude's Design canvas. They are NOT plain HTML (they need the canvas runtime), so use them as reference for layout, copy and both languages:
   - `Main.dc.html`: opening section, "A book that travelled" timeline, three ways in, method and data, footer.
   - `TreeLanding.dc.html`: the tale tree as nested frames, with a margin panel.
@@ -36,8 +36,8 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 - `assets/cypress-wind.mp4` / `.webm`: web-compressed loop of the cypress swaying in the wind (AI-generated, 20 s, no audio), used on the landing page with `cypress.jpg` as poster.
 - `design/assets/`: `cypress.jpg` (hero) and `lion-court.jpg` (Dimna presents the ox to the Lion).
 
-## Landing page behaviour
-First screen shows only the cypress, centred. Scrolling moves it to the right (left in Persian) and fades the text in; on phones it shrinks and fades into an in-flow image. With reduced motion the intro is skipped. Implemented in `index.html` (fixed `#tree` plus a small scroll script).
+## Cover behaviour
+The cover has no story content: the cypress video (soft-edged) centred, name and tagline above, five margin-note links around it (two left, two right, one below; stacked under the tree on phones) that fade in and softly light their side of the tree on hover. Persian mirrors the layout. Draft tale summaries on /tales are labelled as not yet reviewed; tellers show only for the seven verified tales.
 
 ## Visual direction
 Ivory paper #F8F0E4 / #F7F1E3, ink #1F1B16, lapis #2E4A9E, burnt orange #A2471F, gold #B8963E (thin rules only), sage green. Ruled borders (jadval) and nested frames as the structural motif. Avoid arabesque backgrounds, parchment textures, gradients and emoji.
