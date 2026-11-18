@@ -50,6 +50,7 @@
     document.querySelectorAll("[data-alt]").forEach(function (e) {
       var v = H.t(e.dataset.alt); if (e.tagName === "IMG") e.alt = v; else e.setAttribute("aria-label", v);
     });
+    document.querySelectorAll("[data-title]").forEach(function (e) { var v = H.t(e.dataset.title); e.title = v; e.setAttribute("aria-label", v); });
     var t = H.t("title"); if (t) document.title = t + " · Hashiyeh";
     document.querySelectorAll("[data-lang]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
     subs.forEach(function (f) { f(); });

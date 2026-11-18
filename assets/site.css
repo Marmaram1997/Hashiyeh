@@ -35,7 +35,9 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:var(--mute);pa
 .foot{border-top:1px solid var(--gold);margin-top:64px;padding:24px 0 56px;color:var(--mute);font-size:15px}
 .foot a{color:var(--mute)}
 /* journey */
-.journey ol{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.journey ol{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:899px){.journey ol{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.journey ol{grid-template-columns:1fr}}
 .journey li{background:var(--card);border:1px solid var(--rule);padding:18px;display:flex;flex-direction:column;gap:6px}
 .journey li.fa-stop{background:var(--lapis);color:#F8F0E4;border-color:var(--lapis)}
 .journey li.fa-stop .tag{color:#E3D7B8}
@@ -44,6 +46,8 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:var(--mute);pa
 /* method */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border:1px solid var(--gold);margin:24px 0 40px}
 .steps div{padding:18px;border-inline-end:1px solid var(--rule)}.steps b{color:var(--orange);font-weight:400}
+.progress{font-size:18px;color:var(--ink);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:10px 0;margin:28px 0 0;letter-spacing:.02em}
+.example{border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-6px;padding:20px 22px;margin:0 0 40px;max-width:720px}
 .facts{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
 .facts li{padding:12px 0;border-bottom:1px solid var(--rule)}
 /* tales */

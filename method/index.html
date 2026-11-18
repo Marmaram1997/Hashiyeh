@@ -7,20 +7,23 @@
 <body data-page="method"><header id="hdr" class="hdr"></header>
 <main class="w">
 <section class="pagehead"><p class="k" data-k="kicker"></p><h1 class="big"><span data-k="h1a"></span> <em data-k="h1b"></em></h1><p class="lead" data-k="lead"></p>
+<p class="progress" data-k="progress"></p>
 <div class="steps" id="steps"></div>
+<div class="example" id="example"></div>
 <p class="k" data-k="dataK"></p><ul class="facts" id="facts"></ul>
 <p style="margin-top:28px"><a href="https://ganjoor.net/monshi/kelile-demni" data-k="ganjoor"></a></p></section>
 <footer class="foot"><span data-k="note"></span></footer>
 </main>
 <script src="/assets/site.js"></script>
 <script>
-var S={en:[["1","Sources","Persian text from Ganjoor; English from the 1885 Keith-Falconer OCR, which is still noisy."],["2","Alignment","Twelve tales from “The Lion and the Ox” aligned by hand, with parent and child nesting."],["3","Annotation","Model suggestions stay separate from human-reviewed interpretations."],["4","Verification","Every claim needs a visible path back to the text. Pending items are marked."]],
-fa:[["۱","منابع","متن فارسی از گنجور؛ متن انگلیسی از OCR چاپ ۱۸۸۵ کیث فالکونر که هنوز خطا دارد."],["۲","همترازی","دوازده حکایت از باب «شیر و گاو» با دست همتراز شده‌اند، با نسبت پدر و فرزندی."],["۳","حاشیه‌نویسی","پیشنهادهای مدل جدا از تفسیرهای بازبینی‌شده توسط انسان نگه داشته می‌شود."],["۴","راستی‌آزمایی","هر ادعا باید مسیری روشن به متن داشته باشد. موارد در انتظار، نشان‌دار هستند."]]};
+var S={en:[["1","Sources","Persian text from Ganjoor; English from the 1885 Keith-Falconer OCR, which is still noisy."],["2","Alignment","Twelve tales from “The Lion and the Ox” aligned by hand, with parent and child nesting."],["3","Annotation","Model suggestions stay separate from human-reviewed interpretations."],["4","Verification","Items still to be checked are marked as pending."]],
+fa:[["۱","منابع","متن فارسی از گنجور؛ متن انگلیسی از OCR چاپ ۱۸۸۵ کیث فالکونر که هنوز خطا دارد."],["۲","همترازی","دوازده حکایت از باب «شیر و گاو» با دست همتراز شده‌اند، با نسبت پدر و فرزندی."],["۳","حاشیه‌نویسی","پیشنهادهای مدل جدا از تفسیرهای بازبینی‌شده توسط انسان نگه داشته می‌شود."],["۴","راستی‌آزمایی","مواردی که هنوز بررسی نشده‌اند، با نشان «در انتظار» مشخص شده‌اند."]]};
 var F={en:["Persian text: Nasrollah Monshi’s Kelileh o Demneh from the Ganjoor API, 19 chapters and 250 sections.","English text: I. G. N. Keith-Falconer, Kalilah and Dimnah (Cambridge, 1885), public domain, from the archive.org OCR.","The English follows the later Syriac version. It is a sibling version, not a translation of Monshi’s Persian.","The tale dataset, scripts and site code are in the project’s GitHub repository."],
 fa:["متن فارسی: کلیله و دمنهٔ نصرالله منشی از رابط برنامه‌نویسی گنجور، شامل ۱۹ باب و ۲۵۰ بخش.","متن انگلیسی: کیث فالکونر، کلیله و دمنه (کمبریج، ۱۸۸۵)، در مالکیت عمومی، از OCR آرشیو اینترنتی.","متن انگلیسی بر پایهٔ نسخهٔ سریانیِ متأخر است؛ نسخه‌ای همتبار، نه ترجمهٔ فارسی منشی.","مجموعه‌داده، اسکریپت‌ها و کد سایت در مخزن گیت‌هاب پروژه است."]};
-H.add({en:{title:"Method",kicker:"An open notebook",h1a:"How the margin",h1b:"is made.",lead:"The interface is an invitation to read. Its claims need a visible path back to the text.",dataK:"Data and sources",ganjoor:"Persian text at Ganjoor ↗",note:"Images on this site are AI-generated and are not historical manuscripts."},
-fa:{title:"روش",kicker:"دفتر پژوهش باز",h1a:"این حاشیه",h1b:"چگونه ساخته می‌شود؟",lead:"این رابط دعوتی است به خواندن. هر ادعا باید مسیری روشن به متن داشته باشد.",dataK:"داده‌ها و منابع",ganjoor:"متن فارسی در گنجور ↗",note:"تصویرهای این سایت با هوش مصنوعی ساخته شده‌اند و نسخهٔ تاریخی نیستند."}});
+H.add({en:{title:"Method",kicker:"An open notebook",h1a:"How the margin",h1b:"is made.",lead:"The interface is an invitation to read. Its claims need a visible path back to the text.",progress:"12 tales aligned · 7 tellers verified · 5 pending",exK:"Example margin note",exT:"The Frog and the Snake",exB:"Found in Monshi’s Persian, nested inside “The Two Partners”; not found in the later-Syriac comparator.",exS:"Draft note · source verification pending",exL:"See it on The Tales →",dataK:"Data and sources",ganjoor:"Persian text at Ganjoor ↗",note:"Images on this site are AI-generated and are not historical manuscripts."},
+fa:{title:"روش",kicker:"دفتر پژوهش باز",h1a:"این حاشیه",h1b:"چگونه ساخته می‌شود؟",lead:"این رابط دعوتی است به خواندن. هر ادعا باید مسیری روشن به متن داشته باشد.",progress:"۱۲ حکایت همتراز شده · ۷ راوی تأییدشده · ۵ در انتظار",exK:"نمونهٔ یک یادداشت حاشیه",exT:"غوک و مار",exB:"در متن فارسی منشی و درون «دو شریک» آمده؛ در متن مقایسه‌ای سریانیِ متأخر یافت نشده است.",exS:"یادداشت پیش‌نویس · بررسی منبع در انتظار",exL:"دیدن آن در حکایت‌ها ←",dataK:"داده‌ها و منابع",ganjoor:"متن فارسی در گنجور ↗",note:"تصویرهای این سایت با هوش مصنوعی ساخته شده‌اند و نسخهٔ تاریخی نیستند."}});
 function draw(){document.getElementById("steps").innerHTML=S[H.lang].map(function(s){return "<div><b>"+s[0]+"</b> <strong>"+s[1]+"</strong><br>"+s[2]+"</div>"}).join("");
 var f=F[H.lang].slice(0,3).map(function(x){return "<li>"+x+"</li>"});f.push('<li>'+F[H.lang][3].replace(/(گیت‌هاب|GitHub)/,'<a href="https://github.com/Marmaram1997/Hashiyeh">$1</a>')+"</li>");document.getElementById("facts").innerHTML=f.join("")}
-H.on(draw);H.init();
+function ex(){document.getElementById("example").innerHTML='<span class="tag">'+H.t("exK")+'</span><strong style="font-size:22px;font-weight:400">'+H.t("exT")+'</strong><p style="margin:6px 0">'+H.t("exB")+'</p><span class="draft">'+H.t("exS")+'</span> <a href="/tales#frog_snake" style="margin-inline-start:12px">'+H.t("exL")+"</a>"}
+H.on(ex);H.on(draw);H.init();
 </script></body></html>
