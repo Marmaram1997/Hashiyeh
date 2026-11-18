@@ -18,7 +18,7 @@
     lang = q === "fa" || q === "en" ? q : st === "fa" ? "fa" : "en";
   } catch (e) {}
 
-  var LINKS = [["/journey", "nJourney", "journey"], ["/tales", "nTales", "tales"], ["/read", "nRead", "read"], ["/method", "nMethod", "method"], ["/about", "nAbout", "about"]];
+  var LINKS = [["/journey", "nJourney", "journey"], ["/tales", "nTales", "tales"], ["/method", "nMethod", "method"], ["/about", "nAbout", "about"]];
 
   var H = (window.H = {
     get lang() { return lang; },
@@ -31,7 +31,7 @@
   });
 
   function header() {
-    var page = document.body.dataset.page || "";
+    var page = document.body.dataset.page || ""; if (page === "read") page = "tales";
     return '<div class="hdr-left"><a class="back" href="/" title="' + H.t("coverTitle") + '">' + H.t("cover") + "</a>" +
       '<a class="brand" href="/"><b>حاشیه</b><i>Hashiyeh</i></a></div>' +
       '<nav aria-label="' + H.t("mainNav") + '">' +

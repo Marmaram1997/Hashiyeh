@@ -28,7 +28,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 - `build_aligned.py`: builds `lion_ox_aligned.json` from the two sources. The English line ranges are hard-coded and were set by hand.
 
 ## What exists
-- Site pages (static, clean URLs, shared `assets/site.css` and `assets/site.js` with the EN/FA switch and header): `/` cover, `/journey`, `/tales` (atlas with margin panel, reads `data/lion_ox_aligned.json`), `/read` (side-by-side reader, data embedded; `/read#tale_id` opens a tale), `/method`, `/about`. Language choice is kept in localStorage (`hashiyeh-lang`). Pages use absolute paths, so serve with `npm run dev`; file:// will not work.
+- Site pages (static, clean URLs, shared `assets/site.css` and `assets/site.js` with the EN/FA switch and header): `/` cover, `/journey`, `/tales` (atlas with margin panel, reads `data/lion_ox_aligned.json`; its "Read this tale" button opens the reader), `/read` (side-by-side reader, data embedded; `/read#tale_id` opens a tale; reached only from The Tales, shows The Tales as the active menu item and a link back to the map at `/tales#tale_id`), `/method`, `/about`. The cover and header have no "Read" link. Language choice is kept in localStorage (`hashiyeh-lang`). Pages use absolute paths, so serve with `npm run dev`; file:// will not work.
 - `design/*.dc.html`: three landing-page drafts made in Claude's Design canvas. They are NOT plain HTML (they need the canvas runtime), so use them as reference for layout, copy and both languages:
   - `Main.dc.html`: opening section, "A book that travelled" timeline, three ways in, method and data, footer.
   - `TreeLanding.dc.html`: the tale tree as nested frames, with a margin panel.
@@ -37,7 +37,7 @@ The subject is Nasrollah Monshi's 12th-century Persian prose version of *Kelileh
 - `design/assets/`: `cypress.jpg` (hero) and `lion-court.jpg` (Dimna presents the ox to the Lion).
 
 ## Cover behaviour
-The cover has no story content: the cypress video (soft-edged) centred, name and tagline above, five margin-note links around it (two left, two right, one below; stacked under the tree on phones) that fade in and softly light their side of the tree on hover. Persian mirrors the layout. Draft tale summaries on /tales are labelled as not yet reviewed; tellers show only for the seven verified tales.
+The cover has no story content: the cypress video (soft-edged) centred, name and tagline above, four margin-note links around it (The Journey and The Tales left, Method and About right; stacked under the tree on phones) that fade in and softly light their side of the tree on hover. Persian mirrors the layout. Draft tale summaries on /tales are labelled as not yet reviewed; tellers show only for the seven verified tales.
 
 ## Visual direction
 Ivory paper #F8F0E4 / #F7F1E3, ink #1F1B16, lapis #2E4A9E, burnt orange #A2471F, gold #B8963E (thin rules only), sage green. Ruled borders (jadval) and nested frames as the structural motif. Avoid arabesque backgrounds, parchment textures, gradients and emoji.
