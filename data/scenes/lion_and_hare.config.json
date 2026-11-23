@@ -1,0 +1,42 @@
+{
+  "_readme": "Visual configuration for /experience/lion-and-hare. All coordinates are normalized to the artwork: x = fraction of image width, y = fraction of image height (0,0 = top-left). A shot 'rect' is [x0, y0, x1, y1]: the region the camera frames (uniform scale, never stretched). 'anchorY' = where the rect's centre sits in the stage (0 top, 1 bottom). 'fit' < 1 leaves extra air around the rect. Edit freely; reload to see changes.",
+  "image": {
+    "src": "/assets/lion-hare-well.jpg",
+    "width": 1086,
+    "height": 1448,
+    "alt": {
+      "en": "Manuscript-style painting: a lion leans over a round stone well and looks at his reflection in the water; a hare sits beside the well.",
+      "fa": "نگاره‌ای به شیوهٔ نگارگری ایرانی: شیری بر چاهی سنگی و گرد خم شده و به بازتاب خود در آب می‌نگرد؛ خرگوشی کنار چاه نشسته است."
+    }
+  },
+  "narrowQuery": "(max-width: 760px), (max-aspect-ratio: 9/10)",
+  "water": {
+    "_note": "Ellipse of the water opening, measured from the blue pixels of the artwork. 'inset' shrinks it so ripples and clicks stay clear of the stone rim.",
+    "cx": 0.513, "cy": 0.6326, "rx": 0.208, "ry": 0.0608, "inset": 0.93
+  },
+  "ripples": {
+    "maxRings": 4,
+    "durationMs": 1800,
+    "maxRadius": 0.06,
+    "strokePx": 1.4,
+    "peakOpacity": 0.38,
+    "keyboardPoints": [[0.43, 0.645], [0.62, 0.625], [0.52, 0.68]]
+  },
+  "stateBands": { "rimFrom": 0.3, "reflectionFrom": 0.72, "waterLiveFrom": 0.8 },
+  "timeline": {
+    "desktop": { "scrollVh": 260, "stops": [[0, "approach"], [0.14, "approach"], [0.5, "rim"], [0.56, "rim"], [0.9, "reflection"], [1, "reflection"]] },
+    "narrow":  { "scrollVh": 220, "stops": [[0, "approach"], [0.14, "approach"], [0.5, "rim"], [0.56, "rim"], [0.9, "reflection"], [1, "reflection"]] }
+  },
+  "shots": {
+    "desktop": {
+      "approach":   { "rect": [0.03, 0.075, 0.97, 0.915], "anchorY": 0.5 },
+      "rim":        { "rect": [0.26, 0.31, 0.80, 0.74],   "anchorY": 0.5 },
+      "reflection": { "rect": [0.24, 0.47, 0.82, 0.80],   "anchorY": 0.5 }
+    },
+    "narrow": {
+      "approach":   { "rect": [0.03, 0.12, 0.97, 0.91], "anchorY": 0.46 },
+      "rim":        { "rect": [0.27, 0.33, 0.79, 0.73], "anchorY": 0.46 },
+      "reflection": { "rect": [0.27, 0.50, 0.79, 0.78], "anchorY": 0.46 }
+    }
+  }
+}

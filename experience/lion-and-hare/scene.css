@@ -1,0 +1,93 @@
+:root{--paper:#F7F1E3;--ink:#1F1B16;--lapis:#2E4A9E;--orange:#A2471F;--sage:#6F8B5E;--gold:#B8963E;--mute:#5D5243}
+*{box-sizing:border-box}
+html{color-scheme:light;-webkit-text-size-adjust:100%}
+html.smooth{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 "EB Garamond",Georgia,serif;overflow-x:hidden}
+html[dir=rtl] body{font-family:"Noto Naskh Arabic","EB Garamond",serif;line-height:1.9}
+a{color:var(--lapis)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--lapis);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* the pinned scene: native scrolling; the stage sticks while the section scrolls */
+.scene{position:relative;height:calc(100vh + 260vh);height:calc(100svh + var(--extra,260vh))}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--paper)}
+.art{position:absolute;left:0;top:0;transform-origin:0 0;direction:ltr;opacity:0;transition:opacity .5s ease}
+.art.ready{opacity:1}
+.art img{display:block;width:100%;height:100%;
+ -webkit-mask-image:linear-gradient(to right,transparent,#000 2.2%,#000 97.8%,transparent),linear-gradient(to bottom,transparent,#000 2.2%,#000 97.8%,transparent);
+ -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 2.2%,#000 97.8%,transparent),linear-gradient(to bottom,transparent,#000 2.2%,#000 97.8%,transparent);mask-composite:intersect}
+.art svg,.fig svg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.hit{fill:transparent;pointer-events:none}
+.stage[data-live=true] .hit,.fig.live .hit{pointer-events:all;cursor:pointer}
+.ring{fill:none;stroke:var(--paper);vector-effect:non-scaling-stroke}
+.missing{position:absolute;inset:30% 10% auto;text-align:center;color:var(--mute)}
+
+/* flat interface pieces, ruled in gold */
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 14px;background:var(--paper);border:1px solid var(--gold);border-radius:0;color:var(--ink);font-size:16px;line-height:1.3;text-decoration:none}
+.chip:hover{border-color:var(--orange);color:var(--orange)}
+.top{position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:12px 16px;pointer-events:none}
+.top>*,.topr>*{pointer-events:auto}
+.topr{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}
+.langsw{gap:4px;padding:2px 8px}
+.langsw button{background:none;border:0;padding:6px 6px;min-height:36px;color:var(--mute)}
+.langsw button[aria-pressed=true]{color:var(--lapis);text-decoration:underline;text-underline-offset:4px}
+.bottom{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:12px 16px 16px;pointer-events:none}
+.bottom>*{pointer-events:auto}
+.cap{background:var(--paper);border:1px solid var(--gold);padding:8px 14px 10px;max-width:min(26em,100%)}
+.cap .tag{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+html[dir=rtl] .cap .tag{letter-spacing:0;font-size:13px}
+.sceneTitle{margin:2px 0 0;font-weight:400;font-size:22px;line-height:1.25}
+.cap .st{margin:2px 0 0;color:var(--orange);font-size:16px}
+.cap .hint{margin:0;color:var(--lapis);font-size:16px;min-height:1.6em}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+#stir{opacity:0;transition:opacity .35s}
+.stage[data-state=rim] #stir,.stage[data-state=reflection] #stir,#stir:focus-visible{opacity:1}
+.cap .hint.cue{color:var(--mute)}
+.cap .hint.cue::before{content:"↓ "}
+
+/* panel */
+dialog{width:min(40em,calc(100vw - 24px));max-height:calc(100svh - 24px);overflow:auto;padding:18px 22px 20px;background:var(--paper);color:var(--ink);border:1px solid var(--gold);border-radius:0}
+dialog::backdrop{background:rgba(31,27,22,.45)}
+.phead{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--gold);padding-bottom:8px;margin-bottom:8px}
+.phead h2{margin:0;font-weight:400;font-size:22px}
+.ptext{font-family:"Noto Naskh Arabic",serif;font-size:22px;line-height:2.2;text-align:justify}
+.ptext p{margin:0 0 .6em}
+.pnote{font-size:15px;color:var(--mute);margin:8px 0 0}
+#psrc{font-family:"EB Garamond",Georgia,serif;text-align:left}
+
+/* credits */
+.credits{max-width:38em;margin:0 auto;padding:64px 20px 96px;scroll-margin-top:0}
+.credits:focus{outline:none}
+.credits h2{font-weight:400;font-size:26px;border-top:1px solid var(--gold);padding-top:12px;margin:0 0 12px}
+.credits ul{padding-inline-start:1.1em;margin:0 0 20px}.credits li{margin:0 0 6px}
+
+/* reduced motion: static compositions in normal flow */
+#shots{max-width:1100px;margin:0 auto;padding:0 16px}
+#shots[hidden]{display:none!important}
+.shot{margin:0 0 40px}
+.fig{position:relative;overflow:hidden;width:100%;direction:ltr;background:var(--paper)}
+.fig img{position:absolute;display:block;height:auto;max-width:none;
+ -webkit-mask-image:linear-gradient(to right,transparent,#000 2.2%,#000 97.8%,transparent),linear-gradient(to bottom,transparent,#000 2.2%,#000 97.8%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 2.2%,#000 97.8%,transparent),linear-gradient(to bottom,transparent,#000 2.2%,#000 97.8%,transparent);mask-composite:intersect}
+.shot figcaption{padding:8px 0;border-bottom:1px solid var(--gold)}
+.shot .st{color:var(--orange);margin:0}
+.shot .hint{color:var(--lapis);margin:0}
+.static .scene{height:auto}
+.static .stage{position:static;height:auto;overflow:visible}
+.static .art,.static .cap .st,.static .cap .hint{display:none}
+.static .top{position:sticky;top:0;z-index:6;background:var(--paper);border-bottom:1px solid var(--gold)}
+.static #shots{display:block;padding-top:20px}
+.static .bottom{position:static;padding:0 16px 24px;max-width:1100px;margin:0 auto}
+.static #stir{opacity:1}
+
+@media(max-width:760px){
+ .chip{min-height:44px}
+ .sceneTitle{font-size:18px;display:block}
+ .cap{max-width:100%;flex:1 1 100%;padding:6px 12px 8px}
+ .cap .tag{display:none}
+ .cap .st,.cap .hint{display:inline;margin-inline-end:12px;font-size:15px}
+ .cap .hint{min-height:0}
+ .acts{width:100%}
+ .acts .chip{flex:1 1 auto;justify-content:center}
+}

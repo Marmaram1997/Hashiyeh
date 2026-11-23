@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Lion and the Hare · experiment</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/experience/lion-and-hare/scene.css">
+</head>
+<body>
+<p id="live" class="sr" aria-live="polite"></p>
+
+<section class="scene" id="scene" aria-labelledby="sceneTitle">
+  <div class="stage" id="stage" data-state="approach">
+    <div class="art" id="art" hidden>
+      <img id="img" width="1086" height="1448" decoding="async" fetchpriority="high" alt="">
+      <svg id="water" aria-hidden="true" focusable="false"></svg>
+    </div>
+    <p class="missing" id="missing" hidden></p>
+
+    <div class="top">
+      <a class="chip" id="exit" href="/tales#lion_hare"><span aria-hidden="true">←</span> <span data-k="exit"></span></a>
+      <div class="topr">
+        <a class="chip" id="skip" href="#credits" data-k="skip"></a>
+        <div class="chip langsw" role="group" data-alt="langLabel"><button type="button" data-lang="en">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="fa">فارسی</button></div>
+      </div>
+    </div>
+
+    <div id="shots" hidden></div>
+
+    <div class="bottom">
+      <div class="cap">
+        <h1 class="sceneTitle" id="sceneTitle" data-k="sceneTitle"></h1>
+        <p class="tag" data-k="kicker"></p>
+        <p class="st" id="capState"></p>
+        <p class="hint" id="capHint"></p>
+      </div>
+      <div class="acts">
+        <button type="button" class="chip" id="read" data-k="readOriginal"></button>
+        <button type="button" class="chip" id="stir" data-k="stir"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="credits" id="credits" tabindex="-1" aria-labelledby="creditsHead">
+  <h2 id="creditsHead" data-k="creditsHead"></h2>
+  <ul>
+    <li data-k="creditArt"></li>
+    <li data-k="creditText"></li>
+    <li data-k="creditProto"></li>
+  </ul>
+  <p><a href="/read#shirogav/sh22" data-k="backReader"></a> · <a href="/tales#lion_hare" data-k="exit"></a></p>
+</section>
+
+<dialog id="panel" aria-labelledby="panelHead">
+  <div class="phead"><h2 id="panelHead" data-k="passageHead"></h2><button type="button" class="chip" id="closeP" data-k="close"></button></div>
+  <div class="ptext" id="ptext" lang="fa" dir="rtl"></div>
+  <p class="pnote" id="pnote"></p>
+  <p class="pnote" id="psrc" lang="en" dir="ltr"></p>
+  <p class="pnote"><a id="pReader" href="/read#shirogav/sh22" data-k="openReader"></a></p>
+</dialog>
+
+<script src="/assets/site.js"></script>
+<script src="/experience/lion-and-hare/scene.js"></script>
+</body></html>
