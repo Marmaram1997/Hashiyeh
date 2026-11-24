@@ -5,7 +5,7 @@
 import { FrameStore, Painter } from "./story-render.js";
 import { Timeline, clamp } from "./story-scroll.js";
 import { Beats, Panel } from "./story-text.js";
-import { createAudio } from "./story-audio.js?v=4";
+import { createAudio } from "./story-audio.js?v=5";
 const H = window.H, $ = (id) => document.getElementById(id);
 const sec = $("story"); if (!sec) throw new Error("no story section");
 const rm = matchMedia("(prefers-reduced-motion: reduce)");

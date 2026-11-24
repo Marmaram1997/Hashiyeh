@@ -17,8 +17,15 @@ http.createServer(async (req, res) => {
     let file = join(root, p);
     if ((await stat(file).catch(() => null))?.isDirectory()) file = join(file, "index.html");
     const body = await readFile(file);
-    res.writeHead(200, { "Content-Type": types[extname(file)] || "application/octet-stream", "Cache-Control": "no-store" });
-    res.end(body);
+    const ct = types[extname(file)] || "application/octet-stream", m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || "");
+    if (m) {   // byte ranges, so audio and video can be sought (like Vercel)
+      const a = m[1] === "" ? Math.max(0, body.length - +m[2]) : +m[1], b = m[1] !== "" && m[2] !== "" ? Math.min(+m[2], body.length - 1) : body.length - 1;
+      res.writeHead(206, { "Content-Type": ct, "Accept-Ranges": "bytes", "Content-Range": `bytes ${a}-${b}/${body.length}`, "Content-Length": b - a + 1, "Cache-Control": "no-store" });
+      res.end(body.subarray(a, b + 1));
+    } else {
+      res.writeHead(200, { "Content-Type": ct, "Accept-Ranges": "bytes", "Content-Length": body.length, "Cache-Control": "no-store" });
+      res.end(body);
+    }
   } catch {
     res.writeHead(404, { "Content-Type": "text/plain" });
     res.end("Not found");

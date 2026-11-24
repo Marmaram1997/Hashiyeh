@@ -90,7 +90,7 @@ out = dict(
               fa="نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."),
   ver=2,
   closing_couplet_missing=True,
-  audio=dict(segments=[dict(scene=f's{k}', src=f"/assets/story/audio/s{k}.m4a?v=2", volume=1.0) for k in range(1,8)]),
+  audio=dict(segments=[dict(scene=f's{k}', src=f"/assets/story/audio/s{k}.m4a?v=2", dur=d, volume=1.0) for k, d in zip(range(1,8), [5.038,3.458,3.334,3.375,3.458,3.208,3.206])]),
   aspect_stage=[16,9],
   fade=0.05, scenes=scenes, full_passage=full)
 json.dump(out, open("data/story/lion_and_hare.story.json","w"), ensure_ascii=False, indent=1)
