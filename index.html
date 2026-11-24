@@ -61,6 +61,31 @@ html[dir=rtl] .ident p{font-style:normal}
 .chs .c{color:var(--mute);font-size:13px;flex:none}
 html[dir=rtl] .chs .n{text-align:start}
 @media(max-width:700px){.hero{height:auto;min-height:0}.chs li a{flex-wrap:wrap;gap:2px 12px}.chs .e{flex-basis:calc(100% - 3em);order:2}.chs .f{order:1;flex:1}.chs .c{order:3}}
+.story{max-width:880px;margin:0 auto;padding:88px 24px 72px;text-align:center}
+.skick{margin:0 0 12px;display:flex;justify-content:center;align-items:baseline;gap:10px;color:var(--mute)}
+.skick [lang=en]{font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.skick [lang=fa]{font-family:"Noto Naskh Arabic",serif;font-size:16px}
+.story h2{display:flex;flex-direction:column;align-items:center;margin:0 0 30px;font-weight:400}
+.story h2 [lang=en]{font-size:clamp(30px,5vw,46px);line-height:1.2}
+.story h2 [lang=fa]{font-family:"Noto Naskh Arabic",serif;font-size:clamp(24px,3.6vw,32px);line-height:1.7;color:var(--orange)}
+html[dir=rtl] .story h2{flex-direction:column-reverse}
+html[dir=rtl] .story h2 [lang=fa]{font-size:clamp(34px,5vw,48px);color:var(--ink)}
+html[dir=rtl] .story h2 [lang=en]{font-size:clamp(20px,3vw,26px);color:var(--orange)}
+.vwrap{position:relative;max-width:760px;margin:0 auto;aspect-ratio:4/3;background:#FAF2E1;outline:1px solid var(--gold)}
+.vwrap video{display:block;width:100%;height:100%;object-fit:contain}
+.vbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 22px;background:var(--bg);border:1px solid var(--gold);border-radius:0;color:var(--ink);font:inherit;font-size:18px;cursor:pointer}
+.vbtn:hover{border-color:var(--orange);color:var(--orange)}
+.vbtn:focus-visible,.vread:focus-visible{outline:2px solid var(--lapis);outline-offset:3px}
+.vplay{position:absolute;inset:auto 0 5% 0;margin:0 auto;width:max-content;min-height:52px;font-size:20px;padding:10px 30px}
+.vplay::before{content:"";border-left:13px solid currentColor;border-top:8px solid transparent;border-bottom:8px solid transparent}
+html[dir=rtl] .vplay::before{transform:scaleX(-1)}
+.vctl{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.vfail{position:absolute;inset:0;margin:0;padding:24px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--bg);color:var(--mute);font-size:18px}
+.vread{display:inline-block;margin-top:26px;padding:10px 28px;min-height:44px;background:var(--lapis);color:#F8F0E4;border:1px solid var(--lapis);text-decoration:none;font-size:19px}
+.vread:hover{background:var(--orange);border-color:var(--orange)}
+.vcredit{max-width:36em;margin:18px auto 0;color:var(--mute);font-size:14px;line-height:1.5}
+.story [hidden]{display:none!important}
+@media(max-width:700px){.story{padding:56px 16px 48px}.vbtn{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.note{opacity:1}}
 </style></head>
 <body data-page="cover">
@@ -76,6 +101,19 @@ html[dir=rtl] .chs .n{text-align:start}
 <a class="note e n4" href="/about" data-title="nAbout"><span data-k="nAbout"></span></a>
 </div>
 </main></div>
+<section class="story" id="story" aria-labelledby="storyT">
+<p class="skick"><span lang="en">An illustrated tale</span><span aria-hidden="true">·</span><span lang="fa" dir="rtl">حکایتی مصوّر</span></p>
+<h2 id="storyT"><span lang="en">The Lion and the Hare</span><span lang="fa" dir="rtl">شیر و خرگوش</span></h2>
+<div class="vwrap" id="vwrap">
+<video id="storyV" controls preload="none" playsinline width="1440" height="1080" poster="/assets/lion-hare-well-poster.jpg" aria-describedby="storyCredit"><source id="storySrc" src="/assets/lion-hare-well-v3.mp4" type="video/mp4"><a href="/read#shirogav/sh22">The Lion and the Hare · شیر و خرگوش</a></video>
+<button type="button" class="vbtn vplay" id="vbig" hidden></button>
+<p class="vfail" id="vfail" role="status" hidden></p>
+</div>
+<div class="vctl" id="vctl" hidden><button type="button" class="vbtn" id="vtog"></button><button type="button" class="vbtn" id="vrep" data-k="vReplay"></button></div>
+<a class="vread" href="/read#shirogav/sh22" data-k="readTale"></a>
+<p class="vcredit" id="storyCredit" data-k="storyCredit"></p>
+<noscript><p class="vcredit"><a href="/read#shirogav/sh22">The Lion and the Hare · شیر و خرگوش</a></p></noscript>
+</section>
 <section class="chs" aria-labelledby="chh"><h2 id="chh" data-k="chTitle"></h2><p class="sub" data-k="chSub"></p><ol id="chl"></ol></section>
 <script src="/assets/site.js"></script>
 <script>
@@ -85,6 +123,22 @@ H.add({en:{intro:"Nasrollah Monshi's twelfth-century Persian prose Kelileh o Dem
 fa:{intro:"کلیله و دمنهٔ نصرالله منشی، نثر فارسی سدهٔ دوازدهم میلادی، به‌صورت کامل و فارسی از نخستین باب تا واپسین، با خلاصه‌های انگلیسی پیش‌نویس در کنار آن.",start:"آغاز خواندن",cont:"ادامهٔ خواندن",chTitle:"نوزده باب کتاب",chSub:"متن فارسی از گنجور. عنوان‌های انگلیسی بابها پیش‌نویس‌اند.",sec:"بخش"}});
 fetch("/data/chapters.json").then(function(r){return r.json()}).then(function(L){function draw(){document.getElementById("chl").innerHTML=L.map(function(c){var n=H.lang==="fa"?String(c.n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]}):c.n;return '<li><a href="/read#'+c.slug+'"><span class="n">'+n+'</span><span class="e">'+H.esc(c.title_en)+'</span><span class="f">'+H.esc(c.title_fa)+'</span><span class="c">'+(H.lang==="fa"?String(c.sections).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]}):c.sections)+" "+H.t("sec")+"</span></a></li>"}).join("")}draw();H.on(draw)}).catch(function(){});
 try{var l=localStorage.getItem("hashiyeh-last");if(l&&/^[a-z0-9-]+\/sh\d+$/.test(l)){var a=document.getElementById("cont");a.href="/read#"+l;a.hidden=false}}catch(e){}
+
+H.add({en:{vPlay:"Play",vPause:"Pause",vReplay:"Replay",readTale:"Read the tale",storyAlt:"Animated illustration: a lion leans over a stone well and looks at his reflection in the water; a hare sits beside the well.",storyCredit:"AI-generated illustration in the manner of Persian manuscript painting, animated for this project. Not a historical manuscript.",storyFail:"The animation could not be loaded. You can read the tale instead."},
+fa:{vPlay:"پخش",vPause:"مکث",vReplay:"پخش دوباره",readTale:"خواندن حکایت",storyAlt:"تصویر متحرک: شیری بر چاهی سنگی خم شده و به بازتاب خود در آب می‌نگرد؛ خرگوشی کنار چاه نشسته است.",storyCredit:"تصویر ساخته‌شده با هوش مصنوعی به شیوهٔ نگارگری ایرانی، متحرک‌شده برای این پروژه. نسخهٔ خطی تاریخی نیست.",storyFail:"پویانمایی بارگذاری نشد. می‌توانید حکایت را بخوانید."}});
+(function(){var $=function(i){return document.getElementById(i)},v=$("storyV"),big=$("vbig"),ctl=$("vctl"),tog=$("vtog"),fail=$("vfail");
+v.removeAttribute("controls");big.hidden=false;
+function lab(){big.textContent=H.t("vPlay");tog.textContent=H.t(v.paused||v.ended?"vPlay":"vPause");v.setAttribute("aria-label",H.t("storyAlt"));if(!fail.hidden)fail.textContent=H.t("storyFail")}
+function started(){big.hidden=true;ctl.hidden=false;lab()}
+function broke(){big.hidden=true;ctl.hidden=true;fail.hidden=false;fail.textContent=H.t("storyFail")}
+function play(){var p=v.play();started();if(p&&p.catch)p.catch(function(){if(!v.error&&v.networkState!==3){lab()}else broke()})}
+big.addEventListener("click",play);
+tog.addEventListener("click",function(){v.paused||v.ended?play():v.pause()});
+$("vrep").addEventListener("click",function(){v.currentTime=0;play()});
+["play","pause","ended"].forEach(function(e){v.addEventListener(e,lab)});
+$("storySrc").addEventListener("error",broke);v.addEventListener("error",broke);
+if("IntersectionObserver" in window)new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting&&!v.paused)v.pause()})},{threshold:0.2}).observe($("vwrap"));
+H.on(lab);lab()})();
 H.init();
 (function(){var v=document.getElementById("tree"),rm=matchMedia("(prefers-reduced-motion:reduce)");
 function go(){if(rm.matches){v.pause();v.removeAttribute("autoplay")}else v.play&&v.play().catch(function(){})}go();
