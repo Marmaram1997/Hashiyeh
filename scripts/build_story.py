@@ -71,6 +71,11 @@ scenes = [
                fa="تصویر: مرغزار، این بار بی‌شیر؛ آهویی از جوی آب می‌نوشد، بزی می‌چرد، گرازی در میان علف‌ها گام برمی‌دارد و خرگوش در میان جانوران نشسته است."),
       beats=[B(10,"خرگوش بسلامت باز رفت","خاک خورد شد."), B(10,"همه بر مرکب","جولانی نمودند")]),
 ]
+# book page: per-scene video (with its own sound) and poster; frames/scroll settings are no longer used
+for s_ in scenes:
+    k = s_["n"]; s_["video"] = f"/assets/story/video/s{k}.mp4?v=1"; s_["poster"] = f"/assets/story/poster/p{k}.jpg?v=1"
+    s_["size"] = dict(w=s_["frames"]["w"], h=s_["frames"]["h"]); s_["still"] = s_["poster"]
+    for key in ("frames", "scrollVh", "hold", "bg"): s_.pop(key, None)
 # even beat windows inside each scene (local scroll progress 0..1); override by hand if needed
 for s in scenes:
     k = len(s["beats"]); lo, hi, gap = 0.05, 0.97, 0.03
@@ -88,13 +93,11 @@ out = dict(
   reader="/read#shirogav/sh22",
   source=dict(en="Nasrollah Monshi, Kelileh o Demneh, text from Ganjoor (ganjoor.net/monshi/kelile-demni).",
               fa="نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."),
-  ver=2,
   closing_couplet_missing=True,
-  audio=dict(segments=[dict(scene=f's{k}', src=f"/assets/story/audio/s{k}.m4a?v=2", dur=d, volume=1.0) for k, d in zip(range(1,8), [5.038,3.458,3.334,3.375,3.458,3.208,3.206])]),
   aspect_stage=[16,9],
   fade=0.05, scenes=scenes, full_passage=full)
 json.dump(out, open("data/story/lion_and_hare.story.json","w"), ensure_ascii=False, indent=1)
-tot = sum(s["scrollVh"] for s in scenes)
-print("scenes", len(scenes), "total scroll", tot, "vh;", sum(len(s["beats"]) for s in scenes), "beats")
+
+print("scenes", len(scenes), "; ", sum(len(s["beats"]) for s in scenes), "beats")
 for s in scenes:
     for b in s["beats"]: print(s["id"], b["line"], ("…" if b["starts_mid"] else "")+b["text"][:60]+("…" if b["ends_mid"] else ""))

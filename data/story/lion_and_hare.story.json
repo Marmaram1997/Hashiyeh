@@ -8,54 +8,7 @@
   "en": "Nasrollah Monshi, Kelileh o Demneh, text from Ganjoor (ganjoor.net/monshi/kelile-demni).",
   "fa": "نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."
  },
- "ver": 2,
  "closing_couplet_missing": true,
- "audio": {
-  "segments": [
-   {
-    "scene": "s1",
-    "src": "/assets/story/audio/s1.m4a?v=2",
-    "dur": 5.038,
-    "volume": 1.0
-   },
-   {
-    "scene": "s2",
-    "src": "/assets/story/audio/s2.m4a?v=2",
-    "dur": 3.458,
-    "volume": 1.0
-   },
-   {
-    "scene": "s3",
-    "src": "/assets/story/audio/s3.m4a?v=2",
-    "dur": 3.334,
-    "volume": 1.0
-   },
-   {
-    "scene": "s4",
-    "src": "/assets/story/audio/s4.m4a?v=2",
-    "dur": 3.375,
-    "volume": 1.0
-   },
-   {
-    "scene": "s5",
-    "src": "/assets/story/audio/s5.m4a?v=2",
-    "dur": 3.458,
-    "volume": 1.0
-   },
-   {
-    "scene": "s6",
-    "src": "/assets/story/audio/s6.m4a?v=2",
-    "dur": 3.208,
-    "volume": 1.0
-   },
-   {
-    "scene": "s7",
-    "src": "/assets/story/audio/s7.m4a?v=2",
-    "dur": 3.206,
-    "volume": 1.0
-   }
-  ]
- },
  "aspect_stage": [
   16,
   9
@@ -65,19 +18,7 @@
   {
    "id": "s1",
    "n": 1,
-   "frames": {
-    "dir": "/assets/story/frames/s1",
-    "count": 61,
-    "w": 960,
-    "h": 720
-   },
-   "still": "/assets/story/s1-still.jpg",
-   "bg": "#FAF1E4",
-   "scrollVh": 160,
-   "hold": {
-    "start": 0.06,
-    "end": 0.08
-   },
+   "still": "/assets/story/poster/p1.jpg?v=1",
    "alt": {
     "en": "Illustration: deer, a goat, a boar, a wolf and a hare stand close together in a flowering meadow by a stream, all looking toward a lion seated on the far bank.",
     "fa": "تصویر: آهو، بز، گراز، گرگ و خرگوش در مرغزاری پرگل کنار جویی کنار هم ایستاده‌اند و همه به شیری می‌نگرند که آن سوی جوی نشسته است."
@@ -99,24 +40,18 @@
      "a": 0.525,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s1.mp4?v=1",
+   "poster": "/assets/story/poster/p1.jpg?v=1",
+   "size": {
+    "w": 960,
+    "h": 720
+   }
   },
   {
    "id": "s2",
    "n": 2,
-   "frames": {
-    "dir": "/assets/story/frames/s2",
-    "count": 42,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s2-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 150,
-   "hold": {
-    "start": 0.06,
-    "end": 0.08
-   },
+   "still": "/assets/story/poster/p2.jpg?v=1",
    "alt": {
     "en": "Illustration: the foremost deer steps toward the seated lion and raises its head to him while the other animals wait behind it; the lion inclines his head.",
     "fa": "تصویر: آهوی پیشین گامی به سوی شیر نشسته برمی‌دارد و سر به سوی او بالا می‌برد، و دیگر جانوران پشت او می‌ایستند؛ شیر سر خود را اندکی خم می‌کند."
@@ -138,24 +73,18 @@
      "a": 0.525,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s2.mp4?v=1",
+   "poster": "/assets/story/poster/p2.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   },
   {
    "id": "s3",
    "n": 3,
-   "frames": {
-    "dir": "/assets/story/frames/s3",
-    "count": 41,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s3-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 170,
-   "hold": {
-    "start": 0.06,
-    "end": 0.08
-   },
+   "still": "/assets/story/poster/p3.jpg?v=1",
    "alt": {
     "en": "Illustration: a hare waits beside flowers in the foreground while, far off across the hills, the lion moves restlessly.",
     "fa": "تصویر: خرگوشی در پیش‌زمینه کنار گل‌ها می‌ایستد و در دوردست، آن سوی تپه‌ها، شیر بی‌قرار گام برمی‌دارد."
@@ -177,24 +106,18 @@
      "a": 0.525,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s3.mp4?v=1",
+   "poster": "/assets/story/poster/p3.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   },
   {
    "id": "s4",
    "n": 4,
-   "frames": {
-    "dir": "/assets/story/frames/s4",
-    "count": 41,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s4-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 200,
-   "hold": {
-    "start": 0.05,
-    "end": 0.07
-   },
+   "still": "/assets/story/poster/p4.jpg?v=1",
    "alt": {
     "en": "Illustration: the lion, teeth slightly bared, stands over the small hare, who looks up at him calmly and then turns its head.",
     "fa": "تصویر: شیر با دندان‌هایی اندکی آشکار بر فراز خرگوش کوچک ایستاده است؛ خرگوش آرام به او می‌نگرد و سپس سر می‌گرداند."
@@ -224,24 +147,18 @@
      "a": 0.683,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s4.mp4?v=1",
+   "poster": "/assets/story/poster/p4.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   },
   {
    "id": "s5",
    "n": 5,
-   "frames": {
-    "dir": "/assets/story/frames/s5",
-    "count": 42,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s5-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 200,
-   "hold": {
-    "start": 0.05,
-    "end": 0.07
-   },
+   "still": "/assets/story/poster/p5.jpg?v=1",
    "alt": {
     "en": "Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; ",
     "fa": "تصویر: شیر در حالی که خرگوشی را به سینه گرفته، بر لبهٔ چاهی سنگی خم شده و به آب تیره می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود؛ خرگوشی دیگر در سمت چپ کنار لبهٔ چاه ایستاده است."
@@ -271,24 +188,18 @@
      "a": 0.683,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s5.mp4?v=1",
+   "poster": "/assets/story/poster/p5.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   },
   {
    "id": "s6",
    "n": 6,
-   "frames": {
-    "dir": "/assets/story/frames/s6",
-    "count": 39,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s6-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 130,
-   "hold": {
-    "start": 0.05,
-    "end": 0.08
-   },
+   "still": "/assets/story/poster/p6.jpg?v=1",
    "alt": {
     "en": "Illustration: the lion throws himself headfirst into the well; water splashes at the rim and the hare stands beside the well.",
     "fa": "تصویر: شیر خود را سرازیر به چاه می‌افکند؛ آب بر لبهٔ چاه می‌پاشد و خرگوش کنار چاه ایستاده است."
@@ -302,24 +213,18 @@
      "a": 0.05,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s6.mp4?v=1",
+   "poster": "/assets/story/poster/p6.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   },
   {
    "id": "s7",
    "n": 7,
-   "frames": {
-    "dir": "/assets/story/frames/s7",
-    "count": 39,
-    "w": 1024,
-    "h": 576
-   },
-   "still": "/assets/story/s7-still.jpg",
-   "bg": "#F2EADF",
-   "scrollVh": 170,
-   "hold": {
-    "start": 0.05,
-    "end": 0.12
-   },
+   "still": "/assets/story/poster/p7.jpg?v=1",
    "alt": {
     "en": "Illustration: the meadow again, now with no lion; a deer drinks from the stream, a goat grazes, a boar walks through the grass and the hare sits among the animals.",
     "fa": "تصویر: مرغزار، این بار بی‌شیر؛ آهویی از جوی آب می‌نوشد، بزی می‌چرد، گرازی در میان علف‌ها گام برمی‌دارد و خرگوش در میان جانوران نشسته است."
@@ -341,7 +246,13 @@
      "a": 0.525,
      "b": 0.97
     }
-   ]
+   ],
+   "video": "/assets/story/video/s7.mp4?v=1",
+   "poster": "/assets/story/poster/p7.jpg?v=1",
+   "size": {
+    "w": 1024,
+    "h": 576
+   }
   }
  ],
  "full_passage": [

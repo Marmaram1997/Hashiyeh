@@ -1,25 +1,5 @@
-/* Story text: beats (verbatim Persian excerpts, in accessible HTML) and the full-passage panel. */
-import { Timeline } from "./story-scroll.js";
-const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
-export class Beats {
-  constructor(container, data) { this.box = container; this.data = data; this.si = -1; this.nodes = []; }
-  setScene(si) {
-    if (si === this.si) return; this.si = si; this.box.textContent = ""; this.nodes = [];
-    this.data.scenes[si].beats.forEach((b) => {
-      const p = el("p", "beat"); p.lang = "fa"; p.dir = "rtl";
-      if (b.starts_mid) p.append(el("span", "gap", "… "));
-      p.append(document.createTextNode(b.text));
-      if (b.ends_mid) p.append(el("span", "gap", " …"));
-      this.box.append(p); this.nodes.push(p);
-    });
-  }
-  update(si, u) {
-    this.setScene(si);
-    const sc = this.data.scenes[si];
-    sc.beats.forEach((b, k) => { const a = Timeline.beatAlpha(b, u, this.data.fade), n = this.nodes[k]; n.style.opacity = a.toFixed(3); n.style.transform = "translateY(" + ((1 - a) * 6).toFixed(1) + "px)"; n.style.pointerEvents = a > 0.5 ? "auto" : "none"; });
-  }
-}
 /* Full passage in a native <dialog>. Opening/closing never moves the page: scroll position and focus are restored. */
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
 export class Panel {
   constructor(dlg, data, t) { this.dlg = dlg; this.data = data; this.t = t; this.built = false; this.opener = null; this.y = 0;
     dlg.addEventListener("close", () => this.afterClose());
