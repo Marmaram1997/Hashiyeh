@@ -9,6 +9,45 @@
   "fa": "نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."
  },
  "closing_couplet_missing": true,
+ "audio": {
+  "segments": [
+   {
+    "scene": "s1",
+    "src": "/assets/story/audio/s1.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s2",
+    "src": "/assets/story/audio/s2.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s3",
+    "src": "/assets/story/audio/s3.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s4",
+    "src": "/assets/story/audio/s4.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s5",
+    "src": "/assets/story/audio/s5.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s6",
+    "src": "/assets/story/audio/s6.m4a",
+    "volume": 0.8
+   },
+   {
+    "scene": "s7",
+    "src": "/assets/story/audio/s7.m4a",
+    "volume": 0.8
+   }
+  ]
+ },
  "aspect_stage": [
   16,
   9

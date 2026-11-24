@@ -77,14 +77,16 @@ function mode() { if (rm.matches) disable(); else enable(); }
 (rm.addEventListener ? rm.addEventListener("change", mode) : rm.addListener(mode));
 H.on(label);
 
+/* leaving the story silences it; coming back restarts the current scene's sound once */
+if ("IntersectionObserver" in window) new IntersectionObserver((es) => { if (!audio || !audio.enabled) return; if (es[0].isIntersecting) audio.scene(Math.max(0, cur.si), cur.u || 0, true); else audio.stop(); }).observe(sec);
 /* ---- panel, skip, sound ---- */
 $("sfull").addEventListener("click", (e) => panel.open(Math.max(0, cur.si), e.currentTarget));
 $("spclose").addEventListener("click", () => dlg.close());
 const sbtn = $("ssound");
-function soundLabel() { sbtn.textContent = H.t(audio && audio.enabled ? "soundOff" : "soundOn"); sbtn.setAttribute("aria-pressed", String(!!(audio && audio.enabled))); }
+function soundLabel() { sbtn.textContent = H.t(audio && audio.enabled ? "soundOn" : "soundOff"); sbtn.setAttribute("aria-pressed", String(!!(audio && audio.enabled))); }
 H.on(soundLabel);
 
-fetch("/data/story/lion_and_hare.story.json").then((r) => r.json()).then((d) => {
+fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json").then((r) => r.json()).then((d) => {
   const patch = window.__storyPatch; if (patch) d = Object.assign(d, patch(d) || {});
   data = d;
   panel = new Panel(dlg, data);
