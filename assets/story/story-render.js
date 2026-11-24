@@ -16,7 +16,7 @@ export class FrameStore {
     this.queue = []; this.running = 0; this.onChange = () => {}; this.onFail = () => {};
     this.firstReady = scenes.map(() => false);
   }
-  url(s, i) { const f = this.scenes[s].frames; return f.dir + "/" + pad3(i + 1) + ".webp"; }
+  url(s, i) { const f = this.scenes[s].frames; return f.dir + "/" + pad3(i + 1) + ".webp" + (this.ver ? "?v=" + this.ver : ""); }
   count(s) { return this.scenes[s].frames.count; }
   /* progressive order inside one scene: first, last, then coarse to fine */
   order(s, full = true) {

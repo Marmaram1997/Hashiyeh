@@ -5,7 +5,7 @@
 import { FrameStore, Painter } from "./story-render.js";
 import { Timeline, clamp } from "./story-scroll.js";
 import { Beats, Panel } from "./story-text.js";
-import { createAudio } from "./story-audio.js";
+import { createAudio } from "./story-audio.js?v=4";
 const H = window.H, $ = (id) => document.getElementById(id);
 const sec = $("story"); if (!sec) throw new Error("no story section");
 const rm = matchMedia("(prefers-reduced-motion: reduce)");
@@ -24,7 +24,7 @@ function enable() {
   sec.classList.add("story--scrub");
   document.querySelectorAll(".sseq img").forEach((im) => { if (im.getAttribute("src")) { im.dataset.src = im.getAttribute("src"); im.removeAttribute("src"); } });
   tl = new Timeline(data.scenes);
-  store = new FrameStore(data.scenes);
+  store = new FrameStore(data.scenes); store.ver = data.ver;
   store.onChange = () => schedule(true);
   store.onFail = () => { disable(); };
   painter = new Painter(cv, store);
@@ -60,7 +60,7 @@ function update() {
   beats.update(st.si, st.u);
   cue.style.opacity = String(1 - clamp(y / (tl.stageH * 0.2), 0, 1));
   link.classList.toggle("on", st.si === data.scenes.length - 1 && st.u >= 0.9);
-  if (audio) audio.scene(st.si, st.u);
+  if (audio) audio.update(st.si, st.frame / (data.scenes[st.si].frames.count - 1));
   cur.u = st.u; cur.frame = st.frame; cur.y = y; lastY = y;
 }
 function sceneChange(si) {
@@ -78,12 +78,12 @@ function mode() { if (rm.matches) disable(); else enable(); }
 H.on(label);
 
 /* leaving the story silences it; coming back restarts the current scene's sound once */
-if ("IntersectionObserver" in window) new IntersectionObserver((es) => { if (!audio || !audio.enabled) return; if (es[0].isIntersecting) audio.scene(Math.max(0, cur.si), cur.u || 0, true); else audio.stop(); }).observe(sec);
+if ("IntersectionObserver" in window) new IntersectionObserver((es) => { if (audio && !es[0].isIntersecting) audio.stop(); }).observe(sec);
 /* ---- panel, skip, sound ---- */
 $("sfull").addEventListener("click", (e) => panel.open(Math.max(0, cur.si), e.currentTarget));
 $("spclose").addEventListener("click", () => dlg.close());
 const sbtn = $("ssound");
-function soundLabel() { sbtn.textContent = H.t(audio && audio.enabled ? "soundOn" : "soundOff"); sbtn.setAttribute("aria-pressed", String(!!(audio && audio.enabled))); }
+function soundLabel() { const on = !!(audio && audio.enabled); sbtn.textContent = H.t(!on ? "soundOff" : audio.state === "running" ? "soundOn" : "soundWait"); sbtn.setAttribute("aria-pressed", String(on)); }
 H.on(soundLabel);
 
 fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
@@ -91,7 +91,8 @@ fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json",
   data = d;
   panel = new Panel(dlg, data);
   audio = createAudio(data.audio, data.scenes.map((s) => s.id));
-  if (audio) { sbtn.hidden = false; sbtn.addEventListener("click", () => { audio.toggle(); soundLabel(); }); soundLabel(); }
+  if (audio) { sbtn.hidden = false; audio.onState = soundLabel; sbtn.addEventListener("click", () => { audio.toggle(); soundLabel(); }); soundLabel();
+    ["pointerdown", "keydown", "touchend", "click", "wheel"].forEach((ev) => addEventListener(ev, () => audio.resume(), { passive: true })); }
   if (debug) window.__story = { state: () => Object.assign({}, cur, { on, total: tl && tl.total, sectionH: tl && tl.sectionH }), stats: () => store.stats(), store: () => store, timeline: () => tl, audio: () => audio, scrub: () => on };
   label(); if (!rm.matches) enable();
 }).catch(() => { /* stay static */ });
