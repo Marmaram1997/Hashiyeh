@@ -6,10 +6,17 @@ Scenes 2-7 = shots of the 20 s clip (16:9), cut at the detected shot boundaries 
 (24 fps source, every 2nd frame kept = 12 fps, plus each shot's exact last frame.)
 
 usage: python3 scripts/build_story_frames.py SCENE1.mp4 CONTINUE20S.mp4
-The source videos are not stored in the repo (about 44 MB, third-party watermark, mixed audio).
+The source videos are not stored in the repo (about 44 MB, third-party watermark, mixed audio); the watermark is inpainted here.
 """
 import subprocess, sys, os, shutil, glob, json
 s1_src, s2_src = sys.argv[1], sys.argv[2]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import remove_watermark as WM, tempfile
+_t = tempfile.mkdtemp()
+# paint out the KlingAI watermark on the full-resolution frames first (see remove_watermark.py)
+s1_src_c, s2_src_c = _t+"/s1.mkv", _t+"/s2.mkv"
+WM.clean_video(s1_src, s1_src_c, "scene1"); WM.clean_video(s2_src, s2_src_c, "continue")
+s1_src, s2_src = s1_src_c, s2_src_c
 OUT = "assets/story/frames"
 # shot boundaries of the 20 s clip, detected from frame differences (first frame of each shot)
 CUTS = [0, 83, 163, 244, 327, 404, 481]
