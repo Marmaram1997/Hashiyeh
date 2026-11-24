@@ -13,38 +13,38 @@
   "segments": [
    {
     "scene": "s1",
-    "src": "/assets/story/audio/s1.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s1.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s2",
-    "src": "/assets/story/audio/s2.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s2.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s3",
-    "src": "/assets/story/audio/s3.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s3.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s4",
-    "src": "/assets/story/audio/s4.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s4.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s5",
-    "src": "/assets/story/audio/s5.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s5.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s6",
-    "src": "/assets/story/audio/s6.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s6.m4a?v=2",
+    "volume": 1.0
    },
    {
     "scene": "s7",
-    "src": "/assets/story/audio/s7.m4a",
-    "volume": 0.8
+    "src": "/assets/story/audio/s7.m4a?v=2",
+    "volume": 1.0
    }
   ]
  },

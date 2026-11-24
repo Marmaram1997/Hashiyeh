@@ -89,7 +89,7 @@ out = dict(
   source=dict(en="Nasrollah Monshi, Kelileh o Demneh, text from Ganjoor (ganjoor.net/monshi/kelile-demni).",
               fa="نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."),
   closing_couplet_missing=True,
-  audio=dict(segments=[dict(scene=f's{k}', src=f'/assets/story/audio/s{k}.m4a', volume=0.8) for k in range(1,8)]),
+  audio=dict(segments=[dict(scene=f's{k}', src=f'/assets/story/audio/s{k}.m4a?v=2', volume=1.0) for k in range(1,8)]),
   aspect_stage=[16,9],
   fade=0.05, scenes=scenes, full_passage=full)
 json.dump(out, open("data/story/lion_and_hare.story.json","w"), ensure_ascii=False, indent=1)
