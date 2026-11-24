@@ -8,7 +8,8 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const port = Number(process.env.PORT) || 3000;
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript",
   ".json": "application/json; charset=utf-8", ".jpg": "image/jpeg", ".png": "image/png",
-  ".svg": "image/svg+xml", ".txt": "text/plain; charset=utf-8" };
+  ".svg": "image/svg+xml", ".txt": "text/plain; charset=utf-8",
+  ".webp": "image/webp", ".mp4": "video/mp4", ".webm": "video/webm" };
 
 http.createServer(async (req, res) => {
   try {
