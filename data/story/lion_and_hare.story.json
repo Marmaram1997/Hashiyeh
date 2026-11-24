@@ -1,0 +1,352 @@
+{
+ "work": "lion-and-hare",
+ "chapter": "shirogav",
+ "section": "sh22",
+ "ganjoor_id": 45114,
+ "reader": "/read#shirogav/sh22",
+ "source": {
+  "en": "Nasrollah Monshi, Kelileh o Demneh, text from Ganjoor (ganjoor.net/monshi/kelile-demni).",
+  "fa": "نصرالله منشی، کلیله و دمنه؛ متن از گنجور (ganjoor.net/monshi/kelile-demni)."
+ },
+ "closing_couplet_missing": true,
+ "aspect_stage": [
+  16,
+  9
+ ],
+ "fade": 0.05,
+ "scenes": [
+  {
+   "id": "s1",
+   "n": 1,
+   "frames": {
+    "dir": "/assets/story/frames/s1",
+    "count": 61,
+    "w": 960,
+    "h": 720
+   },
+   "still": "/assets/story/s1-still.jpg",
+   "bg": "#FAF1E4",
+   "scrollVh": 160,
+   "hold": {
+    "start": 0.06,
+    "end": 0.08
+   },
+   "alt": {
+    "en": "Illustration: deer, a goat, a boar, a wolf and a hare stand close together in a flowering meadow by a stream, all looking toward a lion seated on the far bank.",
+    "fa": "تصویر: آهو، بز، گراز، گرگ و خرگوش در مرغزاری پرگل کنار جویی کنار هم ایستاده‌اند و همه به شیری می‌نگرند که آن سوی جوی نشسته است."
+   },
+   "beats": [
+    {
+     "line": 1,
+     "text": "آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود",
+     "starts_mid": false,
+     "ends_mid": true,
+     "a": 0.05,
+     "b": 0.495
+    },
+    {
+     "line": 6,
+     "text": "وحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود.",
+     "starts_mid": false,
+     "ends_mid": true,
+     "a": 0.525,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "n": 2,
+   "frames": {
+    "dir": "/assets/story/frames/s2",
+    "count": 42,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s2-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 150,
+   "hold": {
+    "start": 0.06,
+    "end": 0.08
+   },
+   "alt": {
+    "en": "Illustration: the foremost deer steps toward the seated lion and raises its head to him while the other animals wait behind it; the lion inclines his head.",
+    "fa": "تصویر: آهوی پیشین گامی به سوی شیر نشسته برمی‌دارد و سر به سوی او بالا می‌برد، و دیگر جانوران پشت او می‌ایستند؛ شیر سر خود را اندکی خم می‌کند."
+   },
+   "beats": [
+    {
+     "line": 6,
+     "text": "روزی فراهم آمدند و جمله نزدیک شیر رفتند",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.05,
+     "b": 0.495
+    },
+    {
+     "line": 6,
+     "text": "اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد.",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.525,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "n": 3,
+   "frames": {
+    "dir": "/assets/story/frames/s3",
+    "count": 41,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s3-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 170,
+   "hold": {
+    "start": 0.06,
+    "end": 0.08
+   },
+   "alt": {
+    "en": "Illustration: a hare waits beside flowers in the foreground while, far off across the hills, the lion moves restlessly.",
+    "fa": "تصویر: خرگوشی در پیش‌زمینه کنار گل‌ها می‌ایستد و در دوردست، آن سوی تپه‌ها، شیر بی‌قرار گام برمی‌دارد."
+   },
+   "beats": [
+    {
+     "line": 6,
+     "text": "او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد.",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.05,
+     "b": 0.495
+    },
+    {
+     "line": 6,
+     "text": "شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.525,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "n": 4,
+   "frames": {
+    "dir": "/assets/story/frames/s4",
+    "count": 41,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s4-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 200,
+   "hold": {
+    "start": 0.05,
+    "end": 0.07
+   },
+   "alt": {
+    "en": "Illustration: the lion, teeth slightly bared, stands over the small hare, who looks up at him calmly and then turns its head.",
+    "fa": "تصویر: شیر با دندان‌هایی اندکی آشکار بر فراز خرگوش کوچک ایستاده است؛ خرگوش آرام به او می‌نگرد و سپس سر می‌گرداند."
+   },
+   "beats": [
+    {
+     "line": 7,
+     "text": "خرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟",
+     "starts_mid": false,
+     "ends_mid": true,
+     "a": 0.05,
+     "b": 0.337
+    },
+    {
+     "line": 7,
+     "text": "گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.367,
+     "b": 0.653
+    },
+    {
+     "line": 7,
+     "text": "و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای.",
+     "starts_mid": true,
+     "ends_mid": false,
+     "a": 0.683,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "n": 5,
+   "frames": {
+    "dir": "/assets/story/frames/s5",
+    "count": 42,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s5-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 200,
+   "hold": {
+    "start": 0.05,
+    "end": 0.07
+   },
+   "alt": {
+    "en": "Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; ",
+    "fa": "تصویر: شیر در حالی که خرگوشی را به سینه گرفته، بر لبهٔ چاهی سنگی خم شده و به آب تیره می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود؛ خرگوشی دیگر در سمت چپ کنار لبهٔ چاه ایستاده است."
+   },
+   "beats": [
+    {
+     "line": 8,
+     "text": "خرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی.",
+     "starts_mid": false,
+     "ends_mid": false,
+     "a": 0.05,
+     "b": 0.337
+    },
+    {
+     "line": 9,
+     "text": "و گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم.",
+     "starts_mid": false,
+     "ends_mid": true,
+     "a": 0.367,
+     "b": 0.653
+    },
+    {
+     "line": 9,
+     "text": "شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.683,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "n": 6,
+   "frames": {
+    "dir": "/assets/story/frames/s6",
+    "count": 39,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s6-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 130,
+   "hold": {
+    "start": 0.05,
+    "end": 0.08
+   },
+   "alt": {
+    "en": "Illustration: the lion throws himself headfirst into the well; water splashes at the rim and the hare stands beside the well.",
+    "fa": "تصویر: شیر خود را سرازیر به چاه می‌افکند؛ آب بر لبهٔ چاه می‌پاشد و خرگوش کنار چاه ایستاده است."
+   },
+   "beats": [
+    {
+     "line": 9,
+     "text": "او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد.",
+     "starts_mid": true,
+     "ends_mid": false,
+     "a": 0.05,
+     "b": 0.97
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "n": 7,
+   "frames": {
+    "dir": "/assets/story/frames/s7",
+    "count": 39,
+    "w": 1024,
+    "h": 576
+   },
+   "still": "/assets/story/s7-still.jpg",
+   "bg": "#F2EADF",
+   "scrollVh": 170,
+   "hold": {
+    "start": 0.05,
+    "end": 0.12
+   },
+   "alt": {
+    "en": "Illustration: the meadow again, now with no lion; a deer drinks from the stream, a goat grazes, a boar walks through the grass and the hare sits among the animals.",
+    "fa": "تصویر: مرغزار، این بار بی‌شیر؛ آهویی از جوی آب می‌نوشد، بزی می‌چرد، گرازی در میان علف‌ها گام برمی‌دارد و خرگوش در میان جانوران نشسته است."
+   },
+   "beats": [
+    {
+     "line": 10,
+     "text": "خرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد.",
+     "starts_mid": false,
+     "ends_mid": true,
+     "a": 0.05,
+     "b": 0.495
+    },
+    {
+     "line": 10,
+     "text": "همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند",
+     "starts_mid": true,
+     "ends_mid": true,
+     "a": 0.525,
+     "b": 0.97
+    }
+   ]
+  }
+ ],
+ "full_passage": [
+  {
+   "line": 1,
+   "pos": -1,
+   "text": "آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود و برعکس آن روی فلک را منور گردانیده، از هر شاخی هزار ستاره تابان و در هر ستاره هزار سپهر حیران"
+  },
+  {
+   "line": 2,
+   "pos": 0,
+   "text": "سحاب گویی یاقوت ریخت برمینا"
+  },
+  {
+   "line": 3,
+   "pos": 1,
+   "text": "نسیم گویی شنگرف بیخت برزنگار"
+  },
+  {
+   "line": 4,
+   "pos": 0,
+   "text": "بخار چشم هوا و بخور روی زمین"
+  },
+  {
+   "line": 5,
+   "pos": 1,
+   "text": "ز چشم دایه باغ است و روی بچه خار"
+  },
+  {
+   "line": 6,
+   "pos": -1,
+   "text": "وحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود. روزی فراهم آمدند و جمله نزدیک شیر رفتند و گفتند: تو هر روز پس از رنج بسیار و مشقت فراوان از مایکی شکار می‌توانی شکست و ما پیوسته در بلا و تو در تگاپوی و طلب. اکنون چیزی اندیشیده ایم که ترا دران فراغت و ما را امن و راحت باشد. اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد. یک روز قرعه بر خرگوش آمد. یاران را گفت: اگر در فرستادن من توقفی کنید من شما را از جور این جبار خون خوار باز رهانم. گفتند: مضایقتی نیست. او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد. شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده، چنانکه آب دهان او خشک ایستاده بود و نقض عهد را در خاک می‌جست."
+  },
+  {
+   "line": 7,
+   "pos": -1,
+   "text": "خرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟ گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای."
+  },
+  {
+   "line": 8,
+   "pos": -1,
+   "text": "خرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی."
+  },
+  {
+   "line": 9,
+   "pos": -1,
+   "text": "و گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم. شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید، او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد."
+  },
+  {
+   "line": 10,
+   "pos": -1,
+   "text": "خرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد. همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند، و این بیت را ورد ساختند:"
+  }
+ ]
+}

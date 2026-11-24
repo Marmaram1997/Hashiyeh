@@ -61,46 +61,8 @@ html[dir=rtl] .ident p{font-style:normal}
 .chs .c{color:var(--mute);font-size:13px;flex:none}
 html[dir=rtl] .chs .n{text-align:start}
 @media(max-width:700px){.hero{height:auto;min-height:0}.chs li a{flex-wrap:wrap;gap:2px 12px}.chs .e{flex-basis:calc(100% - 3em);order:2}.chs .f{order:1;flex:1}.chs .c{order:3}}
-.story{position:relative;height:350vh;height:350svh;background:#FAF2E1}
-.sstage{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;align-items:center;overflow:hidden;--hh:96px;--fh:92px}
-.shead{flex:none;height:var(--hh);padding:16px 16px 0;text-align:center}
-.skick{margin:0;display:flex;justify-content:center;align-items:baseline;gap:10px;color:var(--mute)}
-.skick [lang=en]{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-.skick [lang=fa]{font-family:"Noto Naskh Arabic",serif;font-size:14px}
-.stitle{margin:2px 0 0;display:flex;justify-content:center;align-items:baseline;gap:14px;font-weight:400;line-height:1.3}
-.stitle [lang=en]{font-size:clamp(22px,3.4vw,30px)}
-.stitle [lang=fa]{font-family:"Noto Naskh Arabic",serif;font-size:clamp(22px,3.2vw,28px);color:var(--orange)}
-html[dir=rtl] .stitle{flex-direction:row-reverse}
-.smid{flex:1 1 auto;min-height:0;width:100%;display:flex;align-items:center;justify-content:center}
-.sfig{position:relative;width:min(100%,calc((100vh - var(--hh) - var(--fh)) * 4 / 3));width:min(100%,calc((100svh - var(--hh) - var(--fh)) * 4 / 3));aspect-ratio:4/3;background:#FAF2E1}
-.sfig img,.sfig canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.sfoot{flex:none;height:var(--fh);position:relative;width:100%;text-align:center}
-.scue,.sread{position:absolute;inset-inline:0;top:14px;margin:auto;width:max-content}
-.scue{margin-block:0;color:var(--mute);font-size:16px;display:flex;flex-direction:column;align-items:center;gap:6px;transition:opacity .25s}
-.scue i{display:block;width:1px;height:26px;background:#6F8B5E}
-.vread{display:inline-block;padding:10px 28px;min-height:44px;background:var(--lapis);color:#F8F0E4;border:1px solid var(--lapis);text-decoration:none;font-size:19px}
-.vread:hover{background:var(--orange);border-color:var(--orange)}
-.vread:focus-visible,.vbtn:focus-visible{outline:2px solid var(--lapis);outline-offset:3px}
-.sread{opacity:0;pointer-events:none;transition:opacity .3s;top:12px}
-.sread.on,.sread:focus{opacity:1;pointer-events:auto}
-.vbtn{display:none;align-items:center;justify-content:center;min-height:44px;padding:8px 22px;background:#FAF2E1;border:1px solid var(--gold);border-radius:0;color:var(--ink);font:inherit;font-size:18px;cursor:pointer}
-.vbtn:hover{border-color:var(--orange);color:var(--orange)}
-.sstatic{display:none}
-.vcredit{max-width:36em;margin:0 auto;padding:22px 24px 8px;text-align:center;color:var(--mute);font-size:14px;line-height:1.5}
-/* static (no JS, reduced motion, or frames failed): one representative frame in normal flow */
-.story.static{height:auto;padding-bottom:36px}
-.story.static .sstage{position:static;height:auto;overflow:visible;--fh:0px}
-.story.static .smid{display:block}
-.story.static .sfig{margin:14px auto 0;width:min(100%,760px)}
-.story.static .sfoot{height:auto;display:flex;flex-direction:column;align-items:center;gap:14px;padding:22px 16px 0}
-.story.static .scue,.story.static canvas{display:none}
-.story.static .sread{position:static;opacity:1;pointer-events:auto;inset:auto;margin:0}
-.story.static[data-js] .vbtn{display:inline-flex}
-.sfig [hidden]{display:none!important}
-.sfig video{position:absolute;inset:0;width:100%;height:100%;background:#FAF2E1}
-@media(max-width:700px){.sstage{--hh:88px;--fh:86px}.stitle{gap:10px}}
 @media(prefers-reduced-motion:reduce){.note{opacity:1}}
-</style></head>
+</style><link rel="stylesheet" href="/assets/story/story.css"></head>
 <body data-page="cover">
 <div class="langtop langsw" role="group" aria-label="Language"><button data-lang="en">EN</button><span aria-hidden="true">/</span><button data-lang="fa">فارسی</button></div>
 <div class="hero"><header class="ident"><div class="name"><span class="fa">حاشیه</span><span class="sl">/</span><span class="en">Hashiyeh</span></div><p data-k="tagline"></p><p class="hintro" data-k="intro"></p><div class="hcta"><a class="p" id="start" href="/read" data-k="start"></a><a id="cont" href="/read" hidden data-k="cont"></a></div></header>
@@ -114,25 +76,30 @@ html[dir=rtl] .stitle{flex-direction:row-reverse}
 <a class="note e n4" href="/about" data-title="nAbout"><span data-k="nAbout"></span></a>
 </div>
 </main></div>
-<section class="story static" id="story" aria-labelledby="storyT">
+<section class="story" id="story" aria-labelledby="storyT">
 <div class="sstage" id="sstage">
 <header class="shead">
 <p class="skick"><span lang="en">An illustrated tale</span><span aria-hidden="true">·</span><span lang="fa" dir="rtl">حکایتی مصوّر</span></p>
 <h2 class="stitle" id="storyT"><span lang="en">The Lion and the Hare</span><span lang="fa" dir="rtl">شیر و خرگوش</span></h2>
+<a class="sskip" href="#chs" data-k="skipStory"></a>
 </header>
-<div class="smid"><div class="sfig" id="sfig">
-<img id="sstill" src="/assets/lion-hare-well-still.jpg" width="1440" height="1080" alt="" data-alt="storyAlt">
-<canvas id="scv" hidden></canvas>
-</div></div>
-<div class="sfoot">
-<p class="scue" id="scue"><span data-k="scrollCue"></span><i aria-hidden="true"></i></p>
-<a class="vread sread" id="sread" href="/read#shirogav/sh22" data-k="readTale"></a>
-<button type="button" class="vbtn" id="splay" data-k="playVideo"></button>
+<!--sseq:start-->
+<ol class="sseq"><li><figure><img src="/assets/story/s1-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: deer, a goat, a boar, a wolf and a hare stand close together in a flowering meadow by a stream, all looking toward a lion seated on the far bank." data-alt-en="Illustration: deer, a goat, a boar, a wolf and a hare stand close together in a flowering meadow by a stream, all looking toward a lion seated on the far bank." data-alt-fa="تصویر: آهو، بز، گراز، گرگ و خرگوش در مرغزاری پرگل کنار جویی کنار هم ایستاده‌اند و همه به شیری می‌نگرند که آن سوی جوی نشسته است."><p class="beat" lang="fa" dir="rtl">آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl">وحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود.<span class=gap> …</span></p></figure></li><li><figure><img src="/assets/story/s2-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: the foremost deer steps toward the seated lion and raises its head to him while the other animals wait behind it; the lion inclines his head." data-alt-en="Illustration: the foremost deer steps toward the seated lion and raises its head to him while the other animals wait behind it; the lion inclines his head." data-alt-fa="تصویر: آهوی پیشین گامی به سوی شیر نشسته برمی‌دارد و سر به سوی او بالا می‌برد، و دیگر جانوران پشت او می‌ایستند؛ شیر سر خود را اندکی خم می‌کند."><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>روزی فراهم آمدند و جمله نزدیک شیر رفتند<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد.<span class=gap> …</span></p></figure></li><li><figure><img src="/assets/story/s3-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: a hare waits beside flowers in the foreground while, far off across the hills, the lion moves restlessly." data-alt-en="Illustration: a hare waits beside flowers in the foreground while, far off across the hills, the lion moves restlessly." data-alt-fa="تصویر: خرگوشی در پیش‌زمینه کنار گل‌ها می‌ایستد و در دوردست، آن سوی تپه‌ها، شیر بی‌قرار گام برمی‌دارد."><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد.<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده<span class=gap> …</span></p></figure></li><li><figure><img src="/assets/story/s4-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: the lion, teeth slightly bared, stands over the small hare, who looks up at him calmly and then turns its head." data-alt-en="Illustration: the lion, teeth slightly bared, stands over the small hare, who looks up at him calmly and then turns its head." data-alt-fa="تصویر: شیر با دندان‌هایی اندکی آشکار بر فراز خرگوش کوچک ایستاده است؛ خرگوش آرام به او می‌نگرد و سپس سر می‌گرداند."><p class="beat" lang="fa" dir="rtl">خرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای.</p></figure></li><li><figure><img src="/assets/story/s5-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; " data-alt-en="Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; " data-alt-fa="تصویر: شیر در حالی که خرگوشی را به سینه گرفته، بر لبهٔ چاهی سنگی خم شده و به آب تیره می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود؛ خرگوشی دیگر در سمت چپ کنار لبهٔ چاه ایستاده است."><p class="beat" lang="fa" dir="rtl">خرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی.</p><p class="beat" lang="fa" dir="rtl">و گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم.<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید<span class=gap> …</span></p></figure></li><li><figure><img src="/assets/story/s6-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: the lion throws himself headfirst into the well; water splashes at the rim and the hare stands beside the well." data-alt-en="Illustration: the lion throws himself headfirst into the well; water splashes at the rim and the hare stands beside the well." data-alt-fa="تصویر: شیر خود را سرازیر به چاه می‌افکند؛ آب بر لبهٔ چاه می‌پاشد و خرگوش کنار چاه ایستاده است."><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد.</p></figure></li><li><figure><img src="/assets/story/s7-still.jpg" width="960" height="720" loading="lazy" alt="Illustration: the meadow again, now with no lion; a deer drinks from the stream, a goat grazes, a boar walks through the grass and the hare sits among the animals." data-alt-en="Illustration: the meadow again, now with no lion; a deer drinks from the stream, a goat grazes, a boar walks through the grass and the hare sits among the animals." data-alt-fa="تصویر: مرغزار، این بار بی‌شیر؛ آهویی از جوی آب می‌نوشد، بزی می‌چرد، گرازی در میان علف‌ها گام برمی‌دارد و خرگوش در میان جانوران نشسته است."><p class="beat" lang="fa" dir="rtl">خرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد.<span class=gap> …</span></p><p class="beat" lang="fa" dir="rtl"><span class=gap>… </span>همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند<span class=gap> …</span></p></figure></li></ol>
+<div class="sseq-foot"><details><summary data-k="fullPassage"></summary><div class="full" lang="fa" dir="rtl"><p class="">آورده‌اند که در مرغزاری که نسیم آن بوی بهشت را معطر کرده بود و برعکس آن روی فلک را منور گردانیده، از هر شاخی هزار ستاره تابان و در هر ستاره هزار سپهر حیران</p><p class="v">سحاب گویی یاقوت ریخت برمینا</p><p class="v">نسیم گویی شنگرف بیخت برزنگار</p><p class="v">بخار چشم هوا و بخور روی زمین</p><p class="v">ز چشم دایه باغ است و روی بچه خار</p><p class="">وحوش بسیار بود که همه بسبب چراخور و آب در خصب و راحت بودند، لکن بمجاورت شیر آن همه منغص بود. روزی فراهم آمدند و جمله نزدیک شیر رفتند و گفتند: تو هر روز پس از رنج بسیار و مشقت فراوان از مایکی شکار می‌توانی شکست و ما پیوسته در بلا و تو در تگاپوی و طلب. اکنون چیزی اندیشیده ایم که ترا دران فراغت و ما را امن و راحت باشد. اگر تعرض خویش از ما زایل کنی هر روز موظف یکی شکاری پیش ملک فرستیم. شیر بدان رضا داد و مدتی بران برآمد. یک روز قرعه بر خرگوش آمد. یاران را گفت: اگر در فرستادن من توقفی کنید من شما را از جور این جبار خون خوار باز رهانم. گفتند: مضایقتی نیست. او ساعتی توقف کرد تا وقت چاشت شیر بگذشت، پس آهسته نرم نرم روی بسوی شیر نهاد. شیر را دل تنگ یافت آتش گرسنگی او را بر باد تند نشانده بود و فروغ خشم در حرکات و سکنات وی پدید آمده، چنانکه آب دهان او خشک ایستاده بود و نقض عهد را در خاک می‌جست.</p><p class="">خرگوش را بدید، آواز دادکه: از کجا می‌آیی و حال وحوش چیست؟ گفت: در صحبت من خرگوشی فرستاده بودند، در راه شیری از من بستد، من گفتم: «این چاشت ملک است »، التفات ننمود و جفاها راند و گفت: «این شکارگاه و صید آن بمن اولی تر، که قوت شوکت من زیادت است. » من شتافتم تا ملک را خبر کنم. شیربخاست و گفت: او را بمن نمای.</p><p class="">خرگوش پیش ایستاد و او را بسر چاهی بزرگ برد که صفای آن چون آینه ای شک و یقین صورتها بنمودی و اوصاف چهره هر یک بر شمردی.</p><p class="">و گفت: در این چاهست و من از وی می‌ترسم، اگر ملک مرا در برگیرد، او را نمایم. شیر او را در برگرفت و بچاه فرونگریست، خیال خود و ازان خرگوش بدید، او را بگذاشت و خود را در چاه افگند و غوطی خورد و نفس خون خوار و جان مردار بمالک سپرد.</p><p class="">خرگوش بسلامت باز رفت. وحوش از صورت حال و کیفیت کار شیر پرسیدند، گفت: او را غوطی دادم که چون گنج قارون خاک خورد شد. همه بر مرکب شادمانگی سوار گشتند و در مرغزار امن و راحت جولانی نمودند، و این بیت را ورد ساختند:</p></div></details><a class="sread-link on" href="/read#shirogav/sh22" data-k="readTale"></a></div>
+<!--sseq:end-->
+<div class="sfig" id="sfig" role="img"><img id="sstill" src="/assets/story/s1-still.jpg" width="960" height="720" alt="" aria-hidden="true"><canvas id="scv" hidden></canvas></div>
+<div class="sread">
+<ol class="sticks" id="sticks" aria-hidden="true"></ol>
+<div class="sbeats" id="sbeats" aria-live="off"></div>
+<p class="snote" data-k="draftNote"></p>
+<div class="sbar"><button type="button" class="sbtn" id="sfull" data-k="fullPassage"></button><button type="button" class="sbtn" id="ssound" hidden aria-pressed="false"></button><a class="sread-link" id="sreadlink" href="/read#shirogav/sh22" data-k="readTale"></a></div>
+<p class="scue" id="scue" aria-hidden="true"><span data-k="scrollCue"></span><i></i></p>
 </div>
 </div>
 </section>
+<dialog class="spanel" id="spanel" aria-labelledby="sptitle"><div><header><h3 id="sptitle" data-k="fullPassage"></h3><button type="button" class="sbtn" id="spclose" data-k="close"></button></header><div class="body" tabindex="0"></div><footer><span data-k="panelSrc"></span><a href="/read#shirogav/sh22" data-k="readTale"></a></footer></div></dialog>
 <p class="vcredit" id="storyCredit" data-k="storyCredit"></p>
-<section class="chs" aria-labelledby="chh"><h2 id="chh" data-k="chTitle"></h2><p class="sub" data-k="chSub"></p><ol id="chl"></ol></section>
+<section class="chs" id="chs" aria-labelledby="chh"><h2 id="chh" data-k="chTitle"></h2><p class="sub" data-k="chSub"></p><ol id="chl"></ol></section>
 <script src="/assets/site.js"></script>
 <script>
 H.add({en:{cypressAlt:"A Persian miniature-style cypress with flowering branches and two birds, moving gently in the wind. AI-generated."},fa:{cypressAlt:"سروی به شیوهٔ نگارگری ایرانی با شاخه‌های شکوفه و دو پرنده، که آرام در باد می‌جنبد. ساخته‌شده با هوش مصنوعی."}});
@@ -142,57 +109,11 @@ fa:{intro:"کلیله و دمنهٔ نصرالله منشی، نثر فارسی 
 fetch("/data/chapters.json").then(function(r){return r.json()}).then(function(L){function draw(){document.getElementById("chl").innerHTML=L.map(function(c){var n=H.lang==="fa"?String(c.n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]}):c.n;return '<li><a href="/read#'+c.slug+'"><span class="n">'+n+'</span><span class="e">'+H.esc(c.title_en)+'</span><span class="f">'+H.esc(c.title_fa)+'</span><span class="c">'+(H.lang==="fa"?String(c.sections).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]}):c.sections)+" "+H.t("sec")+"</span></a></li>"}).join("")}draw();H.on(draw)}).catch(function(){});
 try{var l=localStorage.getItem("hashiyeh-last");if(l&&/^[a-z0-9-]+\/sh\d+$/.test(l)){var a=document.getElementById("cont");a.href="/read#"+l;a.hidden=false}}catch(e){}
 
-H.add({en:{scrollCue:"Scroll to discover",readTale:"Read the tale",playVideo:"Play the video",storyAlt:"Illustration: a lion leans over a stone well and looks at his reflection in the water; a hare sits beside the well.",storyCredit:"AI-generated illustration in the manner of Persian manuscript painting, animated for this project. Not a historical manuscript."},
-fa:{scrollCue:"برای کشف‌کردن به پایین بروید",readTale:"خواندن حکایت",playVideo:"پخش ویدئو",storyAlt:"تصویر: شیری بر چاهی سنگی خم شده و به بازتاب خود در آب می‌نگرد؛ خرگوشی کنار چاه نشسته است.",storyCredit:"تصویر ساخته‌شده با هوش مصنوعی به شیوهٔ نگارگری ایرانی، متحرک‌شده برای این پروژه. نسخهٔ خطی تاریخی نیست."}});
-/* Scroll-scrubbed story: the scroll position alone chooses the frame. 241 frames (15 fps, first and last frame of the final video) are fetched
-   progressively once the section is near; only a small window of frames is kept decoded (see keep/evict). Without JS, with reduced motion,
-   or if frames fail, the section stays "static": one frame, the link, and optional ordinary video playback. */
-(function(){
-var $=function(i){return document.getElementById(i)},sec=$("story"),stage=$("sstage"),fig=$("sfig"),cv=$("scv"),img=$("sstill"),cue=$("scue"),rd=$("sread"),ctx=cv.getContext("2d");
-var N=241,SRC=function(i){return "/assets/lion-hare-seq/"+String(i+1).padStart(3,"0")+".webp"};
-var A=0.03,B=0.93,COARSE=8,WIN=10,KEEP=24;
-/* pacing: ~90% of the motion in the video happens in its first 60%, the rest is a quiet settling; give the action 72% of the scroll */
-var KN=[[0,0],[0.72,0.6],[1,1]];function warp(u){for(var i=1;i<KN.length;i++){if(u<=KN[i][0]){var a=KN[i-1],b=KN[i];return a[1]+(b[1]-a[1])*(u-a[0])/(b[0]-a[0])}}return 1}
-var blobs=new Array(N),bmp=new Array(N),pend={},started=false,scrub=false,fails=0,curF=0,drawn=-1,queued=false,size=0;
-var rm=matchMedia("(prefers-reduced-motion: reduce)");sec.dataset.js="1";
-$("splay").addEventListener("click",function(){var f=$("sfig"),v=document.createElement("video");v.src="/assets/lion-hare-well-v3.mp4";v.controls=true;v.preload="metadata";v.playsInline=true;v.poster="/assets/lion-hare-well-still.jpg";v.setAttribute("aria-label",H.t("storyAlt"));f.appendChild(v);this.hidden=true;v.focus();v.play().catch(function(){})});
-function labels(){var t=H.t("storyAlt");cv.setAttribute("role","img");cv.setAttribute("aria-label",t)}
-H.on(labels);labels();
-function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
-/* ---- loading ---- */
-function order(){var o=[],seen={},add=function(i){if(i>=0&&i<N&&!seen[i]){seen[i]=1;o.push(i)}};add(0);add(N-1);[32,16,8,4,2,1].forEach(function(st){for(var i=0;i<N;i+=st)add(i)});return o}
-function fetchFrame(i,cb,retry){fetch(SRC(i)).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(b){blobs[i]=b;cb(true)}).catch(function(){retry?cb(false):fetchFrame(i,cb,1)})}
-function decode(i){if(bmp[i]||pend[i]||!blobs[i])return;pend[i]=1;createImageBitmap(blobs[i]).then(function(b){delete pend[i];if(near(i)||i%COARSE===0||i===N-1){bmp[i]=b;if(i===0&&!scrub)ready();queue()}else b.close()}).catch(function(){delete pend[i]})}
-function near(i){return Math.abs(i-Math.round(curF))<=KEEP}
-function keep(){var c=Math.round(curF);for(var i=Math.max(0,c-WIN);i<=Math.min(N-1,c+WIN+2);i++)decode(i)}
-function evict(){for(var i=0;i<N;i++){if(bmp[i]&&i%COARSE!==0&&i!==N-1&&!near(i)){bmp[i].close();bmp[i]=null}}}
-function start(){if(started||rm.matches)return;started=true;var q=order(),run=0,idx=0;
- function next(){if(idx>=q.length)return;var i=q[idx++];run++;fetchFrame(i,function(ok){run--;if(ok){if(i%COARSE===0||i===N-1||near(i))decode(i)}else{fails++;if(i===0||fails>20){fallback();return}}pump()})}
- function pump(){while(run<5&&idx<q.length)next()}pump()}
-function fallback(){scrub=false;sec.classList.add("static");cv.hidden=true;img.hidden=false;img.src="/assets/lion-hare-well-still.jpg"}
-function ready(){if(scrub||!started||rm.matches)return;scrub=true;sec.classList.remove("static");cv.hidden=false;img.hidden=true;fit();onScroll();draw()}
-/* ---- drawing ---- */
-function fit(){var w=fig.clientWidth,d=Math.min(window.devicePixelRatio||1,2);size=w;cv.width=Math.round(w*d);cv.height=Math.round(w*d*3/4);drawn=-1;queue()}
-function nearest(i){if(bmp[i])return bmp[i];for(var k=1;k<N;k++){if(i-k>=0&&bmp[i-k])return bmp[i-k];if(i+k<N&&bmp[i+k])return bmp[i+k]}return null}
-function draw(){queued=false;if(!scrub)return;var i=Math.floor(curF),t=curF-i,key=i+t*0.999;if(Math.abs(key-drawn)<1e-4)return;drawn=key;
- var a=nearest(i);if(!a)return;ctx.globalAlpha=1;ctx.imageSmoothingQuality="high";ctx.drawImage(a,0,0,cv.width,cv.height);
- if(t>0.02&&i+1<N&&bmp[i+1]&&bmp[i]){ctx.globalAlpha=t;ctx.drawImage(bmp[i+1],0,0,cv.width,cv.height);ctx.globalAlpha=1}}
-function queue(){if(!queued){queued=true;requestAnimationFrame(draw)}}
-function progress(){var r=sec.getBoundingClientRect(),span=sec.offsetHeight-stage.clientHeight;return span>0?clamp(-r.top/span,0,1):0}
-function onScroll(){if(!scrub)return;var p=progress();curF=warp(clamp((p-A)/(B-A),0,1))*(N-1);
- cue.style.opacity=String(1-clamp(p/0.05,0,1));rd.classList.toggle("on",p>=0.9);keep();evict();queue()}
-addEventListener("scroll",function(){if(scrub)requestAnimationFrame(onScroll)},{passive:true});
-if("ResizeObserver" in window)new ResizeObserver(function(){if(scrub)fit()}).observe(fig);else addEventListener("resize",function(){if(scrub)fit()});
-function mode(){if(rm.matches){scrub=false;sec.classList.add("static");cv.hidden=true;img.src="/assets/lion-hare-well-still.jpg"}else{img.hidden=false;sec.classList.remove("static");img.src=SRC(0);if(started&&bmp[0])ready();else if(near2())start()}}
-rm.addEventListener?rm.addEventListener("change",mode):rm.addListener(mode);
-if(location.search.indexOf("storydebug")>-1)window.__storyStats=function(){return{decoded:bmp.filter(Boolean).length,blobs:blobs.filter(Boolean).length,scrub:scrub,frame:curF}};
-function near2(){return sec.getBoundingClientRect().top<innerHeight-40}
-addEventListener("scroll",function(){if(!started&&near2())start()},{passive:true});
-if(!rm.matches){sec.classList.remove("static");img.src=SRC(0)}
-addEventListener("load",function(){if(near2())start()});
-})();
+H.add({en:{scrollCue:"Scroll to discover",readTale:"Read the tale",skipStory:"Skip story",fullPassage:"Read the full passage",close:"Close",soundOn:"Sound on",soundOff:"Sound off",draftNote:"Persian text as in the source (Ganjoor). Excerpts, not a translation.",panelSrc:"Nasrollah Monshi, Kelileh o Demneh; text from Ganjoor.",storyCredit:"Illustrations AI-generated in the manner of Persian manuscript painting and animated for this project. Not a historical manuscript."},
+fa:{scrollCue:"برای کشف‌کردن به پایین بروید",readTale:"خواندن حکایت",skipStory:"رد شدن از حکایت",fullPassage:"خواندن متن کامل",close:"بستن",soundOn:"صدا روشن",soundOff:"صدا خاموش",draftNote:"متن فارسی همان است که در منبع (گنجور) آمده؛ گزیده‌ها، نه ترجمه.",panelSrc:"نصرالله منشی، کلیله و دمنه؛ متن از گنجور.",storyCredit:"تصویرها با هوش مصنوعی به شیوهٔ نگارگری ایرانی ساخته و برای این پروژه متحرک شده‌اند. نسخهٔ خطی تاریخی نیست."}});
 H.init();
 (function(){var v=document.getElementById("tree"),rm=matchMedia("(prefers-reduced-motion:reduce)");
 function go(){if(rm.matches){v.pause();v.removeAttribute("autoplay")}else v.play&&v.play().catch(function(){})}go();
 rm.addEventListener&&rm.addEventListener("change",go)})();
-</script></body></html>
+</script>
+<script type="module" src="/assets/story/story.js"></script></body></html>
