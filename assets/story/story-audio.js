@@ -1,60 +1,60 @@
-/* Scroll-synced sound. One <audio> element per scene (the clip's own track), played at NATURAL pitch.
-   The sound follows the picture: while the visitor scrolls forward it plays, its speed nudged up or down (0.6x-2.2x, pitch preserved by the browser)
-   so it stays with the picture; if the picture is behind, the sound waits; when scrolling stops, the sound stops; scrolling back pauses it.
-   On by default (remembered in localStorage if turned off). Browsers allow sound only after a click, tap or key press on the page
-   (wheel or trackpad scrolling does not count), so until then `state` is "suspended" and the button says so.
-   Config: { segments:[{scene:"s1", src, dur, volume}] }   API: enabled, toggle(), update(si, f01), stop(), resume(), state, onState */
+/* Scene sound, played in its own time at natural speed (one <audio> element per scene = the clip's own track).
+   - The sound of a scene starts when the visitor scrolls FORWARD into the scene, plays through to its end (3-5 s) even if they stop to read, then is silent.
+   - Leaving a scene fades its sound out quickly; the next scene's sound starts. Scrolling back into a scene does not play it; a scene's sound
+     is not restarted within 6 s of its last start (small back-and-forth scrolls never retrigger it; a cut-off sound just resumes). Leaving the story or hiding the tab fades it out.
+   - On by default (kept in localStorage if turned off). Browsers allow sound only after a click, tap or key press on the page (wheel or trackpad
+     scrolling does not count), so until then `state` is "suspended" and the button says so; the current scene then starts right after the first click.
+   Config: { segments:[{scene:"s1", src, dur, volume}] }   API: enabled, toggle(), update(si, active), stop(), resume(), state, onState */
 export function createAudio(cfg, sceneIds) {
   const segs = cfg && cfg.segments; if (!segs || !segs.length) return null;
-  const KEY = "hashiyeh-story-sound";
+  const KEY = "hashiyeh-story-sound", GUARD = 6000;
   let on = true; try { on = localStorage.getItem(KEY) !== "off"; } catch (e) {}
-  const els = [], api = { onState() {}, get enabled() { return on; }, get state() { return unlocked ? "running" : "suspended"; } };
-  let unlocked = false, si = -1, t = 0, tPrev = 0, tPrevMs = 0, lastUpd = 0, v = 0, raf = 0, trying = false;
-  const MINV = 0.05, AHEAD = 0.35, SEEK = 1.5, RMIN = 0.6, RMAX = 2.2;
-  const dur = (k) => (els[k] && isFinite(els[k].duration) && els[k].duration) || segs[k].dur || 4;
+  const els = [], started = [], fades = new Map();
+  let unlocked = false, trying = false, cur = -1, wasActive = false;
+  const api = { onState() {}, get enabled() { return on; }, get state() { return unlocked ? "running" : "suspended"; } };
   function el(k) {
     if (k < 0 || k >= segs.length) return null;
-    if (!els[k]) { const a = new Audio(); a.preload = "auto"; a.src = segs[k].src; a.volume = segs[k].volume == null ? 1 : segs[k].volume; try { a.preservesPitch = true; a.mozPreservesPitch = true; a.webkitPreservesPitch = true; } catch (e) {} els[k] = a; }
+    if (!els[k]) { const a = new Audio(); a.preload = "auto"; a.src = segs[k].src; try { a.preservesPitch = true; } catch (e) {} els[k] = a; }
     return els[k];
   }
-  function pauseAll(except) { els.forEach((a, k) => { if (a && k !== except && !a.paused) a.pause(); }); }
-  function tick(now) {
-    raf = 0; const a = el(si);
-    if (now - lastUpd > 120) v *= 0.6;                                  // no recent scrolling: decay to a stop
-    if (!on || !unlocked || !a || !(v > MINV)) { if (a && !a.paused) a.pause(); }
-    else {
-      const diff = t - a.currentTime;                                    // >0: the picture is ahead of the sound
-      if (Math.abs(diff) > SEEK) { try { a.currentTime = Math.max(0, Math.min(t, dur(si) - 0.05)); } catch (e) {} }
-      else if (diff < -AHEAD) { if (!a.paused) a.pause(); }              // sound got ahead of the picture: wait for it
-      else {
-        a.playbackRate = Math.min(RMAX, Math.max(RMIN, 1 + 1.2 * diff));
-        if (a.paused && a.currentTime < dur(si) - 0.05) a.play().catch(() => { unlocked = false; api.onState(); });
-      }
-    }
-    if (on && (now - lastUpd < 800 || (a && !a.paused))) raf = requestAnimationFrame(tick);
+  function fadeOut(a, ms) {
+    if (!a || a.paused) return; clearInterval(fades.get(a)); const v0 = a.volume, t0 = performance.now();
+    const id = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); a.volume = v0 * (1 - k); if (k >= 1) { clearInterval(id); fades.delete(a); a.pause(); } }, 30);
+    fades.set(a, id);
   }
-  const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+  function play(k, force) {
+    const a = el(k); if (!a || !on || !unlocked) return;
+    const now = performance.now(), vol = segs[k].volume == null ? 1 : segs[k].volume;
+    if (!force && started[k] && now - started[k] < GUARD) {              // recently started (scroll jitter): never restart; only resume it if it was cut off part-way
+      if (a.currentTime < (a.duration || 99) - 0.2) { clearInterval(fades.get(a)); fades.delete(a); a.volume = vol; if (a.paused) a.play().catch(() => {}); }
+      return;
+    }
+    started[k] = now; clearInterval(fades.get(a)); fades.delete(a);
+    try { a.currentTime = 0; } catch (e) {} a.volume = vol;
+    a.play().catch(() => { unlocked = false; api.onState(); });
+  }
+  const fadeAll = (ms, except) => els.forEach((a, k) => { if (a && k !== except) fadeOut(a, ms); });
   Object.assign(api, {
-    /* called on every scroll update: si = scene index, f01 = position in the scene's frames (0..1) */
-    update(s, f01) {
-      const now = performance.now();
-      if (s !== si) { pauseAll(); si = s; el(s); el(s + 1); t = f01 * dur(s); tPrev = t; tPrevMs = now; v = 0; const a = els[s]; if (a) { try { a.currentTime = Math.max(0, t); } catch (e) {} } kick(); return; }
-      t = f01 * dur(s); const dtm = now - tPrevMs;
-      if (dtm > 8) { const inst = (t - tPrev) / (dtm / 1000); v = v * 0.6 + inst * 0.4; tPrev = t; tPrevMs = now; lastUpd = now; }
-      el(s + 1); kick();
+    /* si = scene index; active = the pinned story stage is on screen */
+    update(si, active) {
+      if (!active) { if (wasActive) { fadeAll(300); cur = -1; } wasActive = false; return; }
+      wasActive = true; el(si); el(si + 1);
+      if (si === cur) return;
+      const prev = cur; cur = si; fadeAll(250, si);
+      if (prev === -1 || si > prev) play(si, false);                       // forward entry (or first arrival): play; backward entry: stay silent
     },
     /* must run inside a click / key press / tap: lets the browser play sound later without a gesture */
     resume() {
       if (!on || unlocked || trying) return; trying = true;
-      const a = el(Math.max(si, 0)); if (!a) { trying = false; return; }
-      a.muted = true;
-      a.play().then(() => { a.pause(); a.muted = false; try { a.currentTime = Math.max(0, t); } catch (e) {} unlocked = true; trying = false; api.onState(); kick(); })
+      const a = el(Math.max(cur, 0)); if (!a) { trying = false; return; }
+      a.muted = true; a.volume = 0;
+      a.play().then(() => { a.pause(); a.muted = false; unlocked = true; trying = false; api.onState(); if (wasActive && cur >= 0) play(cur, true); })
         .catch(() => { a.muted = false; trying = false; });
     },
-    toggle() { on = !on; try { localStorage.setItem(KEY, on ? "on" : "off"); } catch (e) {} if (on) { api.resume(); kick(); } else pauseAll(); api.onState(); return on; },
-    stop() { pauseAll(); },
+    toggle() { on = !on; try { localStorage.setItem(KEY, on ? "on" : "off"); } catch (e) {} if (on) api.resume(); else fadeAll(120); if (on && unlocked && wasActive && cur >= 0) play(cur, true); api.onState(); return on; },
+    stop() { fadeAll(200); cur = -1; wasActive = false; },
   });
-  document.addEventListener("visibilitychange", () => { if (document.hidden) pauseAll(); });
+  document.addEventListener("visibilitychange", () => { if (document.hidden) { fadeAll(100); cur = -1; wasActive = false; } });
   el(0); el(1);
   return api;
 }

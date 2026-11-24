@@ -5,7 +5,7 @@
 import { FrameStore, Painter } from "./story-render.js";
 import { Timeline, clamp } from "./story-scroll.js";
 import { Beats, Panel } from "./story-text.js";
-import { createAudio } from "./story-audio.js?v=5";
+import { createAudio } from "./story-audio.js?v=7";
 const H = window.H, $ = (id) => document.getElementById(id);
 const sec = $("story"); if (!sec) throw new Error("no story section");
 const rm = matchMedia("(prefers-reduced-motion: reduce)");
@@ -60,7 +60,7 @@ function update() {
   beats.update(st.si, st.u);
   cue.style.opacity = String(1 - clamp(y / (tl.stageH * 0.2), 0, 1));
   link.classList.toggle("on", st.si === data.scenes.length - 1 && st.u >= 0.9);
-  if (audio) audio.update(st.si, st.frame / (data.scenes[st.si].frames.count - 1));
+  if (audio) audio.update(st.si, r.top <= 1 && r.bottom > innerHeight * 0.6);
   cur.u = st.u; cur.frame = st.frame; cur.y = y; lastY = y;
 }
 function sceneChange(si) {
