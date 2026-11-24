@@ -86,7 +86,7 @@ const sbtn = $("ssound");
 function soundLabel() { sbtn.textContent = H.t(audio && audio.enabled ? "soundOn" : "soundOff"); sbtn.setAttribute("aria-pressed", String(!!(audio && audio.enabled))); }
 H.on(soundLabel);
 
-fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json").then((r) => r.json()).then((d) => {
+fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
   const patch = window.__storyPatch; if (patch) d = Object.assign(d, patch(d) || {});
   data = d;
   panel = new Panel(dlg, data);

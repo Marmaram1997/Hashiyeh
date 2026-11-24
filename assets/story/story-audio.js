@@ -1,38 +1,97 @@
-/* Audio, independent of the scroll-scrubbed frames. Off until the visitor switches it on (a user gesture).
-   Config (optional, per story): { ambience:[{scene:"s1", src, volume}], cues:[{scene:"s6", at:0.3, src, volume}] }
-   - ambience: one loop per scene, cross-faded when the scene changes.
-   - cues: fired once on a FORWARD crossing of `at`; re-armed only after the visitor scrolls back before that scene.
-   - never scrubbed or reversed; everything fades out when the tab is hidden or the story is left.
-   segments: [{scene:"s2", src, volume}] = the clip's own mixed soundtrack for that scene, played once from its start on a forward entry (not synced to scroll speed, never reversed).
-   With no audio config createAudio returns null and no control is shown. */
-export function createAudio(cfg, sceneIds) {
-  if (!cfg || !((cfg.ambience && cfg.ambience.length) || (cfg.cues && cfg.cues.length) || (cfg.segments && cfg.segments.length))) return null;
-  const amb = {}, fired = new Set(); let on = false, cur = null, lastU = 0, lastS = 0, ramps = new Map();
-  const mk = (src, loop, vol) => { const a = new Audio(src); a.loop = loop; a.preload = "none"; a.volume = 0; a._max = vol == null ? 1 : vol; return a; };
-  const ramp = (a, to, ms, done) => { clearInterval(ramps.get(a)); const from = a.volume, t0 = performance.now();
-    const id = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); a.volume = from + (to - from) * k; if (k >= 1) { clearInterval(id); ramps.delete(a); done && done(); } }, 40); ramps.set(a, id); };
-  const fadeOutAll = (ms = 400) => Object.values(Object.assign({}, amb, segs)).forEach((a) => { if (!a.paused) ramp(a, 0, ms, () => a.pause()); });
-  (cfg.ambience || []).forEach((c) => { amb[c.scene] = mk(c.src, true, c.volume); });
-  const segs = {}, segT = {}; (cfg.segments || []).forEach((c) => { segs[c.scene] = mk(c.src, false, c.volume); });
-  const cues = (cfg.cues || []).map((c) => Object.assign({ audio: mk(c.src, false, c.volume) }, c));
-  const api = {
-    get enabled() { return on; },
-    toggle() { on = !on; if (on) { Object.keys(segs).forEach((k) => { const a = segs[k]; if (k !== sceneIds[lastS]) { a.volume = 0; a.play().then(() => { a.pause(); a.currentTime = 0; }).catch(() => {}); } }); api.scene(lastS, lastU, true); } else { fadeOutAll(); } return on; },
-    scene(si, u, force) {
-      const id = sceneIds[si];
-      if (on && (id !== cur || force)) { Object.keys(segs).forEach((k) => { if (k !== id && !segs[k].paused) ramp(segs[k], 0, 350, () => segs[k].pause()); }); if (amb[id] || Object.keys(amb).length) fadeOutAll(600); const a = amb[id]; if (a) { a.play().catch(() => {}); ramp(a, a._max, 600); } }
-      if (on && segs[id] && (id !== cur || force) && (force || si > lastS)) {   // a scene's own sound plays once, from its start, on a FORWARD entry only
-        const a = segs[id], now = performance.now();
-        if (force || !segT[id] || now - segT[id] > 6000) { segT[id] = now; a.currentTime = 0; a.volume = a._max; a.play().catch(() => {}); }
-      }
-      cur = id;
-      cues.forEach((c) => { const ci = sceneIds.indexOf(c.scene);
-        if (si < ci) fired.delete(c.scene + c.at);                                   // scrolled back before the scene: re-arm
-        else if (si === ci && on && !fired.has(c.scene + c.at) && lastS === si && lastU < c.at && u >= c.at && u - lastU < 0.25) { fired.add(c.scene + c.at); c.audio.currentTime = 0; c.audio.volume = c.audio._max; c.audio.play().catch(() => {}); } });
-      lastS = si; lastU = u;
-    },
-    stop() { fadeOutAll(300); cues.forEach((c) => c.audio.pause()); },
-  };
-  document.addEventListener("visibilitychange", () => { if (document.hidden) api.stop(); else if (on) api.scene(lastS, lastU, true); });
-  return api;
+/* Glue for the scroll-driven story on the landing page.
+   Data: /data/story/lion_and_hare.story.json (scene config + verbatim Persian beats; see scripts/build_story.py)
+   Rendering: story-render.js   Scroll logic: story-scroll.js   Text/panel: story-text.js   Audio: story-audio.js
+   Modes: scrub (sticky stage, frames follow scroll) | static (no JS, reduced motion, or frames failed): the plain reading sequence. */
+import { FrameStore, Painter } from "./story-render.js";
+import { Timeline, clamp } from "./story-scroll.js";
+import { Beats, Panel } from "./story-text.js";
+import { createAudio } from "./story-audio.js";
+const H = window.H, $ = (id) => document.getElementById(id);
+const sec = $("story"); if (!sec) throw new Error("no story section");
+const rm = matchMedia("(prefers-reduced-motion: reduce)");
+let data = null, tl, store, painter, beats, panel, audio, on = false, raf = 0, cur = { si: -1 }, lastY = -1;
+const stage = $("sstage"), fig = $("sfig"), cv = $("scv"), still = $("sstill"), cue = $("scue"), link = $("sreadlink"), ticks = $("sticks"), dlg = $("spanel");
+const debug = /storydebug/.test(location.search);
+
+function label() {
+  if (!data) return;
+  const k = cur.si >= 0 ? cur.si : 0, sc = data.scenes[k], alt = (sc.alt[H.lang] || sc.alt.en);
+  fig.setAttribute("aria-label", alt);
+  document.querySelectorAll(".sseq img").forEach((im) => { im.alt = (H.lang === "fa" && im.dataset.altFa) || im.dataset.altEn || im.alt; });
 }
+function enable() {
+  if (on || !data) return; on = true;
+  sec.classList.add("story--scrub");
+  document.querySelectorAll(".sseq img").forEach((im) => { if (im.getAttribute("src")) { im.dataset.src = im.getAttribute("src"); im.removeAttribute("src"); } });
+  tl = new Timeline(data.scenes);
+  store = new FrameStore(data.scenes);
+  store.onChange = () => schedule(true);
+  store.onFail = () => { disable(); };
+  painter = new Painter(cv, store);
+  beats = new Beats($("sbeats"), data);
+  ticks.textContent = ""; data.scenes.forEach((s) => { const li = document.createElement("li"); ticks.append(li); });
+  layout(); cur = { si: -1 }; lastY = -1; schedule(true);
+}
+function disable() {
+  if (!on) return; on = false;
+  sec.classList.remove("story--scrub"); sec.style.height = "";
+  cv.hidden = true; if (audio) audio.stop();
+  document.querySelectorAll(".sseq img").forEach((im) => { if (im.dataset.src) im.setAttribute("src", im.dataset.src); });
+  if (store) { store.failed = true; store.release = () => {}; }
+}
+function layout() {
+  if (!on) return;
+  tl.layout(stage.clientHeight || innerHeight);
+  sec.style.height = tl.sectionH + "px";
+  cur.si = -1; painter.key = null; schedule(true);
+}
+function schedule(force) { if (force) lastY = -1; if (!raf) raf = requestAnimationFrame(update); }
+function nearView() { return sec.getBoundingClientRect().top < innerHeight * 1.6; }
+function update() {
+  raf = 0; if (!on) return;
+  const r = sec.getBoundingClientRect(), y = clamp(-r.top, 0, tl.total);
+  if (!store.started) { if (!nearView()) return; store.started = true; }
+  const st = tl.at(y);
+  if (st.si !== cur.si) sceneChange(st.si);
+  store.setActive(st.si, st.frame);
+  const ok = painter.draw(st.si, st.frame);
+  cv.hidden = !ok;
+  still.hidden = ok;
+  beats.update(st.si, st.u);
+  cue.style.opacity = String(1 - clamp(y / (tl.stageH * 0.2), 0, 1));
+  link.classList.toggle("on", st.si === data.scenes.length - 1 && st.u >= 0.9);
+  if (audio) audio.scene(st.si, st.u);
+  cur.u = st.u; cur.frame = st.frame; cur.y = y; lastY = y;
+}
+function sceneChange(si) {
+  cur.si = si; const sc = data.scenes[si]; label();
+  sec.style.setProperty("--story-bg", sc.bg || "#F2EADF");
+  const b = fig.getBoundingClientRect(); painter.fit(si, b.width, b.height);
+  still.src = sc.still;
+  [...ticks.children].forEach((li, k) => li.setAttribute("aria-current", String(k === si)));
+}
+addEventListener("scroll", () => { if (on) schedule(); }, { passive: true });
+if ("ResizeObserver" in window) new ResizeObserver(() => { if (on) layout(); }).observe(stage); else addEventListener("resize", () => layout());
+addEventListener("load", () => schedule());
+function mode() { if (rm.matches) disable(); else enable(); }
+(rm.addEventListener ? rm.addEventListener("change", mode) : rm.addListener(mode));
+H.on(label);
+
+/* leaving the story silences it; coming back restarts the current scene's sound once */
+if ("IntersectionObserver" in window) new IntersectionObserver((es) => { if (!audio || !audio.enabled) return; if (es[0].isIntersecting) audio.scene(Math.max(0, cur.si), cur.u || 0, true); else audio.stop(); }).observe(sec);
+/* ---- panel, skip, sound ---- */
+$("sfull").addEventListener("click", (e) => panel.open(Math.max(0, cur.si), e.currentTarget));
+$("spclose").addEventListener("click", () => dlg.close());
+const sbtn = $("ssound");
+function soundLabel() { sbtn.textContent = H.t(audio && audio.enabled ? "soundOn" : "soundOff"); sbtn.setAttribute("aria-pressed", String(!!(audio && audio.enabled))); }
+H.on(soundLabel);
+
+fetch(sec.parentElement.dataset.story || "/data/story/lion_and_hare.story.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
+  const patch = window.__storyPatch; if (patch) d = Object.assign(d, patch(d) || {});
+  data = d;
+  panel = new Panel(dlg, data);
+  audio = createAudio(data.audio, data.scenes.map((s) => s.id));
+  if (audio) { sbtn.hidden = false; sbtn.addEventListener("click", () => { audio.toggle(); soundLabel(); }); soundLabel(); }
+  if (debug) window.__story = { state: () => Object.assign({}, cur, { on, total: tl && tl.total, sectionH: tl && tl.sectionH }), stats: () => store.stats(), store: () => store, timeline: () => tl, audio: () => audio, scrub: () => on };
+  label(); if (!rm.matches) enable();
+}).catch(() => { /* stay static */ });
