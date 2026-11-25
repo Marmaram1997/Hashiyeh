@@ -74,7 +74,7 @@ scenes = [
 # book page: per-scene video (with its own sound) and poster; frames/scroll settings are no longer used
 for s_ in scenes:
     k = s_["n"]; s_["video"] = f"/assets/story/video/s{k}.mp4?v=1"; s_["poster"] = f"/assets/story/poster/p{k}.jpg?v=1"
-    s_["size"] = dict(w=s_["frames"]["w"], h=s_["frames"]["h"]); s_["still"] = s_["poster"]
+    s_["size"] = dict(w=s_["frames"]["w"], h=s_["frames"]["h"]); s_["still"] = s_["poster"]; s_["bed"] = f"/assets/story/bed/b{k}.m4a?v=1"
     for key in ("frames", "scrollVh", "hold", "bg"): s_.pop(key, None)
 # even beat windows inside each scene (local scroll progress 0..1); override by hand if needed
 for s in scenes:

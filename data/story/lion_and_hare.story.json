@@ -46,7 +46,8 @@
    "size": {
     "w": 960,
     "h": 720
-   }
+   },
+   "bed": "/assets/story/bed/b1.m4a?v=1"
   },
   {
    "id": "s2",
@@ -79,7 +80,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b2.m4a?v=1"
   },
   {
    "id": "s3",
@@ -112,7 +114,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b3.m4a?v=1"
   },
   {
    "id": "s4",
@@ -153,7 +156,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b4.m4a?v=1"
   },
   {
    "id": "s5",
@@ -194,7 +198,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b5.m4a?v=1"
   },
   {
    "id": "s6",
@@ -219,7 +224,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b6.m4a?v=1"
   },
   {
    "id": "s7",
@@ -252,7 +258,8 @@
    "size": {
     "w": 1024,
     "h": 576
-   }
+   },
+   "bed": "/assets/story/bed/b7.m4a?v=1"
   }
  ],
  "full_passage": [
