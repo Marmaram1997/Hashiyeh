@@ -57,8 +57,8 @@ scenes = [
       beats=[B(7,"خرگوش را بدید","حال وحوش چیست؟"), B(7,"گفت: در صحبت من","التفات ننمود و جفاها راند"), B(7,"و گفت: «این شکارگاه","او را بمن نمای.")]),
  dict(id="s5", n=5, frames=dict(dir="/assets/story/frames/s5", count=42, w=1024, h=576), still="/assets/story/s5-still.jpg", bg="#F2EADF",
       scrollVh=200, hold=dict(start=0.05, end=0.07),
-      alt=dict(en="Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; ",
-               fa="تصویر: شیر در حالی که خرگوشی را به سینه گرفته، بر لبهٔ چاهی سنگی خم شده و به آب تیره می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود؛ خرگوشی دیگر در سمت چپ کنار لبهٔ چاه ایستاده است."),
+      alt=dict(en="Illustration: a hare runs across the meadow to a stone well; the lion seizes it, holds it against his chest and leans over the rim to look into the water, where reflections appear.",
+               fa="تصویر: خرگوشی در چمن به سوی چاهی سنگی می‌دود؛ شیر او را می‌گیرد، به سینه می‌فشارد و بر لبهٔ چاه خم می‌شود و به آب می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود."),
       beats=[B(8,"خرگوش پیش ایستاد","بر شمردی."), B(9,"و گفت: در این چاهست","او را نمایم."), B(9,"شیر او را در برگرفت","خرگوش بدید")]),
  dict(id="s6", n=6, frames=dict(dir="/assets/story/frames/s6", count=39, w=1024, h=576), still="/assets/story/s6-still.jpg", bg="#F2EADF",
       scrollVh=130, hold=dict(start=0.05, end=0.08),
@@ -73,8 +73,8 @@ scenes = [
 ]
 # book page: per-scene video (with its own sound) and poster; frames/scroll settings are no longer used
 for s_ in scenes:
-    k = s_["n"]; s_["video"] = f"/assets/story/video/s{k}.mp4?v=1"; s_["poster"] = f"/assets/story/poster/p{k}.jpg?v=1"
-    s_["size"] = dict(w=s_["frames"]["w"], h=s_["frames"]["h"]); s_["still"] = s_["poster"]; s_["bed"] = f"/assets/story/bed/b{k}.m4a?v=1"
+    k = s_["n"]; ver = 2 if k == 5 else 1; s_["video"] = f"/assets/story/video/s{k}.mp4?v={ver}"; s_["poster"] = f"/assets/story/poster/p{k}.jpg?v={ver}"
+    s_["size"] = dict(w=s_["frames"]["w"], h=s_["frames"]["h"]); s_["still"] = s_["poster"]; s_["bed"] = f"/assets/story/bed/b{k}.m4a?v={ver}"
     for key in ("frames", "scrollVh", "hold", "bg"): s_.pop(key, None)
 # even beat windows inside each scene (local scroll progress 0..1); override by hand if needed
 for s in scenes:

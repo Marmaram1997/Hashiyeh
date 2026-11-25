@@ -162,10 +162,10 @@
   {
    "id": "s5",
    "n": 5,
-   "still": "/assets/story/poster/p5.jpg?v=1",
+   "still": "/assets/story/poster/p5.jpg?v=2",
    "alt": {
-    "en": "Illustration: the lion holds the hare against his chest and leans over the rim of a stone well; ",
-    "fa": "تصویر: شیر در حالی که خرگوشی را به سینه گرفته، بر لبهٔ چاهی سنگی خم شده و به آب تیره می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود؛ خرگوشی دیگر در سمت چپ کنار لبهٔ چاه ایستاده است."
+    "en": "Illustration: a hare runs across the meadow to a stone well; the lion seizes it, holds it against his chest and leans over the rim to look into the water, where reflections appear.",
+    "fa": "تصویر: خرگوشی در چمن به سوی چاهی سنگی می‌دود؛ شیر او را می‌گیرد، به سینه می‌فشارد و بر لبهٔ چاه خم می‌شود و به آب می‌نگرد که بازتاب‌هایی در آن پدیدار می‌شود."
    },
    "beats": [
     {
@@ -193,13 +193,13 @@
      "b": 0.97
     }
    ],
-   "video": "/assets/story/video/s5.mp4?v=1",
-   "poster": "/assets/story/poster/p5.jpg?v=1",
+   "video": "/assets/story/video/s5.mp4?v=2",
+   "poster": "/assets/story/poster/p5.jpg?v=2",
    "size": {
     "w": 1024,
     "h": 576
    },
-   "bed": "/assets/story/bed/b5.m4a?v=1"
+   "bed": "/assets/story/bed/b5.m4a?v=2"
   },
   {
    "id": "s6",

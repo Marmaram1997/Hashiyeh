@@ -21,7 +21,7 @@ def clean(frame, mask, radius=6):
 
 import subprocess
 # watermark boxes (x0,y0,x1,y1) in source pixels; threshold per source
-BOXES = {"scene1": ((1385,1160,1635,1225), 200), "continue": ((1085,660,1262,706), 150)}
+BOXES = {"scene1": ((1385,1160,1635,1225), 200), "continue": ((1085,660,1262,706), 150), "scene5": ((1085,660,1262,706), 150)}
 def clean_video(src, dst, key):
     """write a lossless copy of `src` (video only) with the watermark inpainted"""
     box, thr = BOXES[key]; m = mask_for(src, box, thr=thr, grow=5)
